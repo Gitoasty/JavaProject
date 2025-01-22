@@ -15,7 +15,7 @@ public class ProjectDraft extends Project {
         this.id = p.id;
         this.name = p.name;
         this.tasks = p.tasks;
-        this.estimated_time = p.estimated_time;
+        this.estimatedTime = p.estimatedTime;
     }
 
     /**
@@ -65,10 +65,10 @@ public class ProjectDraft extends Project {
 
         /**
          * guides us back to the optional step of the Builder pattern, so we can call the build() method
-         * @param estimated_time takes an Integer to be set as estimated project duration (in days)
+         * @param estimatedTime takes an Integer to be set as estimated project duration (in days)
          * @return Builder as an object of type OptionalSetter
          */
-        OptionalSetter estimatedTimeSetter(Integer estimated_time);
+        OptionalSetter estimatedTimeSetter(Integer estimatedTime);
 
         /**
          * constructs the ProjectDraft object by calling the ProjectDraft() constructor using values from Builder instance
@@ -84,7 +84,7 @@ public class ProjectDraft extends Project {
         private Integer id;
         private String name;
         private Set<String> tasks;
-        private Integer estimated_time;
+        private Integer estimatedTime;
 
         @Override
         public NameSetter id(Integer id) {
@@ -105,8 +105,8 @@ public class ProjectDraft extends Project {
         }
 
         @Override
-        public OptionalSetter estimatedTimeSetter(Integer estimated_time) {
-            this.estimated_time = estimated_time;
+        public OptionalSetter estimatedTimeSetter(Integer estimatedTime) {
+            this.estimatedTime = estimatedTime;
             return this;
         }
 

@@ -8,7 +8,7 @@ import java.util.Set;
 public abstract class Project {
     protected Integer id;
     protected String name;
-    protected Integer estimated_time;
+    protected Integer estimatedTime;
     protected Set<String> tasks;
 
     /**
@@ -32,7 +32,7 @@ public abstract class Project {
      * @param t provided estimated project duration (in days)
      */
     public void timeSetter(Integer t) {
-        this.estimated_time = t;
+        this.estimatedTime = t;
     }
 
     /**
@@ -64,7 +64,7 @@ public abstract class Project {
      * @return the estimated time to complete the project
      */
     public Integer timeGetter() {
-        return estimated_time;
+        return estimatedTime;
     }
 
     /**
