@@ -27,7 +27,7 @@ public class ProjectDraft extends Project {
     }
 
     /**
-     * First step of the Builder process
+     * First step of the ProjectDraft Builder process
      */
     public interface IdSetter {
         /**
@@ -39,7 +39,7 @@ public class ProjectDraft extends Project {
     }
 
     /**
-     * Second step of the Builder process
+     * Second step of the ProjectDraft Builder process
      */
     public interface NameSetter {
 
@@ -52,7 +52,7 @@ public class ProjectDraft extends Project {
     }
 
     /**
-     * Optional part of the Builder process, also contains the build() method
+     * Optional part of the ProjectDraft Builder process, also contains the build() method
      */
     public interface OptionalSetter {
 

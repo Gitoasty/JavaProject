@@ -31,7 +31,7 @@ public class ProjectAssignment extends Project {
     }
 
     /**
-     * First step of the Builder process
+     * First step of the ProjectAssignment Builder process
      */
     public interface IdSetter {
         /**
@@ -43,7 +43,7 @@ public class ProjectAssignment extends Project {
     }
 
     /**
-     * Second step of the Builder process
+     * Second step of the ProjectAssignment Builder process
      */
     public interface NameSetter {
 
@@ -56,7 +56,7 @@ public class ProjectAssignment extends Project {
     }
 
     /**
-     * Third step of the Builder process
+     * Third step of the ProjectAssignment Builder process
      */
     public interface WorkerSetter {
 
@@ -69,7 +69,7 @@ public class ProjectAssignment extends Project {
     }
 
     /**
-     * Optional part of the Builder process, also contains the build() method
+     * Optional part of the ProjectAssignment Builder process, also contains the build() method
      */
     public interface OptionalSetter {
 
@@ -142,7 +142,7 @@ public class ProjectAssignment extends Project {
 
     /**
      * takes an Arraylist of Workers for the Project
-     * @param w
+     * @param w provided List of Workers for the project
      */
     public void workerSetter(List<Worker> w) {
         this.workers = (ArrayList<Worker>) w;
