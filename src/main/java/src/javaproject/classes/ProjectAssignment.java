@@ -11,19 +11,19 @@ public class ProjectAssignment extends Project {
     private ArrayList<Worker> workers;
 
     /**
-     * constructs the ProjectAssignment class
-     * @param p builder object used to construct the ProjectAssignment
+     * constructs the ProjectAssignment object
+     * @param pa builder object used to construct the ProjectAssignment
      */
-    public ProjectAssignment(Builder p) {
-        this.id = p.id;
-        this.name = p.name;
-        this.workers = p.workers;
-        this.tasks = p.tasks;
-        this.estimatedTime = p.estimatedTime;
+    public ProjectAssignment(Builder pa) {
+        this.id = pa.id;
+        this.name = pa.name;
+        this.workers = pa.workers;
+        this.tasks = pa.tasks;
+        this.estimatedTime = pa.estimatedTime;
     }
 
     /**
-     * ensures we go to NameSetter next, starting point of the Builder Pattern
+     * ensures we go to IdSetter next, starting point of the Builder Pattern
      * @return Builder as an object of type IdSetter
      */
     public static ProjectAssignment.IdSetter builder() {

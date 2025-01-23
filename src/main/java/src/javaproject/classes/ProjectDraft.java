@@ -8,18 +8,18 @@ import java.util.Set;
 public class ProjectDraft extends Project {
 
     /**
-     * constructs the ProjectDraft class
-     * @param p builder object used to construct the ProjectDraft
+     * constructs the ProjectDraft object
+     * @param pd builder object used to construct the ProjectDraft
      */
-    public ProjectDraft(Builder p) {
-        this.id = p.id;
-        this.name = p.name;
-        this.tasks = p.tasks;
-        this.estimatedTime = p.estimatedTime;
+    public ProjectDraft(Builder pd) {
+        this.id = pd.id;
+        this.name = pd.name;
+        this.tasks = pd.tasks;
+        this.estimatedTime = pd.estimatedTime;
     }
 
     /**
-     * ensures we go to NameSetter next, starting point of the Builder Pattern
+     * ensures we go to IdSetter next, starting point of the Builder Pattern
      * @return Builder as an object of type IdSetter
      */
     public static IdSetter builder() {

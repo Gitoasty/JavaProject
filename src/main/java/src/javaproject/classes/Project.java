@@ -3,7 +3,7 @@ package src.javaproject.classes;
 import java.util.Set;
 
 /**
- * Base class inherited by ProjectDraft and ProjectAssignment
+ * Base class for Project classes
  */
 public abstract class Project {
     protected Integer id;
@@ -44,7 +44,7 @@ public abstract class Project {
     }
 
     /**
-     * used to get project id
+     * used to get project id attribute
      * @return the project id
      */
     public Integer idGetter() {
@@ -52,7 +52,7 @@ public abstract class Project {
     }
 
     /**
-     * used to get project name
+     * returns the project name attribute
      * @return the project name
      */
     public String nameGetter() {
@@ -60,7 +60,7 @@ public abstract class Project {
     }
 
     /**
-     * used to get estimated time
+     * returns the estimated time attribute
      * @return the estimated time to complete the project
      */
     public Integer timeGetter() {
@@ -68,7 +68,7 @@ public abstract class Project {
     }
 
     /**
-     * used to get the project tasks
+     * returns the project tasks attribute
      * @return the project tasks in the form of Strings
      */
     public Set<String> taskGetter() {
