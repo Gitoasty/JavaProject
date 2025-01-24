@@ -9,14 +9,4 @@ import java.io.FileInputStream;
  */
 public interface LoginManagement {
 
-//    public static Account<String> newAccount(String user, String rawPass, String role) {
-//
-//    }
-
-    public static void write() {
-        //FileInputStream a = new FileInputStream("")
-
-        String[] prin = "aaaa bbbbbb c".split(" ");
-        System.out.println(prin.length);
-    }
 }

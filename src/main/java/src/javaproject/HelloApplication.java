@@ -5,8 +5,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
-import src.javaproject.classes.Account;
-import src.javaproject.interfaces.LoginManagement;
 
 import java.io.IOException;
 import java.util.Objects;
