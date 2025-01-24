@@ -45,7 +45,12 @@
             <version>3.48.0.0</version>
             <scope>compile</scope>
         </dependency>
-
+        <dependency>
+            <groupId>at.favre.lib</groupId>
+            <artifactId>bcrypt</artifactId>
+            <version>0.10.2</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 
     <build>

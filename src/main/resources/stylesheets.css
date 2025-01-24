@@ -1,0 +1,4 @@
+.main_menu_bg {
+    -fx-background-image: url("temp_backgrounds/main_menu.jpeg");
+    -fx-background-size: stretch;
+}
