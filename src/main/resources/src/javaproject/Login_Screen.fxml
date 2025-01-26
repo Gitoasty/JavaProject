@@ -36,7 +36,7 @@
                   <Font size="50.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="409.0" layoutY="25.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="login_label" stylesheets="@../../stylesheets.css" text="Username:" textFill="WHITE" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="409.0" layoutY="25.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="login_label" stylesheets="@../../stylesheets.css" text="User tag:" textFill="WHITE" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <font>
                   <Font size="50.0" />
                </font>
@@ -52,7 +52,7 @@
                   <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                </GridPane.margin>
             </Label>
-            <TextField fx:id="userText" alignment="CENTER" onKeyPressed="#typing" promptText="username" styleClass="login_textField" stylesheets="@../../stylesheets.css" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <TextField fx:id="userText" alignment="CENTER" onKeyPressed="#typing" promptText="user tag" styleClass="login_textField" stylesheets="@../../stylesheets.css" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <font>
                   <Font size="50.0" />
                </font>

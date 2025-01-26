@@ -19,6 +19,7 @@
     -fx-padding: 10;
 }
 
+<!-- Official CSS docs say :focus, JavaFX docs say :focused, SonarQUbe is gaslighting me :focused is wrong -->
 .login_textField:focus {
     -fx-background-color: rgba(102, 0, 102, 0.9);
     -fx-border-color: transparent;

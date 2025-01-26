@@ -9,6 +9,13 @@ import java.io.*;
  */
 public interface LoginManagement {
 
+    /**
+     * Checks whether user exists and login password is correct
+     * @param credentials array of Strings containing valid user tag, hashed password and 'admin' if user is an admin
+     * @param user user tag linked to specific user
+     * @param pass password to be tested
+     * @return true if login data provided is valid
+     */
     private static boolean loginLogic(String[] credentials, String user, String pass) {
         boolean match = false;
 
@@ -21,6 +28,11 @@ public interface LoginManagement {
         return match;
     }
 
+    /**
+     * Logs the user in if user exists and password is correct
+     * @param user user tag used for logging in
+     * @param pass user password to be tested
+     */
     public static void attemptLogin(String user, String pass) {
         if (user.isEmpty() || pass.isEmpty()) {
             return;
