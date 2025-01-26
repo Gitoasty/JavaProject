@@ -7,4 +7,6 @@ module src.javaproject {
 
     opens src.javaproject to javafx.fxml;
     exports src.javaproject;
+    exports src.javaproject.controllers;
+    opens src.javaproject.controllers to javafx.fxml;
 }

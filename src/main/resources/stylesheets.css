@@ -1,4 +1,35 @@
 .main_menu_bg {
     -fx-background-image: url("temp_backgrounds/main_menu.jpeg");
     -fx-background-size: stretch;
+    -fx-font-size: 50px;
+}
+
+.login_label {
+    -fx-background-color: rgba(102, 0, 102, 0.8);
+    -fx-background-radius: 50px;
+    -fx-text-fill: white;
+}
+
+.login_textField {
+    -fx-background-color: rgba(102, 0, 102, 0.8);
+    -fx-background-radius: 50px;
+    -fx-text-fill: white;
+    -fx-text-box-border: transparent;
+    -fx-border-color: transparent;
+    -fx-padding: 10;
+}
+
+.login_textField:focused {
+    -fx-background-color: rgba(102, 0, 102, 0.9);
+    -fx-border-color: transparent;
+    -fx-font-size: 40px;
+    -fx-padding: 15;
+}
+
+.login_button {
+    -fx-background-color: rgba(102, 0, 102, 0.8);
+    -fx-background-radius: 50px;
+    -fx-text-fill: white;
+    -fx-font-size: 50px;
+    -fx-padding: 15;
 }
