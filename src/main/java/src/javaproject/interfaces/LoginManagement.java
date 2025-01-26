@@ -23,33 +23,23 @@ public interface LoginManagement {
     }
 
     public static void attemptLogin(String user, String pass) {
-        if (!user.isEmpty() && !pass.isEmpty()) {
-            try {
-                File f = new File("src/main/resources/login_info.txt");
-                FileReader fr = new FileReader(f);
-                BufferedReader bf = new BufferedReader(fr);
+        if (user.isEmpty() || pass.isEmpty()) {
+            return;
+        }
 
-                ArrayList<String> lines = new ArrayList<>();
-
-                int counter = 0;
-                while (lines.add(bf.readLine()) && lines.get(counter) != null) {
-                    String[] temp = lines.get(counter++).split(" ");
-
-                    if (temp.length > 1) {
-                        if (loginLogic(temp, user, pass)) {
-                            if (temp.length == 3) {
-                                System.out.println("Logged in as admin");
-                            } else if (temp.length == 2) {
-                                System.out.println("Logged in");
-                            }
-                            break;
-                        }
-                    }
+        File file = new File("src/main/resources/login_info.txt");
+        try (BufferedReader bf = new BufferedReader(new FileReader(file))) {
+            String line;
+            while ((line = bf.readLine()) != null) {
+                String[] parts = line.split(" ");
+                if (parts.length > 1 && loginLogic(parts, user, pass)) {
+                    System.out.println(parts.length == 3 ? "Logged in as admin" : "Logged in");
+                    break;
                 }
-                System.out.println("aaaa");
-            } catch (IOException | NullPointerException e) {
-                System.out.println("nope");
             }
+        } catch (IOException e) {
+            System.out.println("nope");
         }
     }
+
 }

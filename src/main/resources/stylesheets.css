@@ -19,7 +19,7 @@
     -fx-padding: 10;
 }
 
-.login_textField:focused {
+.login_textField:focus {
     -fx-background-color: rgba(102, 0, 102, 0.9);
     -fx-border-color: transparent;
     -fx-font-size: 40px;
