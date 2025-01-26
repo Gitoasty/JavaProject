@@ -13,12 +13,10 @@ public interface LoginManagement {
     private static boolean loginLogic(String[] credentials, String user, String pass) {
         boolean match = false;
 
-        if (credentials.length > 1) {
-            BCrypt.Result result = BCrypt.verifyer().verify(pass.toCharArray(), credentials[1]);
+        BCrypt.Result result = BCrypt.verifyer().verify(pass.toCharArray(), credentials[1]);
 
-            if (credentials[0].equals(user) && result.verified) {
-                match = true;
-            }
+        if (credentials[0].equals(user) && result.verified) {
+            match = true;
         }
 
         return match;
@@ -37,12 +35,13 @@ public interface LoginManagement {
                 while (lines.add(bf.readLine()) && lines.get(counter) != null) {
                     String[] temp = lines.get(counter++).split(" ");
 
-                    if (loginLogic(temp, user, pass)) {
-                        if (temp.length == 3) {
-                            System.out.println("Logged in as admin");
-                            break;
-                        } else if (temp.length == 2) {
-                            System.out.println("Logged in");
+                    if (temp.length > 1) {
+                        if (loginLogic(temp, user, pass)) {
+                            if (temp.length == 3) {
+                                System.out.println("Logged in as admin");
+                            } else if (temp.length == 2) {
+                                System.out.println("Logged in");
+                            }
                             break;
                         }
                     }
