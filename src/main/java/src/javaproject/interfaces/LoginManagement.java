@@ -3,7 +3,6 @@ package src.javaproject.interfaces;
 import at.favre.lib.crypto.bcrypt.BCrypt;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import src.javaproject.HelloApplication;
 
 import java.io.*;
 

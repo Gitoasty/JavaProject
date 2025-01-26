@@ -40,15 +40,16 @@ public class LoginController {
      */
     public void login(){
         int result = LoginManagement.attemptLogin(userText.getText(), passText.getText());
-        System.out.println(result);
 
         switch (result) {
             case 1:
                 logger.info("Logged in as admin");
                 //switch to admin panel
+                break;
             case 2:
                 logger.info("Logged in as user");
                 //switch to user panel
+                break;
             default:
                 logger.info("Login failed");
         }
