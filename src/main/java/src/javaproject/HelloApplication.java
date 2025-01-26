@@ -8,6 +8,8 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.util.Objects;
+import org.slf4j.LoggerFactory;
+import org.slf4j.Logger;
 
 public class HelloApplication extends Application {
     @Override
@@ -25,6 +27,8 @@ public class HelloApplication extends Application {
     }
 
     public static void main(String[] args) {
+        Logger logger = LoggerFactory.getLogger(HelloApplication.class);
+        logger.info("This works");
         launch(args);
     }
 }
