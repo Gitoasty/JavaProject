@@ -3,7 +3,6 @@ package src.javaproject.interfaces;
 import at.favre.lib.crypto.bcrypt.BCrypt;
 
 import java.io.*;
-import java.util.ArrayList;
 
 /**
  * Interface for handling logging into the app and creation of new accounts
@@ -31,9 +30,9 @@ public interface LoginManagement {
         try (BufferedReader bf = new BufferedReader(new FileReader(file))) {
             String line;
             while ((line = bf.readLine()) != null) {
-                String[] parts = line.split(" ");
-                if (parts.length > 1 && loginLogic(parts, user, pass)) {
-                    System.out.println(parts.length == 3 ? "Logged in as admin" : "Logged in");
+                String[] entry = line.split(" ");
+                if (entry.length > 1 && loginLogic(entry, user, pass)) {
+                    System.out.println(entry.length == 3 ? "Logged in as admin" : "Logged in");
                     break;
                 }
             }
