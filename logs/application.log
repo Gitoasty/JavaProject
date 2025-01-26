@@ -1,1 +1,46 @@
 2025-01-26 16:08:16,038 [INFO] src.javaproject.HelloApplication - This works
+2025-01-26 21:35:56,530 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-01-26 21:39:42,814 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-01-26 21:41:26,306 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-01-26 21:41:28,455 [INFO] src.javaproject.HelloApplication - App closed
+2025-01-26 21:43:18,225 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-01-26 21:43:21,834 [INFO] src.javaproject.interfaces.LoginManagement - Logged in as admin
+2025-01-26 21:43:23,910 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-01-26 21:58:28,740 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-01-26 21:58:30,767 [INFO] src.javaproject.interfaces.LoginManagement - Missing username or password
+2025-01-26 21:58:30,767 [INFO] src.javaproject.controllers.LoginController - Login failed
+2025-01-26 21:58:31,279 [INFO] src.javaproject.interfaces.LoginManagement - Missing username or password
+2025-01-26 21:58:31,279 [INFO] src.javaproject.controllers.LoginController - Login failed
+2025-01-26 21:58:31,423 [INFO] src.javaproject.interfaces.LoginManagement - Missing username or password
+2025-01-26 21:58:31,423 [INFO] src.javaproject.controllers.LoginController - Login failed
+2025-01-26 21:58:34,941 [INFO] src.javaproject.interfaces.LoginManagement - Missing username or password
+2025-01-26 21:58:34,941 [INFO] src.javaproject.controllers.LoginController - Login failed
+2025-01-26 21:58:37,801 [INFO] src.javaproject.controllers.LoginController - Logged in as admin
+2025-01-26 21:58:37,801 [INFO] src.javaproject.controllers.LoginController - Logged in as user
+2025-01-26 21:58:37,801 [INFO] src.javaproject.controllers.LoginController - Login failed
+2025-01-26 21:58:42,195 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-01-26 21:59:27,209 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-01-26 21:59:36,223 [INFO] src.javaproject.controllers.LoginController - Logged in as admin
+2025-01-26 21:59:36,223 [INFO] src.javaproject.controllers.LoginController - Logged in as user
+2025-01-26 21:59:36,223 [INFO] src.javaproject.controllers.LoginController - Login failed
+2025-01-26 21:59:38,493 [INFO] src.javaproject.controllers.LoginController - Logged in as admin
+2025-01-26 21:59:38,493 [INFO] src.javaproject.controllers.LoginController - Logged in as user
+2025-01-26 21:59:38,493 [INFO] src.javaproject.controllers.LoginController - Login failed
+2025-01-26 21:59:39,262 [INFO] src.javaproject.controllers.LoginController - Login failed
+2025-01-26 21:59:42,778 [INFO] src.javaproject.controllers.LoginController - Login failed
+2025-01-26 21:59:43,018 [INFO] src.javaproject.controllers.LoginController - Login failed
+2025-01-26 21:59:45,947 [INFO] src.javaproject.interfaces.LoginManagement - Missing username or password
+2025-01-26 21:59:45,947 [INFO] src.javaproject.controllers.LoginController - Login failed
+2025-01-26 21:59:48,983 [INFO] src.javaproject.interfaces.LoginManagement - Missing username or password
+2025-01-26 21:59:48,984 [INFO] src.javaproject.controllers.LoginController - Login failed
+2025-01-26 21:59:53,307 [INFO] src.javaproject.controllers.LoginController - Login failed
+2025-01-26 21:59:54,564 [INFO] src.javaproject.controllers.LoginController - Logged in as admin
+2025-01-26 21:59:54,564 [INFO] src.javaproject.controllers.LoginController - Logged in as user
+2025-01-26 21:59:54,564 [INFO] src.javaproject.controllers.LoginController - Login failed
+2025-01-26 21:59:55,766 [INFO] src.javaproject.controllers.LoginController - Logged in as admin
+2025-01-26 21:59:55,766 [INFO] src.javaproject.controllers.LoginController - Logged in as user
+2025-01-26 21:59:55,766 [INFO] src.javaproject.controllers.LoginController - Login failed
+2025-01-26 21:59:56,969 [INFO] src.javaproject.controllers.LoginController - Logged in as admin
+2025-01-26 21:59:56,969 [INFO] src.javaproject.controllers.LoginController - Logged in as user
+2025-01-26 21:59:56,969 [INFO] src.javaproject.controllers.LoginController - Login failed
+2025-01-26 22:00:00,493 [INFO] src.javaproject.HelloApplication - App closed successfully

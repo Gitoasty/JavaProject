@@ -1,6 +1,9 @@
 package src.javaproject.interfaces;
 
 import at.favre.lib.crypto.bcrypt.BCrypt;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import src.javaproject.HelloApplication;
 
 import java.io.*;
 
@@ -32,10 +35,14 @@ public interface LoginManagement {
      * Logs the user in if user exists and password is correct
      * @param user user tag used for logging in
      * @param pass user password to be tested
+     * @return Login result, 0 if unsuccessful, 1 if admin, 2 if user
      */
-    public static void attemptLogin(String user, String pass) {
+    public static int attemptLogin(String user, String pass) {
+        Logger logger = LoggerFactory.getLogger(LoginManagement.class);
+
         if (user.isEmpty() || pass.isEmpty()) {
-            return;
+            logger.info("Missing username or password");
+            return 0;
         }
 
         File file = new File("src/main/resources/login_info.txt");
@@ -44,13 +51,13 @@ public interface LoginManagement {
             while ((line = bf.readLine()) != null) {
                 String[] entry = line.split(" ");
                 if (entry.length > 1 && loginLogic(entry, user, pass)) {
-                    System.out.println(entry.length == 3 ? "Logged in as admin" : "Logged in");
-                    break;
+                    return entry.length == 3 ? 1 : 2;
                 }
             }
         } catch (IOException e) {
-            System.out.println("nope");
+            logger.error("Problem reading stored credentials");
         }
+        return 0;
     }
 
 }
