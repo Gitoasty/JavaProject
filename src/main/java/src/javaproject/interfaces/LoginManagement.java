@@ -44,7 +44,7 @@ public interface LoginManagement {
             return 0;
         }
 
-        File file = new File("src/main/resources/login_info.txt");
+        File file = new File("src/main/resources/data/login_info.txt");
         try (BufferedReader bf = new BufferedReader(new FileReader(file))) {
             String line;
             while ((line = bf.readLine()) != null) {

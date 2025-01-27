@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.util.Objects;
 import org.slf4j.LoggerFactory;
 import org.slf4j.Logger;
+import src.javaproject.interfaces.TableCreator;
 
 public class HelloApplication extends Application {
     @Override
@@ -32,6 +33,7 @@ public class HelloApplication extends Application {
     }
 
     public static void main(String[] args) {
+        TableCreator.createDatabase();
         launch(args);
     }
 }

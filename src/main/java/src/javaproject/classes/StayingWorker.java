@@ -96,7 +96,6 @@ public final class StayingWorker extends Worker {
         private String firstName;
         private String lastName;
         private Integer workExperience;
-        private Contract contract;
 
         @Override
         public FirstNameSetter id(Integer id) {
