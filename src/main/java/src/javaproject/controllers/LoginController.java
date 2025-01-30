@@ -71,7 +71,7 @@ public class LoginController {
 
     public void register(ActionEvent event) {
         Button clicked = (Button) event.getSource();
-        ScreenUtilities su = new ScreenUtilities();
-        su.switchScreen("/src/javaproject/Register_Screen", clicked);
+        //ScreenUtilities su = new ScreenUtilities();
+        ScreenUtilities.switchScreen("/src/javaproject/Register_Screen", clicked);
     }
 }

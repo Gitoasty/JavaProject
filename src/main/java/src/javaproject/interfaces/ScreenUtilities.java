@@ -14,20 +14,22 @@ import java.io.IOException;
 import java.util.Objects;
 
 /**
- * Helper Interface for storing Screen related methods
+ * Helper Class for storing Screen related methods
  */
-public class ScreenUtilities {
-    private static Logger logger = LoggerFactory.getLogger(ScreenUtilities.class);
+public interface ScreenUtilities {
+    Logger logger = LoggerFactory.getLogger(ScreenUtilities.class);
 
-    public void switchScreen(String target, Button clicked) {
+    public static void switchScreen(String target, Button clicked) {
         try {
             Stage stage = (Stage) clicked.getScene().getWindow();
-            Parent root = FXMLLoader.load(getClass().getResource(STR."\{target}.fxml"));
+            stage.setMaximized(false);
+            Parent root = FXMLLoader.load(ScreenUtilities.class.getResource(STR."\{target}.fxml"));
             Scene scene = new Scene(root);
 
-            String css = getClass().getResource("/stylesheets.css").toExternalForm();
+            String css = ScreenUtilities.class.getResource("/stylesheets.css").toExternalForm();
             scene.getStylesheets().add(css);
             stage.setScene(scene);
+            stage.setMaximized(true);
             stage.show();
         } catch (IOException e) {
             logger.error("Error with switching screens");
