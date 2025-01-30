@@ -1,5 +1,6 @@
 package src.javaproject.controllers;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -13,7 +14,10 @@ import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import src.javaproject.HelloApplication;
+import src.javaproject.classes.Account;
 import src.javaproject.interfaces.LoginManagement;
+import src.javaproject.interfaces.ScreenUtilities;
 
 import java.io.IOException;
 import java.util.Objects;
@@ -32,10 +36,6 @@ public class LoginController {
     @FXML
     private Button registerButton;
     private Logger logger = LoggerFactory.getLogger(LoginController.class);
-
-    private Stage stage;
-    private Scene scene;
-    private Parent root;
 
     /**
      * Handles switching to the PasswordField and calling the login() function when pressing enter
@@ -69,25 +69,9 @@ public class LoginController {
         }
     }
 
-    public void register() {
-//        ScreenUtilities su = new ScreenUtilities();
-//        su.switchScreen(stackPane, "Register_Screen");
-        try {
-            logger.warn("1");
-            root = FXMLLoader.load(getClass().getResource("Register_Screen.fxml"));
-            stage = (Stage) stackPane.getScene().getWindow();
-            scene = new Scene(root);
-            logger.warn("2");
-
-            String css = getClass().getResource("/stylesheets.css").toExternalForm();
-            logger.warn("3");
-            scene.getStylesheets().add(css);
-            stage.setScene(scene);
-            stage.show();
-        } catch (IOException e) {
-            logger.error("Error with switching screens");
-        } catch (NullPointerException e) {
-            logger.error("WTF");
-        }
+    public void register(ActionEvent event) {
+        Button clicked = (Button) event.getSource();
+        ScreenUtilities su = new ScreenUtilities();
+        su.switchScreen("/src/javaproject/Register_Screen", clicked);
     }
 }

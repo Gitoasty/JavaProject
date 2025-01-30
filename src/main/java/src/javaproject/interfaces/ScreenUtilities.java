@@ -3,6 +3,7 @@ package src.javaproject.interfaces;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import org.slf4j.Logger;
@@ -18,28 +19,20 @@ import java.util.Objects;
 public class ScreenUtilities {
     private static Logger logger = LoggerFactory.getLogger(ScreenUtilities.class);
 
-    /**
-     * Switches application to the Screen specified by target String
-     * @param stackPane Base pane of Screen calling the method
-     * @param target String determining which Screen to switch to
-     */
-    public void switchScreen(StackPane stackPane, String target) {
+    public void switchScreen(String target, Button clicked) {
         try {
-            logger.trace("Error with switching screens");
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(STR."\{target}.fxml")));
-            Stage stage = (Stage) stackPane.getScene().getWindow();
+            Stage stage = (Stage) clicked.getScene().getWindow();
+            Parent root = FXMLLoader.load(getClass().getResource(STR."\{target}.fxml"));
             Scene scene = new Scene(root);
-            logger.trace("Error with switching screens");
 
-            String css = String.valueOf(Objects.requireNonNull(getClass().getClassLoader().getResource("stylesheets.css")));
-            logger.trace("Error with switching screens");
+            String css = getClass().getResource("/stylesheets.css").toExternalForm();
             scene.getStylesheets().add(css);
             stage.setScene(scene);
             stage.show();
         } catch (IOException e) {
             logger.error("Error with switching screens");
         } catch (NullPointerException e) {
-            logger.error(String.valueOf(e.getCause()));
+            logger.error("Problem with loading");
         }
     }
 }
