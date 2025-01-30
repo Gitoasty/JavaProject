@@ -34,3 +34,7 @@
     -fx-font-size: 50px;
     -fx-padding: 15;
 }
+
+.login_button:pressed {
+    -fx-background-color: rgba(102, 0, 102, 1);
+}

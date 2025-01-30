@@ -64,3 +64,138 @@
 2025-01-27 17:00:50,359 [INFO] src.javaproject.HelloApplication - App started successfully
 2025-01-27 17:00:53,671 [INFO] src.javaproject.controllers.LoginController - Logged in as admin
 2025-01-27 17:00:54,552 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-01-30 16:22:58,513 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-01-30 16:23:10,030 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-01-30 16:29:40,602 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-01-30 16:29:41,522 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-01-30 16:38:55,694 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-01-30 16:38:57,797 [INFO] src.javaproject.interfaces.LoginManagement - Missing username or password
+2025-01-30 16:38:57,797 [INFO] src.javaproject.controllers.LoginController - Login failed
+2025-01-30 16:39:00,921 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-01-30 16:39:52,606 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-01-30 16:39:53,941 [INFO] src.javaproject.interfaces.LoginManagement - Missing username or password
+2025-01-30 16:39:53,941 [INFO] src.javaproject.controllers.LoginController - Login failed
+2025-01-30 16:39:56,518 [INFO] src.javaproject.interfaces.LoginManagement - Missing username or password
+2025-01-30 16:39:56,518 [INFO] src.javaproject.controllers.LoginController - Login failed
+2025-01-30 16:39:57,221 [INFO] src.javaproject.interfaces.LoginManagement - Missing username or password
+2025-01-30 16:39:57,221 [INFO] src.javaproject.controllers.LoginController - Login failed
+2025-01-30 16:39:57,673 [INFO] src.javaproject.interfaces.LoginManagement - Missing username or password
+2025-01-30 16:39:57,674 [INFO] src.javaproject.controllers.LoginController - Login failed
+2025-01-30 16:39:58,449 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-01-30 16:40:46,560 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-01-30 16:40:54,263 [INFO] src.javaproject.interfaces.LoginManagement - Missing username or password
+2025-01-30 16:40:54,263 [INFO] src.javaproject.controllers.LoginController - Login failed
+2025-01-30 16:40:54,416 [INFO] src.javaproject.interfaces.LoginManagement - Missing username or password
+2025-01-30 16:40:54,416 [INFO] src.javaproject.controllers.LoginController - Login failed
+2025-01-30 16:40:55,702 [INFO] src.javaproject.interfaces.LoginManagement - Missing username or password
+2025-01-30 16:40:55,702 [INFO] src.javaproject.controllers.LoginController - Login failed
+2025-01-30 16:40:55,846 [INFO] src.javaproject.interfaces.LoginManagement - Missing username or password
+2025-01-30 16:40:55,846 [INFO] src.javaproject.controllers.LoginController - Login failed
+2025-01-30 16:40:59,176 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-01-30 16:45:45,963 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-01-30 16:46:14,166 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-01-30 17:18:27,068 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-01-30 17:18:34,856 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-01-30 17:19:34,762 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-01-30 17:19:36,305 [ERROR] src.javaproject.interfaces.ScreenUtilities - null
+2025-01-30 17:19:37,405 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-01-30 17:20:25,094 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-01-30 17:20:26,226 [ERROR] src.javaproject.interfaces.ScreenUtilities - null
+2025-01-30 17:20:27,229 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-01-30 17:26:04,652 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-01-30 17:26:05,638 [ERROR] src.javaproject.interfaces.ScreenUtilities - null
+2025-01-30 17:26:06,361 [ERROR] src.javaproject.interfaces.ScreenUtilities - null
+2025-01-30 17:26:06,723 [ERROR] src.javaproject.interfaces.ScreenUtilities - null
+2025-01-30 17:26:06,875 [ERROR] src.javaproject.interfaces.ScreenUtilities - null
+2025-01-30 17:26:07,658 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-01-30 17:27:26,794 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-01-30 17:27:27,741 [ERROR] src.javaproject.interfaces.ScreenUtilities - null
+2025-01-30 17:27:31,321 [ERROR] src.javaproject.interfaces.ScreenUtilities - null
+2025-01-30 17:27:32,060 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-01-30 17:27:57,816 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-01-30 17:27:58,704 [ERROR] src.javaproject.interfaces.ScreenUtilities - null
+2025-01-30 17:28:00,990 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-01-30 17:29:37,329 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-01-30 17:29:39,661 [ERROR] src.javaproject.interfaces.ScreenUtilities - null
+2025-01-30 17:29:41,062 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-01-30 17:31:16,522 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-01-30 17:31:17,264 [ERROR] src.javaproject.interfaces.ScreenUtilities - null
+2025-01-30 17:31:18,569 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-01-30 17:32:20,517 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-01-30 17:32:21,363 [ERROR] src.javaproject.interfaces.ScreenUtilities - null
+2025-01-30 17:32:22,989 [ERROR] src.javaproject.interfaces.ScreenUtilities - null
+2025-01-30 17:32:23,878 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-01-30 17:32:39,785 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-01-30 17:32:41,047 [ERROR] src.javaproject.interfaces.ScreenUtilities - null
+2025-01-30 17:32:43,545 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-01-30 17:33:41,663 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-01-30 17:33:42,621 [ERROR] src.javaproject.controllers.LoginController - null
+2025-01-30 17:33:53,760 [ERROR] src.javaproject.controllers.LoginController - null
+2025-01-30 17:33:54,658 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-01-30 17:34:50,927 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-01-30 17:34:51,976 [ERROR] src.javaproject.controllers.LoginController - null
+2025-01-30 17:34:52,795 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-01-30 17:35:03,053 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-01-30 17:35:04,392 [ERROR] src.javaproject.controllers.LoginController - null
+2025-01-30 17:35:05,601 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-01-30 17:35:57,190 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-01-30 17:35:58,491 [ERROR] src.javaproject.controllers.LoginController - WTF
+2025-01-30 17:35:59,502 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-01-30 17:36:59,075 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-01-30 17:36:59,776 [ERROR] src.javaproject.controllers.LoginController - WTF
+2025-01-30 17:37:00,684 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-01-30 17:38:13,474 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-01-30 17:38:14,394 [ERROR] src.javaproject.controllers.LoginController - WTF
+2025-01-30 17:38:15,418 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-01-30 17:38:53,192 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-01-30 17:38:54,588 [ERROR] src.javaproject.controllers.LoginController - WTF
+2025-01-30 17:38:55,647 [ERROR] src.javaproject.controllers.LoginController - WTF
+2025-01-30 17:38:56,206 [ERROR] src.javaproject.controllers.LoginController - WTF
+2025-01-30 17:38:57,070 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-01-30 17:39:54,849 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-01-30 17:40:10,725 [INFO] src.javaproject.interfaces.LoginManagement - Missing username or password
+2025-01-30 17:40:10,725 [INFO] src.javaproject.controllers.LoginController - Login failed
+2025-01-30 17:40:11,313 [INFO] src.javaproject.interfaces.LoginManagement - Missing username or password
+2025-01-30 17:40:11,313 [INFO] src.javaproject.controllers.LoginController - Login failed
+2025-01-30 17:40:11,474 [INFO] src.javaproject.interfaces.LoginManagement - Missing username or password
+2025-01-30 17:40:11,475 [INFO] src.javaproject.controllers.LoginController - Login failed
+2025-01-30 17:40:11,605 [INFO] src.javaproject.interfaces.LoginManagement - Missing username or password
+2025-01-30 17:40:11,605 [INFO] src.javaproject.controllers.LoginController - Login failed
+2025-01-30 17:40:12,334 [INFO] src.javaproject.interfaces.LoginManagement - Missing username or password
+2025-01-30 17:40:12,334 [INFO] src.javaproject.controllers.LoginController - Login failed
+2025-01-30 17:40:12,474 [INFO] src.javaproject.interfaces.LoginManagement - Missing username or password
+2025-01-30 17:40:12,474 [INFO] src.javaproject.controllers.LoginController - Login failed
+2025-01-30 17:40:18,820 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-01-30 17:41:23,122 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-01-30 17:41:24,210 [ERROR] src.javaproject.controllers.LoginController - WTF
+2025-01-30 17:41:25,795 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-01-30 17:41:46,495 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-01-30 17:41:47,460 [WARN] src.javaproject.controllers.LoginController - this is good
+2025-01-30 17:41:47,460 [ERROR] src.javaproject.controllers.LoginController - WTF
+2025-01-30 17:41:48,134 [WARN] src.javaproject.controllers.LoginController - this is good
+2025-01-30 17:41:48,134 [ERROR] src.javaproject.controllers.LoginController - WTF
+2025-01-30 17:41:48,806 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-01-30 17:42:12,858 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-01-30 17:42:14,008 [WARN] src.javaproject.controllers.LoginController - 1
+2025-01-30 17:42:14,008 [ERROR] src.javaproject.controllers.LoginController - WTF
+2025-01-30 17:42:14,966 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-01-30 17:43:02,151 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-01-30 17:43:03,299 [WARN] src.javaproject.controllers.LoginController - 1
+2025-01-30 17:43:03,313 [ERROR] src.javaproject.controllers.LoginController - WTF
+2025-01-30 17:43:04,462 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-01-30 17:43:57,334 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-01-30 17:43:58,511 [WARN] src.javaproject.controllers.LoginController - 1
+2025-01-30 17:43:58,511 [ERROR] src.javaproject.controllers.LoginController - WTF
+2025-01-30 17:43:59,563 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-01-30 17:44:42,533 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-01-30 17:44:43,667 [WARN] src.javaproject.controllers.LoginController - 1
+2025-01-30 17:44:43,668 [ERROR] src.javaproject.controllers.LoginController - WTF
+2025-01-30 17:44:45,051 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-01-30 17:45:12,005 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-01-30 17:45:14,559 [WARN] src.javaproject.controllers.LoginController - 1
+2025-01-30 17:45:14,560 [ERROR] src.javaproject.controllers.LoginController - WTF
+2025-01-30 17:45:15,752 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-01-30 17:46:46,165 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-01-30 17:46:47,334 [WARN] src.javaproject.controllers.LoginController - 1
+2025-01-30 17:46:47,334 [ERROR] src.javaproject.controllers.LoginController - WTF
+2025-01-30 17:46:48,395 [INFO] src.javaproject.HelloApplication - App closed successfully
