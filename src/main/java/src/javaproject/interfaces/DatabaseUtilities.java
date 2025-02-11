@@ -1,6 +1,7 @@
 package src.javaproject.interfaces;
 
 import org.slf4j.Logger;
+import src.javaproject.classes.Account;
 
 import java.io.FileReader;
 import java.io.IOException;
@@ -51,5 +52,27 @@ public interface DatabaseUtilities {
             logger.warn("Error reading from table");
         }
         return false;
+    }
+
+    /**
+     * Fetches given Account from database
+     * @param logger logger of controller calling this method
+     * @param userTag tag of the user we want
+     * @return Account object with corresponding tag if it exists, otherwise null
+     */
+    static Account<String> fetchAccount(Logger logger, String userTag) {
+        try {
+            Connection conn = getConnection(logger);
+            String query = "SELECT * FROM accounts WHERE userTag = ?";
+            PreparedStatement stmt = conn.prepareStatement(query);
+            stmt.setString(1, userTag);
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()) {
+                return new Account<>(rs.getString("userTag"), rs.getString("password"), rs.getString("role"));
+            }
+        } catch (SQLException _) {
+            logger.warn("Error reading from table");
+        }
+        return new Account<>("","","");
     }
 }

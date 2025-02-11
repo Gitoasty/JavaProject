@@ -464,3 +464,58 @@
 2025-02-11 18:18:35,346 [INFO] src.javaproject.controllers.RegisterController - Password is too short, register failed
 2025-02-11 18:18:44,681 [INFO] src.javaproject.controllers.RegisterController - Register successful
 2025-02-11 18:28:36,693 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-11 20:01:16,067 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-11 20:05:38,402 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-11 20:08:07,608 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-11 20:08:12,293 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-11 20:09:13,874 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-11 20:09:29,126 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-11 20:10:01,585 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-11 20:10:10,594 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-11 20:10:25,465 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-11 20:10:27,913 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-11 20:10:56,677 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-11 20:11:04,986 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-11 20:13:03,093 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-11 20:13:21,847 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-11 20:14:17,499 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-11 20:14:19,493 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-11 20:14:43,659 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-11 20:14:45,284 [INFO] src.javaproject.controllers.LoginController - No such account
+2025-02-11 20:14:45,285 [INFO] src.javaproject.controllers.LoginController - Login failed
+2025-02-11 20:14:46,455 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-11 20:16:01,337 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-11 20:16:02,437 [INFO] src.javaproject.controllers.LoginController - No such account
+2025-02-11 20:16:02,437 [INFO] src.javaproject.controllers.LoginController - Login failed
+2025-02-11 20:16:07,262 [INFO] src.javaproject.controllers.LoginController - No such account
+2025-02-11 20:16:07,262 [INFO] src.javaproject.controllers.LoginController - Login failed
+2025-02-11 20:16:07,659 [INFO] src.javaproject.controllers.LoginController - No such account
+2025-02-11 20:16:07,659 [INFO] src.javaproject.controllers.LoginController - Login failed
+2025-02-11 20:16:07,822 [INFO] src.javaproject.controllers.LoginController - No such account
+2025-02-11 20:16:07,822 [INFO] src.javaproject.controllers.LoginController - Login failed
+2025-02-11 20:16:07,992 [INFO] src.javaproject.controllers.LoginController - No such account
+2025-02-11 20:16:07,993 [INFO] src.javaproject.controllers.LoginController - Login failed
+2025-02-11 20:16:08,134 [INFO] src.javaproject.controllers.LoginController - No such account
+2025-02-11 20:16:08,135 [INFO] src.javaproject.controllers.LoginController - Login failed
+2025-02-11 20:16:09,767 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-11 20:20:02,876 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-11 20:20:40,240 [INFO] src.javaproject.controllers.LoginController - Login failed
+2025-02-11 20:20:46,412 [INFO] src.javaproject.controllers.LoginController - Login failed
+2025-02-11 20:20:46,896 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-11 20:23:02,834 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-11 20:23:04,044 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Register_Screen
+2025-02-11 20:23:06,913 [INFO] src.javaproject.controllers.RegisterController - A field was empty, register failed
+2025-02-11 20:23:11,183 [INFO] src.javaproject.controllers.RegisterController - Password is too short, register failed
+2025-02-11 20:23:14,639 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-11 20:23:18,616 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-11 20:23:22,625 [INFO] src.javaproject.controllers.LoginController - Logged in as user
+2025-02-11 20:23:50,350 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-11 20:24:06,632 [WARN] src.javaproject.HelloApplication - Problem creating account table
+2025-02-11 20:24:07,400 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-11 20:24:14,379 [WARN] src.javaproject.controllers.LoginController - Error reading from table
+2025-02-11 20:24:14,379 [INFO] src.javaproject.controllers.LoginController - No such account
+2025-02-11 20:24:14,379 [INFO] src.javaproject.controllers.LoginController - Login failed
+2025-02-11 20:24:34,721 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-11 20:24:40,022 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-11 20:24:44,215 [INFO] src.javaproject.controllers.LoginController - Logged in as admin
+2025-02-11 20:24:44,692 [INFO] src.javaproject.HelloApplication - App closed successfully

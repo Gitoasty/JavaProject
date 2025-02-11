@@ -53,6 +53,7 @@ public class LoginController {
                 break;
             default:
                 logger.info("Login failed");
+                break;
         }
     }
 

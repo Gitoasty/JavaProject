@@ -3,8 +3,9 @@ package src.javaproject.interfaces;
 import at.favre.lib.crypto.bcrypt.BCrypt;
 import org.slf4j.Logger;
 
-import java.io.*;
 import javafx.scene.control.Label;
+import src.javaproject.classes.Account;
+
 import java.util.ArrayList;
 
 /**
@@ -19,12 +20,12 @@ public interface LoginManagement {
      * @param pass password to be tested
      * @return true if login data provided is valid
      */
-    private static boolean loginLogic(String[] credentials, String user, String pass) {
+    private static boolean loginLogic(Account<String> credentials, String user, String pass) {
         boolean match = false;
 
-        BCrypt.Result result = BCrypt.verifyer().verify(pass.toCharArray(), credentials[1]);
+        BCrypt.Result result = BCrypt.verifyer().verify(pass.toCharArray(), credentials.passwordGetter());
 
-        if (credentials[0].equals(user) && result.verified) {
+        if (credentials.usernameGetter().equals(user) && result.verified) {
             match = true;
         }
 
@@ -40,23 +41,19 @@ public interface LoginManagement {
      */
     static int attemptLogin(Logger logger, String user, String pass) {
 
+        Account<String> account = DatabaseUtilities.fetchAccount(logger, user);
         if (user.isEmpty() || pass.isEmpty()) {
             logger.info("Missing username or password");
             return 0;
+        } else if (account.usernameGetter().isEmpty()) {
+            logger.info("No such account");
+            return 0;
         }
 
-        File file = new File("src/main/resources/data/login_info.txt");
-        try (BufferedReader bf = new BufferedReader(new FileReader(file))) {
-            String line;
-            while ((line = bf.readLine()) != null) {
-                String[] entry = line.split(" ");
-                if (entry.length > 1 && loginLogic(entry, user, pass)) {
-                    return entry.length == 3 ? 1 : 2;
-                }
-            }
-        } catch (IOException e) {
-            logger.error("Problem reading stored credentials");
+        if (loginLogic(account, user, pass)) {
+            return account.roleGetter().equals("admin") ? 1 : 2;
         }
+
         return 0;
     }
 
