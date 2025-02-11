@@ -1,41 +1,36 @@
 package src.javaproject.interfaces;
 
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
-import java.io.FileReader;
-import java.io.IOException;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.util.Properties;
+import java.sql.Statement;
 
 /**
  * Interface for storing database related methods
  */
 public interface TableCreator {
 
-    Logger logger = LoggerFactory.getLogger(TableCreator.class);
-
     /**
-     * Creates an SQL database if one does not already exist
+     * Creates table for storing user account data
+     * @param logger logger of controller calling this method
      */
-    public static void createDatabase() {
+    static void accountData(Logger logger) {
         try {
-            final String db_file = "src/main/resources/data/database.properties";
-            Properties prop = new Properties();
-            prop.load(new FileReader(db_file));
-            String url = prop.getProperty("databaseURL");
-            Connection conn = DriverManager.getConnection(url);
-            conn.close();
-        } catch (SQLException e) {
-            logger.warn("Error creating table");
-        } catch (IOException e) {
-            logger.warn("Error opening or reading database.properties");
+            Connection conn = DatabaseUtilities.getConnection(logger);
+
+            Statement stat = conn.createStatement();
+
+            String creationString = "CREATE TABLE IF NOT EXISTS " + "accounts" + "("
+                    +"userTag TEXT PRIMARY KEY NOT NULL, "
+                    +"fName TEXT NOT NULL, "
+                    +"lName TEXT NOT NULL, "
+                    +"password TEXT NOT NULL, "
+                    +"role TEXT NOT NULL"
+                    +")";
+            stat.executeUpdate(creationString);
+        } catch (SQLException _) {
+            logger.warn("Problem creating account table");
         }
-    }
-
-    public static void accountData() {
-
     }
 }

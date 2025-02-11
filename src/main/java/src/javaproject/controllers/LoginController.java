@@ -2,25 +2,16 @@ package src.javaproject.controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
-import javafx.scene.layout.StackPane;
-import javafx.stage.Stage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import src.javaproject.HelloApplication;
-import src.javaproject.classes.Account;
 import src.javaproject.interfaces.LoginManagement;
 import src.javaproject.interfaces.ScreenUtilities;
 
-import java.io.IOException;
-import java.util.Objects;
 
 /**
  * Controller for the login screen
@@ -28,14 +19,10 @@ import java.util.Objects;
 public class LoginController {
 
     @FXML
-    private StackPane stackPane;
-    @FXML
     private TextField userText;
     @FXML
     private PasswordField passText;
-    @FXML
-    private Button registerButton;
-    private Logger logger = LoggerFactory.getLogger(LoginController.class);
+    private final Logger logger = LoggerFactory.getLogger(LoginController.class);
 
     /**
      * Handles switching to the PasswordField and calling the login() function when pressing enter
@@ -50,10 +37,10 @@ public class LoginController {
     }
 
     /**
-     * Calls the {@link LoginManagement#attemptLogin(String, String)} method from {@link LoginManagement} interface
+     * Calls the {@link LoginManagement#attemptLogin(Logger, String, String)} method from {@link LoginManagement} interface
      */
     public void login(){
-        int result = LoginManagement.attemptLogin(userText.getText(), passText.getText());
+        int result = LoginManagement.attemptLogin(logger, userText.getText(), passText.getText());
 
         switch (result) {
             case 1:
@@ -69,8 +56,12 @@ public class LoginController {
         }
     }
 
+    /**
+     * Calls the register {@link ScreenUtilities#switchScreen(Logger, String, Button)} method from {@link ScreenUtilities} interface
+     * @param event Event from the Button click
+     */
     public void register(ActionEvent event) {
         Button clicked = (Button) event.getSource();
-        ScreenUtilities.switchScreen("/src/javaproject/Register_Screen", clicked);
+        ScreenUtilities.switchScreen(logger, "/src/javaproject/Register_Screen", clicked);
     }
 }

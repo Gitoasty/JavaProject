@@ -333,3 +333,134 @@
 2025-01-30 18:26:29,264 [INFO] src.javaproject.HelloApplication - App closed successfully
 2025-01-30 18:26:33,169 [INFO] src.javaproject.HelloApplication - App started successfully
 2025-01-30 18:26:52,127 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-01-30 18:36:03,170 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-01-30 18:36:06,221 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-01-30 18:36:13,887 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-01-30 18:36:18,296 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-01-30 18:36:24,786 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-01-30 18:36:29,019 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-03 12:33:46,267 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-03 12:33:52,086 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-03 12:40:18,974 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-03 12:40:27,263 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-03 12:41:19,512 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-03 12:41:26,703 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-03 12:42:18,050 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-03 12:42:27,423 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-03 12:42:47,731 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-03 12:42:52,153 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-03 12:43:03,344 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-03 12:43:06,459 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-03 12:44:13,620 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-03 12:44:15,807 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-04 16:44:57,578 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-04 16:44:58,502 [INFO] src.javaproject.interfaces.LoginManagement - Missing username or password
+2025-02-04 16:44:58,502 [INFO] src.javaproject.controllers.LoginController - Login failed
+2025-02-04 16:45:00,428 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-04 16:45:49,283 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-04 16:45:50,275 [INFO] src.javaproject.interfaces.LoginManagement - Missing username or password
+2025-02-04 16:45:50,275 [INFO] src.javaproject.controllers.LoginController - Login failed
+2025-02-04 16:45:51,989 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-04 16:47:35,589 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-04 16:47:36,595 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Register_Screen
+2025-02-04 16:47:37,290 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-06 03:15:52,035 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-06 03:15:53,322 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-06 03:16:03,820 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-06 03:16:05,376 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Register_Screen
+2025-02-06 03:16:26,637 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-11 12:06:55,316 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-11 12:07:00,880 [INFO] src.javaproject.controllers.LoginController - Logged in as admin
+2025-02-11 12:07:05,554 [INFO] src.javaproject.controllers.LoginController - Logged in as admin
+2025-02-11 12:07:06,404 [INFO] src.javaproject.controllers.LoginController - Logged in as admin
+2025-02-11 12:07:06,647 [INFO] src.javaproject.controllers.LoginController - Logged in as admin
+2025-02-11 12:07:07,582 [INFO] src.javaproject.controllers.LoginController - Logged in as admin
+2025-02-11 12:07:10,427 [INFO] src.javaproject.controllers.LoginController - Logged in as admin
+2025-02-11 12:07:11,095 [INFO] src.javaproject.controllers.LoginController - Logged in as admin
+2025-02-11 12:07:11,669 [INFO] src.javaproject.controllers.LoginController - Logged in as admin
+2025-02-11 12:08:24,626 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Register_Screen
+2025-02-11 12:29:19,509 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-11 12:29:24,829 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Register_Screen
+2025-02-11 12:29:35,753 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-11 12:29:46,462 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-11 12:29:47,368 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Register_Screen
+2025-02-11 12:29:53,192 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-11 12:34:39,037 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-11 12:34:39,742 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Register_Screen
+2025-02-11 12:35:47,102 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-11 12:35:48,159 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Register_Screen
+2025-02-11 12:35:48,672 [INFO] src.javaproject.controllers.RegisterController - A field was empty, register failed
+2025-02-11 12:35:53,001 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-11 12:36:46,490 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-11 12:36:47,188 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Register_Screen
+2025-02-11 12:36:49,441 [INFO] src.javaproject.controllers.RegisterController - A field was empty, register failed
+2025-02-11 12:36:52,709 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-11 12:37:00,581 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-11 12:37:01,777 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Register_Screen
+2025-02-11 12:37:04,724 [INFO] src.javaproject.controllers.RegisterController - A field was empty, register failed
+2025-02-11 12:37:10,612 [INFO] src.javaproject.controllers.RegisterController - A field was empty, register failed
+2025-02-11 12:37:15,367 [INFO] src.javaproject.controllers.RegisterController - A field was empty, register failed
+2025-02-11 12:37:19,388 [INFO] src.javaproject.controllers.RegisterController - A field was empty, register failed
+2025-02-11 12:37:20,470 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-11 12:43:47,417 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-11 12:43:48,598 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-11 12:43:57,037 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-11 12:43:58,365 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Register_Screen
+2025-02-11 12:44:05,865 [INFO] src.javaproject.controllers.RegisterController - A field contained a space, register failed
+2025-02-11 12:44:11,241 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-11 12:44:36,288 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-11 12:44:37,543 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Register_Screen
+2025-02-11 12:44:43,236 [INFO] src.javaproject.controllers.RegisterController - A field contained a space, register failed
+2025-02-11 12:44:45,702 [INFO] src.javaproject.controllers.RegisterController - A field contained a space, register failed
+2025-02-11 12:44:49,204 [INFO] src.javaproject.controllers.RegisterController - A field was empty, register failed
+2025-02-11 12:44:51,066 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-11 17:00:24,379 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-11 17:00:26,976 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Register_Screen
+2025-02-11 17:00:55,836 [INFO] src.javaproject.controllers.RegisterController - A field was empty, register failed
+2025-02-11 17:00:57,100 [INFO] src.javaproject.controllers.RegisterController - A field was empty, register failed
+2025-02-11 17:00:57,301 [INFO] src.javaproject.controllers.RegisterController - A field was empty, register failed
+2025-02-11 17:00:57,497 [INFO] src.javaproject.controllers.RegisterController - A field was empty, register failed
+2025-02-11 17:00:57,688 [INFO] src.javaproject.controllers.RegisterController - A field was empty, register failed
+2025-02-11 17:00:57,869 [INFO] src.javaproject.controllers.RegisterController - A field was empty, register failed
+2025-02-11 17:00:58,126 [INFO] src.javaproject.controllers.RegisterController - A field was empty, register failed
+2025-02-11 17:01:00,492 [INFO] src.javaproject.controllers.RegisterController - A field was empty, register failed
+2025-02-11 17:01:02,507 [INFO] src.javaproject.controllers.RegisterController - A field was empty, register failed
+2025-02-11 17:01:18,499 [INFO] src.javaproject.controllers.RegisterController - A field contained a space, register failed
+2025-02-11 17:01:21,998 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-11 17:21:07,088 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-11 17:21:08,403 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Register_Screen
+2025-02-11 17:21:09,214 [INFO] src.javaproject.controllers.RegisterController - A field was empty, register failed
+2025-02-11 17:21:10,934 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-11 18:07:39,305 [WARN] src.javaproject.HelloApplication - Problem creating account table
+2025-02-11 18:07:40,058 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-11 18:07:52,097 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Register_Screen
+2025-02-11 18:08:09,191 [WARN] src.javaproject.controllers.RegisterController - Error reading from table
+2025-02-11 18:08:09,193 [WARN] src.javaproject.controllers.RegisterController - Problem inserting account into table
+2025-02-11 18:08:09,193 [INFO] src.javaproject.controllers.RegisterController - Register successful
+2025-02-11 18:08:24,440 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-11 18:10:10,454 [WARN] src.javaproject.HelloApplication - Problem creating account table
+2025-02-11 18:10:11,210 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-11 18:10:13,296 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Register_Screen
+2025-02-11 18:10:22,185 [WARN] src.javaproject.controllers.RegisterController - Error reading from table
+2025-02-11 18:10:22,187 [WARN] src.javaproject.controllers.RegisterController - Problem inserting account into table
+2025-02-11 18:10:22,187 [INFO] src.javaproject.controllers.RegisterController - Failed to add account to table
+2025-02-11 18:10:23,889 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-11 18:11:06,557 [WARN] src.javaproject.HelloApplication - Problem creating account table
+2025-02-11 18:11:07,316 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-11 18:11:08,510 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Register_Screen
+2025-02-11 18:11:12,806 [WARN] src.javaproject.controllers.RegisterController - Error reading from table
+2025-02-11 18:11:12,808 [WARN] src.javaproject.controllers.RegisterController - Problem inserting account into table
+2025-02-11 18:11:12,808 [INFO] src.javaproject.controllers.RegisterController - Failed to add account to table
+2025-02-11 18:11:14,244 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-11 18:12:07,780 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-11 18:12:09,237 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Register_Screen
+2025-02-11 18:12:11,609 [INFO] src.javaproject.controllers.RegisterController - Register successful
+2025-02-11 18:12:12,624 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-11 18:17:07,162 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-11 18:17:08,846 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Register_Screen
+2025-02-11 18:17:15,368 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-11 18:18:31,127 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-11 18:18:32,359 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Register_Screen
+2025-02-11 18:18:35,346 [INFO] src.javaproject.controllers.RegisterController - Password is too short, register failed
+2025-02-11 18:18:44,681 [INFO] src.javaproject.controllers.RegisterController - Register successful
+2025-02-11 18:28:36,693 [INFO] src.javaproject.HelloApplication - App closed successfully

@@ -11,7 +11,7 @@
 }
 
 .login_textField {
-    -fx-background-color: rgba(102, 0, 102, 0.8);
+    -fx-background-color: rgba(102, 0, 102, 0.75);
     -fx-background-radius: 50px;
     -fx-text-fill: white;
     -fx-text-box-border: transparent;
@@ -19,8 +19,8 @@
     -fx-padding: 10;
 }
 
-<!-- Official CSS docs say :focus, JavaFX docs say :focused, SonarQUbe is gaslighting me :focused is wrong -->
-.login_textField:focus {
+<!-- Official CSS docs say :focus, JavaFX docs say :focused, SonarQube is gas lighting me :focused is wrong -->
+.login_textField:focused {
     -fx-background-color: rgba(102, 0, 102, 0.9);
     -fx-border-color: transparent;
     -fx-font-size: 40px;
