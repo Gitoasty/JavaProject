@@ -33,10 +33,10 @@ public final class FreelanceWorker extends Worker {
 
         /**
          * guides us to the next step of the Builder Pattern
-         * @param id takes an Integer to be set as worker id
+         * @param id takes an String to be set as worker id
          * @return Builder as an object of type FirstNameSetter
          */
-        FirstNameSetter id(Integer id);
+        FirstNameSetter id(String id);
     }
 
     /**
@@ -101,14 +101,14 @@ public final class FreelanceWorker extends Worker {
      * Helper class for constructing instances of FreelanceWorker
      */
     private static class Builder implements IdSetter, FirstNameSetter, LastNameSetter, WorkExperienceSetter, ContractSetter {
-        private Integer id;
+        private String id;
         private String firstName;
         private String lastName;
         private Integer workExperience;
         private Contract contract;
 
         @Override
-        public FirstNameSetter id(Integer id) {
+        public FirstNameSetter id(String id) {
             this.id = id;
             return this;
         }
@@ -141,5 +141,13 @@ public final class FreelanceWorker extends Worker {
         public FreelanceWorker build() {
             return new FreelanceWorker(this);
         }
+    }
+
+    /**
+     * Gets the contract
+     * @return Contract object
+     */
+    public Contract contractGetter() {
+        return contract;
     }
 }

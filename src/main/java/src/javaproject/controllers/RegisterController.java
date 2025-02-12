@@ -1,5 +1,6 @@
 package src.javaproject.controllers;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -38,7 +39,7 @@ public class RegisterController {
      */
     public void typing(KeyEvent event) {
         if (event.getSource().equals(fName) && event.getCode() == KeyCode.ENTER) {
-            passText.requestFocus();
+            lName.requestFocus();
         } else if (event.getSource().equals(lName) && event.getCode() == KeyCode.ENTER) {
             userTag.requestFocus();
         } else if (event.getSource().equals(userTag) && event.getCode() == KeyCode.ENTER) {
@@ -52,18 +53,22 @@ public class RegisterController {
 
     public void register() {
         ArrayList<String> credentials = new ArrayList<>();
+        credentials.add(userTag.getText());
         credentials.add(fName.getText());
         credentials.add(lName.getText());
-        credentials.add(userTag.getText());
         credentials.add(passText.getText());
         credentials.add(passConfirmText.getText());
 
         if (LoginManagement.attemptRegister(logger, credentials, indicatorLabel)) {
             ScreenUtilities.good(registerButton);
-            //give alert and switch to login screen
+            ScreenUtilities.switchScreen(logger, "/src/javaproject/Login_Screen", registerButton);
         } else {
             ScreenUtilities.bad(registerButton);
         }
     }
 
+    public void goBack(ActionEvent event) {
+        Button clicked = (Button) event.getSource();
+        ScreenUtilities.switchScreen(logger, "/src/javaproject/Login_Screen", clicked);
+    }
 }

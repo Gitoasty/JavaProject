@@ -519,3 +519,174 @@
 2025-02-11 20:24:40,022 [INFO] src.javaproject.HelloApplication - App started successfully
 2025-02-11 20:24:44,215 [INFO] src.javaproject.controllers.LoginController - Logged in as admin
 2025-02-11 20:24:44,692 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-11 23:42:09,640 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-11 23:42:11,049 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Register_Screen
+2025-02-11 23:42:16,761 [INFO] src.javaproject.controllers.RegisterController - Password is too short, register failed
+2025-02-11 23:42:25,827 [INFO] src.javaproject.controllers.RegisterController - Passwords do not match, register failed
+2025-02-11 23:42:37,075 [WARN] src.javaproject.controllers.RegisterController - Problem inserting account into table
+2025-02-11 23:42:37,075 [INFO] src.javaproject.controllers.RegisterController - Failed to add account to table
+2025-02-11 23:46:32,391 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-11 23:46:33,613 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Register_Screen
+2025-02-11 23:46:42,356 [WARN] src.javaproject.controllers.RegisterController - Problem inserting account into table
+2025-02-11 23:46:42,357 [INFO] src.javaproject.controllers.RegisterController - Register successful
+2025-02-11 23:48:40,691 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-11 23:48:45,242 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-11 23:48:46,545 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Register_Screen
+2025-02-11 23:48:50,003 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-11 23:49:23,297 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-11 23:49:24,182 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Register_Screen
+2025-02-11 23:49:36,414 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-11 23:50:58,959 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-11 23:51:00,756 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Register_Screen
+2025-02-11 23:51:07,836 [INFO] src.javaproject.controllers.RegisterController - Account already exists, register failed
+2025-02-11 23:51:12,535 [INFO] src.javaproject.controllers.RegisterController - A field contained a space, register failed
+2025-02-11 23:51:16,405 [INFO] src.javaproject.controllers.RegisterController - Account already exists, register failed
+2025-02-11 23:52:32,986 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-11 23:52:34,372 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Register_Screen
+2025-02-11 23:52:40,852 [INFO] src.javaproject.controllers.RegisterController - Account already exists, register failed
+2025-02-11 23:52:45,362 [INFO] src.javaproject.controllers.RegisterController - Account already exists, register failed
+2025-02-11 23:52:49,838 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-11 23:53:25,418 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-11 23:53:26,502 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-11 23:54:32,667 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-11 23:54:34,099 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Register_Screen
+2025-02-11 23:54:41,092 [INFO] src.javaproject.controllers.RegisterController - Account already exists, register failed
+2025-02-11 23:57:34,713 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-11 23:57:52,021 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Register_Screen
+2025-02-11 23:58:00,578 [WARN] src.javaproject.controllers.RegisterController - Error reading from table
+2025-02-11 23:58:00,873 [WARN] src.javaproject.controllers.RegisterController - Problem inserting account into table
+2025-02-11 23:58:00,873 [INFO] src.javaproject.controllers.RegisterController - Register successful
+2025-02-11 23:58:33,081 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-11 23:58:34,504 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Register_Screen
+2025-02-11 23:58:46,040 [INFO] src.javaproject.controllers.RegisterController - Account already exists, register failed
+2025-02-11 23:58:54,221 [WARN] src.javaproject.controllers.RegisterController - Problem inserting account into table
+2025-02-11 23:58:54,222 [INFO] src.javaproject.controllers.RegisterController - Register successful
+2025-02-11 23:59:07,143 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-12 00:03:17,772 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-12 00:03:18,872 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Register_Screen
+2025-02-12 00:03:26,366 [INFO] src.javaproject.controllers.RegisterController - Account already exists, register failed
+2025-02-12 00:03:30,602 [INFO] src.javaproject.controllers.RegisterController - Register successful
+2025-02-12 00:03:45,741 [INFO] src.javaproject.controllers.RegisterController - Account already exists, register failed
+2025-02-12 00:03:48,929 [INFO] src.javaproject.controllers.RegisterController - Register successful
+2025-02-12 00:03:50,234 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-12 00:06:50,002 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-12 00:06:51,182 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Register_Screen
+2025-02-12 00:07:01,984 [INFO] src.javaproject.controllers.RegisterController - Register successful
+2025-02-12 00:07:02,085 [INFO] src.javaproject.controllers.RegisterController - Switched screen to /src/javaproject/Login_Screen
+2025-02-12 00:07:09,127 [WARN] src.javaproject.controllers.LoginController - Error reading from table
+2025-02-12 00:07:09,127 [INFO] src.javaproject.controllers.LoginController - No such account
+2025-02-12 00:07:09,127 [INFO] src.javaproject.controllers.LoginController - Login failed
+2025-02-12 00:07:11,312 [WARN] src.javaproject.controllers.LoginController - Error reading from table
+2025-02-12 00:07:11,312 [INFO] src.javaproject.controllers.LoginController - No such account
+2025-02-12 00:07:11,312 [INFO] src.javaproject.controllers.LoginController - Login failed
+2025-02-12 00:07:12,253 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-12 00:08:31,070 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-12 00:08:37,187 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-12 00:10:41,718 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-12 00:10:45,530 [INFO] src.javaproject.controllers.LoginController - Logged in as admin
+2025-02-12 00:10:46,879 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-12 00:11:07,212 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-12 00:11:13,804 [INFO] src.javaproject.controllers.LoginController - Logged in as user
+2025-02-12 00:11:14,769 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-12 12:50:37,010 [WARN] src.javaproject.HelloApplication - Problem creating worker table
+2025-02-12 12:50:37,897 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-12 12:50:39,235 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Register_Screen
+2025-02-12 12:50:47,993 [INFO] src.javaproject.controllers.RegisterController - Account already exists, register failed
+2025-02-12 12:50:55,069 [INFO] src.javaproject.controllers.RegisterController - Account already exists, register failed
+2025-02-12 12:50:56,045 [INFO] src.javaproject.controllers.RegisterController - Account already exists, register failed
+2025-02-12 12:50:57,420 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-12 12:51:15,269 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-12 12:51:16,185 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Register_Screen
+2025-02-12 12:51:23,984 [INFO] src.javaproject.controllers.RegisterController - Register successful
+2025-02-12 12:51:24,090 [INFO] src.javaproject.controllers.RegisterController - Switched screen to /src/javaproject/Login_Screen
+2025-02-12 12:51:29,313 [INFO] src.javaproject.controllers.LoginController - Logged in as user
+2025-02-12 12:51:31,327 [INFO] src.javaproject.controllers.LoginController - Logged in as user
+2025-02-12 12:51:32,064 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-12 12:57:31,150 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-12 12:57:42,268 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Register_Screen
+2025-02-12 12:57:52,437 [WARN] src.javaproject.controllers.RegisterController - Problem inserting account into table
+2025-02-12 12:57:52,437 [INFO] src.javaproject.controllers.RegisterController - Register successful
+2025-02-12 12:57:52,543 [INFO] src.javaproject.controllers.RegisterController - Switched screen to /src/javaproject/Login_Screen
+2025-02-12 12:57:57,966 [INFO] src.javaproject.controllers.LoginController - Logged in as user
+2025-02-12 12:57:59,766 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-12 12:59:14,662 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-12 12:59:20,013 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Register_Screen
+2025-02-12 12:59:27,590 [INFO] src.javaproject.controllers.RegisterController - Passwords do not match, register failed
+2025-02-12 12:59:29,405 [INFO] src.javaproject.controllers.RegisterController - Register successful
+2025-02-12 12:59:29,488 [INFO] src.javaproject.controllers.RegisterController - Switched screen to /src/javaproject/Login_Screen
+2025-02-12 12:59:34,241 [INFO] src.javaproject.controllers.LoginController - Logged in as user
+2025-02-12 12:59:35,897 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-12 14:55:40,440 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-12 14:55:42,697 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Register_Screen
+2025-02-12 14:55:52,838 [INFO] src.javaproject.controllers.RegisterController - Passwords do not match, register failed
+2025-02-12 14:55:54,705 [INFO] src.javaproject.controllers.RegisterController - Passwords do not match, register failed
+2025-02-12 14:56:00,170 [INFO] src.javaproject.controllers.RegisterController - Register successful
+2025-02-12 14:56:00,259 [INFO] src.javaproject.controllers.RegisterController - Switched screen to /src/javaproject/Login_Screen
+2025-02-12 14:56:04,987 [INFO] src.javaproject.controllers.LoginController - Logged in as user
+2025-02-12 15:14:49,984 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-12 15:24:52,708 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-12 15:24:55,623 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-12 15:25:16,800 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-12 15:25:19,036 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-12 15:25:54,477 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-12 15:25:56,499 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-12 15:31:26,319 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-12 15:31:27,003 [WARN] src.javaproject.HelloApplication - Problem switching scene with keyboard shortcut
+2025-02-12 15:31:30,536 [WARN] src.javaproject.HelloApplication - Problem switching scene with keyboard shortcut
+2025-02-12 15:31:31,971 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-12 15:31:36,609 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-12 15:31:37,158 [WARN] src.javaproject.HelloApplication - Problem switching scene with keyboard shortcut
+2025-02-12 15:31:37,911 [WARN] src.javaproject.HelloApplication - Problem switching scene with keyboard shortcut
+2025-02-12 15:31:42,611 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-12 15:32:33,970 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-12 15:32:35,627 [WARN] src.javaproject.HelloApplication - Problem switching scene with keyboard shortcut
+2025-02-12 15:32:37,191 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-12 15:33:29,874 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-12 15:33:33,886 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-12 15:34:31,509 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-12 15:34:37,126 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-12 15:36:48,404 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-12 15:36:49,037 [INFO] src.javaproject.HelloApplication - Switched to register screen with keyboard shortcut
+2025-02-12 15:36:51,710 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-12 15:38:18,177 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-12 15:38:18,780 [INFO] src.javaproject.HelloApplication - Switched to register screen with keyboard shortcut
+2025-02-12 15:38:22,639 [INFO] src.javaproject.controllers.RegisterController - A field was empty, register failed
+2025-02-12 15:38:25,868 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-12 15:40:24,025 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-12 15:40:24,450 [INFO] src.javaproject.HelloApplication - Switched to register screen with keyboard shortcut
+2025-02-12 15:40:37,621 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-12 15:41:18,183 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-12 15:41:18,934 [INFO] src.javaproject.HelloApplication - Switched to register screen with keyboard shortcut
+2025-02-12 15:42:17,219 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-12 15:42:19,398 [INFO] src.javaproject.HelloApplication - Switched to register screen with keyboard shortcut
+2025-02-12 15:42:24,280 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-12 15:42:53,417 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-12 15:42:54,878 [INFO] src.javaproject.HelloApplication - Switched to register screen with keyboard shortcut
+2025-02-12 15:42:58,073 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-12 15:44:27,841 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-12 15:44:28,330 [INFO] src.javaproject.HelloApplication - Switched to register screen with keyboard shortcut
+2025-02-12 15:44:30,615 [INFO] src.javaproject.controllers.RegisterController - A field was empty, register failed
+2025-02-12 15:44:32,514 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-12 15:45:50,905 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-12 15:45:52,114 [INFO] src.javaproject.HelloApplication - Switched to register screen with keyboard shortcut
+2025-02-12 15:45:54,863 [INFO] src.javaproject.controllers.RegisterController - A field was empty, register failed
+2025-02-12 15:45:57,503 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-12 15:46:43,896 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-12 15:46:44,476 [INFO] src.javaproject.HelloApplication - Switched to register screen with keyboard shortcut
+2025-02-12 15:46:47,637 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-12 15:49:00,783 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-12 15:49:01,244 [INFO] src.javaproject.HelloApplication - Switched to register screen with keyboard shortcut
+2025-02-12 15:49:03,932 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-12 15:49:31,602 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-12 15:49:32,933 [INFO] src.javaproject.HelloApplication - Switched to register screen with keyboard shortcut
+2025-02-12 15:49:34,747 [INFO] src.javaproject.HelloApplication - App closed successfully
+2025-02-12 15:52:14,570 [INFO] src.javaproject.HelloApplication - App started successfully
+2025-02-12 15:52:15,390 [INFO] src.javaproject.HelloApplication - Switched to register screen with keyboard shortcut
+2025-02-12 15:52:16,507 [INFO] src.javaproject.controllers.RegisterController - Switched screen to /src/javaproject/Login_Screen
+2025-02-12 15:52:19,338 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Register_Screen
+2025-02-12 15:52:20,151 [INFO] src.javaproject.controllers.RegisterController - Switched screen to /src/javaproject/Login_Screen
+2025-02-12 15:52:20,910 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Register_Screen
+2025-02-12 15:52:21,721 [INFO] src.javaproject.controllers.RegisterController - Switched screen to /src/javaproject/Login_Screen
+2025-02-12 15:52:22,340 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Register_Screen
+2025-02-12 15:52:22,955 [INFO] src.javaproject.controllers.RegisterController - Switched screen to /src/javaproject/Login_Screen
+2025-02-12 15:52:24,046 [INFO] src.javaproject.HelloApplication - App closed successfully

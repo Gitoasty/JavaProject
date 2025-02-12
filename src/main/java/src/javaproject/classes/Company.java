@@ -14,7 +14,7 @@ public final class Company {
      * Constructs the Company object
      * @param c Builder object used to construct Company
      */
-    public Company(Builder c) {
+    private Company(Builder c) {
         this.id = c.id;
         this.name = c.name;
         this.workers = c.workers;
@@ -109,5 +109,29 @@ public final class Company {
         public Company build() {
             return new Company(this);
         }
+    }
+
+    /**
+     * Gets company id
+     * @return Integer id
+     */
+    public Integer idGetter() {
+        return id;
+    }
+
+    /**
+     * Gets company name
+     * @return String name
+     */
+    public String nameGetter() {
+        return name;
+    }
+
+    /**
+     * Gets Workers
+     * @return Set of Workers
+     */
+    public Set<Worker> workerGetter() {
+        return workers;
     }
 }

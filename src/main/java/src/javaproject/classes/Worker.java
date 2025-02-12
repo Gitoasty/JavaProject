@@ -4,7 +4,7 @@ package src.javaproject.classes;
  * Base class for FreelanceWorker and StayingWorker classes
  */
 public abstract sealed class Worker permits FreelanceWorker, StayingWorker {
-    protected Integer id;
+    protected String id;
     protected String firstName;
     protected String lastName;
     protected Integer workExperience;
@@ -13,7 +13,7 @@ public abstract sealed class Worker permits FreelanceWorker, StayingWorker {
      * returns the id attribute
      * @return worker id
      */
-    public Integer idGetter() {
+    public String idGetter() {
         return id;
     }
 

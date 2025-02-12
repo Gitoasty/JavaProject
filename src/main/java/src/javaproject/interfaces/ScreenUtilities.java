@@ -12,6 +12,7 @@ import javafx.util.Duration;
 import org.slf4j.Logger;
 
 import java.io.IOException;
+import java.util.Objects;
 
 /**
  * Helper Interface for storing Screen related methods
@@ -28,10 +29,10 @@ public interface ScreenUtilities {
         try {
             Stage stage = (Stage) clicked.getScene().getWindow();
             stage.setMaximized(false);
-            Parent root = FXMLLoader.load(ScreenUtilities.class.getResource(STR."\{target}.fxml"));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(ScreenUtilities.class.getResource(STR."\{target}.fxml")));
             Scene scene = new Scene(root);
 
-            String css = ScreenUtilities.class.getResource("/stylesheets.css").toExternalForm();
+            String css = Objects.requireNonNull(ScreenUtilities.class.getResource("/stylesheets.css")).toExternalForm();
             scene.getStylesheets().add(css);
             stage.setScene(scene);
             stage.setMaximized(true);

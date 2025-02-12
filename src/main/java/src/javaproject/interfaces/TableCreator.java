@@ -23,14 +23,37 @@ public interface TableCreator {
 
             String creationString = "CREATE TABLE IF NOT EXISTS " + "accounts" + "("
                     +"userTag TEXT PRIMARY KEY NOT NULL, "
-                    +"fName TEXT NOT NULL, "
-                    +"lName TEXT NOT NULL, "
                     +"password TEXT NOT NULL, "
                     +"role TEXT NOT NULL"
                     +")";
             stat.executeUpdate(creationString);
+            conn.close();
         } catch (SQLException _) {
             logger.warn("Problem creating account table");
+        }
+    }
+
+    /**
+     * Creates table for storing worker data
+     * @param logger logger of controller calling this method
+     */
+    static void workerData(Logger logger) {
+        try {
+            Connection conn = DatabaseUtilities.getConnection(logger);
+
+            Statement stat = conn.createStatement();
+
+            String creationString = "CREATE TABLE IF NOT EXISTS " + "workers" + "("
+                    +"id TEXT PRIMARY KEY NOT NULL, "
+                    +"fName TEXT NOT NULL, "
+                    +"lName TEXT NOT NULL, "
+                    +"type TEXT, " //Gets assigned by admin, FULL-TIME for staying workers, contract id for Freelancers
+                    +"experience INTEGER"
+                    +")";
+            stat.executeUpdate(creationString);
+            conn.close();
+        } catch (SQLException _) {
+            logger.warn("Problem creating worker table");
         }
     }
 }

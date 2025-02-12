@@ -73,7 +73,7 @@ public interface LoginManagement {
             ScreenUtilities.labelUpdater(indicator, "Spaces not allowed");
             logger.info("A field contained a space, register failed");
             return false;
-        } else if (DatabaseUtilities.accountExists(logger, credentials.get(2))) {
+        } else if (DatabaseUtilities.accountExists(logger, credentials.getFirst())) {
             ScreenUtilities.labelUpdater(indicator, "Account exists");
             logger.info("Account already exists, register failed");
             return false;
@@ -85,12 +85,10 @@ public interface LoginManagement {
             ScreenUtilities.labelUpdater(indicator, "Password too short");
             logger.info("Password is too short, register failed");
             return false;
-        } else if (!RowAdder.addAccount(logger, credentials)) {
-            ScreenUtilities.labelUpdater(indicator, "Something broke");
-            logger.info("Failed to add account to table");
-            return false;
         }
 
+        RowAdder.addAccount(logger, credentials);
+        RowAdder.addPartialWorker(logger, credentials);
         ScreenUtilities.labelUpdater(indicator, "Register successful");
         logger.info("Register successful");
         return true;

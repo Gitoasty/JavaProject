@@ -31,10 +31,10 @@ public final class StayingWorker extends Worker {
 
         /**
          * guides us to the next step of the Builder Pattern
-         * @param id takes an Integer to be set as worker id
+         * @param id takes an String to be set as worker id
          * @return Builder as an object of type FirstNameSetter
          */
-        FirstNameSetter id(Integer id);
+        FirstNameSetter id(String id);
     }
 
     /**
@@ -92,13 +92,13 @@ public final class StayingWorker extends Worker {
      * Helper class for constructing instances of StayingWorker
      */
     private static class Builder implements IdSetter, FirstNameSetter, LastNameSetter, WorkExperienceSetter, FinalSetter {
-        private Integer id;
+        private String id;
         private String firstName;
         private String lastName;
         private Integer workExperience;
 
         @Override
-        public FirstNameSetter id(Integer id) {
+        public FirstNameSetter id(String id) {
             this.id = id;
             return this;
         }

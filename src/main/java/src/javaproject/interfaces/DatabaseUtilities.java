@@ -41,13 +41,13 @@ public interface DatabaseUtilities {
      * @return true if user tag exists, false if it does not exist
      */
     static boolean accountExists(Logger logger, String filter) {
-        try {
-            Connection conn = getConnection(logger);
-            Statement stmt = conn.createStatement();
-            ResultSet rs = stmt.executeQuery(STR."SELECT * FROM accounts WHERE userTag = '%\{filter}%'");
-            if (rs.next()) {
-                return true;
-            }
+        String query = "SELECT userTag FROM accounts WHERE userTag = ?";
+        try (Connection conn = getConnection(logger);
+             PreparedStatement stmt = conn.prepareStatement(query)) {
+
+            stmt.setString(1, filter);
+            ResultSet rs = stmt.executeQuery();
+            return rs.next();
         } catch (SQLException _) {
             logger.warn("Error reading from table");
         }
@@ -61,10 +61,9 @@ public interface DatabaseUtilities {
      * @return Account object with corresponding tag if it exists, otherwise null
      */
     static Account<String> fetchAccount(Logger logger, String userTag) {
-        try {
-            Connection conn = getConnection(logger);
-            String query = "SELECT * FROM accounts WHERE userTag = ?";
-            PreparedStatement stmt = conn.prepareStatement(query);
+        String query = "SELECT userTag, password, role FROM accounts WHERE userTag = ?";
+        try (Connection conn = getConnection(logger);
+             PreparedStatement stmt = conn.prepareStatement(query)) {
             stmt.setString(1, userTag);
             ResultSet rs = stmt.executeQuery();
             if (rs.next()) {
