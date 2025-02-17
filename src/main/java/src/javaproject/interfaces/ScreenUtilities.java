@@ -2,6 +2,7 @@ package src.javaproject.interfaces;
 
 import javafx.animation.RotateTransition;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -25,7 +26,7 @@ public interface ScreenUtilities {
      * @param target name of target screen
      * @param clicked Button which triggered the method call
      */
-    static void switchScreen(Logger logger, String target, Button clicked) {
+    static void switchScreen(Logger logger, String target, Node clicked) {
         try {
             Stage stage = (Stage) clicked.getScene().getWindow();
             stage.setMaximized(false);

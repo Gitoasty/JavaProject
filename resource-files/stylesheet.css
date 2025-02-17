@@ -563,7 +563,7 @@ div.checkboxes > label > input {
 
 }
 .table-header[onclick].sort-desc::after {
-    background-image:url('data:image/svg+xml; utf8, \
+    background-image:url('data:image/svg+xml; utf8, \´
     <svg xmlns="http://www.w3.org/2000/svg" width="125" height="170"> \
     <path d="M10.101 57.059L63.019 4.142l52.917 52.917" style="opacity:.35;"/> \
     <path d="M10.101 86.392l52.917 52.917 52.917-52.917" style="opacity:.75;"/></svg>');

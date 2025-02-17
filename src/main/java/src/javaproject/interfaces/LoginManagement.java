@@ -5,6 +5,7 @@ import org.slf4j.Logger;
 
 import javafx.scene.control.Label;
 import src.javaproject.classes.Account;
+import src.javaproject.exceptions.PasswordException;
 
 import java.util.ArrayList;
 
@@ -45,6 +46,8 @@ public interface LoginManagement {
         if (user.isEmpty() || pass.isEmpty()) {
             logger.info("Missing username or password");
             return 0;
+        } else if (pass.length() > 72) {
+            throw new PasswordException("Password must be at most 72 characters");
         } else if (account.usernameGetter().isEmpty()) {
             logger.info("No such account");
             return 0;
@@ -77,6 +80,8 @@ public interface LoginManagement {
             ScreenUtilities.labelUpdater(indicator, "Account exists");
             logger.info("Account already exists, register failed");
             return false;
+        } else if (credentials.get(3).length() > 72) {
+            throw new PasswordException("Password must be at most 72 characters");
         } else if (!credentials.get(3).equals(credentials.get(4))) {
             ScreenUtilities.labelUpdater(indicator, "Passwords must match");
             logger.info("Passwords do not match, register failed");

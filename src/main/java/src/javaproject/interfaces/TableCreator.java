@@ -56,4 +56,74 @@ public interface TableCreator {
             logger.warn("Problem creating worker table");
         }
     }
+
+    /**
+     * Creates table for storing project data
+     * @param logger logger of controller calling this method
+     */
+    static void projectData(Logger logger) {
+        try {
+            Connection conn = DatabaseUtilities.getConnection(logger);
+
+            Statement stat = conn.createStatement();
+
+            String creationString = "CREATE TABLE IF NOT EXISTS " + "projects" + "("
+                    +"id INTEGER PRIMARY KEY AUTOINCREMENT, "
+                    +"name TEXT NOT NULL, "
+                    +"estimatedTime INTEGER, " //time in days
+                    +"tasks TEXT, " //tasks separated by commas
+                    +"workers TEXT" //user tags separated by commas
+                    +")";
+            stat.executeUpdate(creationString);
+            conn.close();
+        } catch (SQLException _) {
+            logger.warn("Problem creating project table");
+        }
+    }
+
+    /**
+     * Creates table for storing company data
+     * @param logger logger of controller calling this method
+     */
+    static void companyData(Logger logger) {
+        try {
+            Connection conn = DatabaseUtilities.getConnection(logger);
+
+            Statement stat = conn.createStatement();
+
+            String creationString = "CREATE TABLE IF NOT EXISTS " + "companies" + "("
+                    +"id INTEGER PRIMARY KEY AUTOINCREMENT, "
+                    +"name TEXT NOT NULL, "
+                    +"workers TEXT" //user tags separated by commas
+                    +")";
+            stat.executeUpdate(creationString);
+            conn.close();
+        } catch (SQLException _) {
+            logger.warn("Problem creating company table");
+        }
+    }
+
+    /**
+     * Creates table for storing contract data
+     * @param logger logger of controller calling this method
+     */
+    static void contractData(Logger logger) {
+        try {
+            Connection conn = DatabaseUtilities.getConnection(logger);
+
+            Statement stat = conn.createStatement();
+
+            String creationString = "CREATE TABLE IF NOT EXISTS " + "contracts" + "("
+                    +"id INTEGER PRIMARY KEY AUTOINCREMENT, "
+                    +"start DATE NOT NULL, "
+                    +"end DATE NOT NULL, "
+                    +"salary INTEGER NOT NULL, "
+                    +"companyId INTEGER NOT NULL"
+                    +")";
+            stat.executeUpdate(creationString);
+            conn.close();
+        } catch (SQLException _) {
+            logger.warn("Problem creating contract table");
+        }
+    }
 }

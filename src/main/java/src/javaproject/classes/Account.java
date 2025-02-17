@@ -5,9 +5,9 @@ package src.javaproject.classes;
  * @param <R> can be String or null, depending on the user role
  */
 public class Account<R> {
-    private String username;
-    private String password;
-    private R role;
+    private final String username;
+    private final String password;
+    private final R role;
 
     public Account(String username, String password, R role) {
         this.username = username;

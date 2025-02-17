@@ -9,7 +9,7 @@ public final class StayingWorker extends Worker {
      * Constructs the StayingWorker object
      * @param fw builder object used to construct the StayingWorker
      */
-    public StayingWorker(Builder fw) {
+    private StayingWorker(Builder fw) {
         this.id = fw.id;
         this.firstName = fw.firstName;
         this.lastName = fw.lastName;

@@ -6,9 +6,9 @@ import java.util.Set;
  * Class to represent a company with workers
  */
 public final class Company {
-    private Integer id;
-    private String name;
-    private Set<Worker> workers;
+    private final Integer id;
+    private final String name;
+    private final Set<Worker> workers;
 
     /**
      * Constructs the Company object

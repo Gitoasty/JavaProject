@@ -20,6 +20,7 @@
 }
 
 <!-- Official CSS docs say :focus, JavaFX docs say :focused, SonarQube is gas lighting me :focused is wrong -->
+
 .login_textField:focused {
     -fx-background-color: rgba(102, 0, 102, 0.9);
     -fx-border-color: transparent;
@@ -37,4 +38,154 @@
 
 .login_button:pressed {
     -fx-background-color: rgba(102, 0, 102, 1);
+}
+
+.adminBar {
+    -fx-background-color: rgba(100, 0, 0, 0.75);
+    -fx-alignment: center;
+    -fx-text-fill: white;
+}
+
+.menu {
+    -fx-background-color: transparent;
+    -fx-font-size: 25px;
+    -fx-text-fill: white;
+    -fx-padding: 5px 10px 5px 25px;
+}
+
+.context-menu {
+    -fx-background-color: rgba(150, 0, 0, 0.4);
+    -fx-background-radius: 10px;
+}
+
+.menu-item {
+    -fx-background-color: rgba(200, 0, 0, 0.5);
+    -fx-text-fill: white;
+    -fx-background-radius: 10px;
+    -fx-padding: 5px 15px;
+    -fx-margin: 5px 5px 5px 5px;
+}
+
+.menu-item:focused {
+    -fx-background-color: rgba(250, 0, 0, 0.5);
+}
+
+.adminBG {
+    -fx-background-image: url("temp_backgrounds/adminMenu.png");
+    -fx-background-size: stretch;
+}
+
+.adminAccountBG {
+    -fx-background-image: url("temp_backgrounds/accountBG.jpg");
+    -fx-background-size: stretch;
+}
+
+.adminLabel {
+    -fx-background-color: rgba(102, 0, 0, 0.75);
+    -fx-background-radius: 50px;
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+}
+
+.adminButton {
+    -fx-background-color: rgba(102, 0, 0, 0.75);
+    -fx-background-radius: 50px;
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+}
+
+.adminTextField {
+    -fx-background-color: rgba(102, 0, 0, 0.75);
+    -fx-background-radius: 50px;
+    -fx-text-fill: white;
+    -fx-text-box-border: transparent;
+    -fx-border-color: transparent;
+}
+
+.adminTextField:focused {
+    -fx-background-color: rgba(102, 0, 0, 0.9);
+    -fx-border-color: transparent;
+    -fx-font-size: 40px;
+}
+
+.table-view{
+   -fx-background-color: rgba(102, 0, 0, 0.75);
+}
+
+.table-view:focused{
+    -fx-background-color: rgba(102, 0, 0, 0.85);
+}
+
+.table-view .column-header-background{
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header-background .label{
+    -fx-background-color: transparent;
+    -fx-alignment: center;
+    -fx-text-fill: white;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+
+.table-view .filler {
+    -fx-background-color: transparent;
+}
+
+.table-row-cell{
+    -fx-background-color: -fx-table-cell-border-color, #616161;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+}
+
+.table-row-cell:odd{
+    -fx-background-color: -fx-table-cell-border-color, #424242;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+}
+
+.adminChoiceBox > * {
+    -fx-alignment: center;
+    -fx-background-color: rgba(102, 0, 0, 0.75);
+    -fx-mark-color: rgba(102, 0, 0, 0.85);
+    -fx-text-fill: white;
+}
+
+.adminChoiceBox > .label {
+    -fx-font-size: 45px;
+}
+
+.adminChoiceBox .menu-item .label {
+    -fx-text-alignment: center;
+    -fx-font-size: 45px;
+}
+
+.adminList {
+    -fx-background-color: rgba(102, 0, 0, 0.2);
+    -fx-border-radius: 30px;
+    -fx-font-size: 25px;
+}
+
+.adminList .list-cell {
+    -fx-alignment: center;
+    -fx-text-alignment: center;
+    -fx-text-fill: white;
+}
+
+.adminList .list-cell:filled:selected:focused, .adminList .list-cell:filled:selected {
+    -fx-border-radius: 30px;
+    -fx-background-color: rgba(102, 0, 0, 0.9);
+}
+.adminList .list-cell:odd {
+    -fx-border-radius: 30px;
+    -fx-background-color: rgba(102, 0, 0, 0.3);
+}
+.adminList .list-cell:even {
+    -fx-border-radius: 30px;
+    -fx-background-color: rgba(102, 0, 0, 0.5);
+}
+.list-cell:filled:hover {
+    -fx-background-color: rgba(102, 0, 0, 0.75);
 }

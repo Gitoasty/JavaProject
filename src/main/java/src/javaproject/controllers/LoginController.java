@@ -2,6 +2,7 @@ package src.javaproject.controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -9,6 +10,7 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import src.javaproject.exceptions.PasswordException;
 import src.javaproject.interfaces.LoginManagement;
 import src.javaproject.interfaces.ScreenUtilities;
 
@@ -40,12 +42,18 @@ public class LoginController {
      * Calls the {@link LoginManagement#attemptLogin(Logger, String, String)} method from {@link LoginManagement} interface
      */
     public void login(){
-        int result = LoginManagement.attemptLogin(logger, userText.getText(), passText.getText());
+        int result = 0;
+
+        try {
+            result = LoginManagement.attemptLogin(logger, userText.getText(), passText.getText());
+        } catch (PasswordException _) {
+            logger.info("Password was too long");
+        }
 
         switch (result) {
             case 1:
                 logger.info("Logged in as admin");
-                //switch to admin panel
+                ScreenUtilities.switchScreen(logger, "/src/javaproject/Admin_Menu", userText);
                 break;
             case 2:
                 logger.info("Logged in as user");
@@ -58,7 +66,7 @@ public class LoginController {
     }
 
     /**
-     * Calls the register {@link ScreenUtilities#switchScreen(Logger, String, Button)} method from {@link ScreenUtilities} interface
+     * Calls the register {@link ScreenUtilities#switchScreen(Logger, String, Node)} method from {@link ScreenUtilities} interface
      * @param event Event from the Button click
      */
     public void register(ActionEvent event) {

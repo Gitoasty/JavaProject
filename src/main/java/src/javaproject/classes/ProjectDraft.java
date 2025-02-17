@@ -11,7 +11,7 @@ public class ProjectDraft extends Project {
      * constructs the ProjectDraft object
      * @param pd builder object used to construct the ProjectDraft
      */
-    public ProjectDraft(Builder pd) {
+    private ProjectDraft(Builder pd) {
         this.id = pd.id;
         this.name = pd.name;
         this.tasks = pd.tasks;

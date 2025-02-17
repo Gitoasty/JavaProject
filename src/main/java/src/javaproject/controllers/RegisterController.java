@@ -10,6 +10,7 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import src.javaproject.exceptions.PasswordException;
 import src.javaproject.interfaces.LoginManagement;
 import src.javaproject.interfaces.ScreenUtilities;
 
@@ -59,11 +60,15 @@ public class RegisterController {
         credentials.add(passText.getText());
         credentials.add(passConfirmText.getText());
 
-        if (LoginManagement.attemptRegister(logger, credentials, indicatorLabel)) {
-            ScreenUtilities.good(registerButton);
-            ScreenUtilities.switchScreen(logger, "/src/javaproject/Login_Screen", registerButton);
-        } else {
-            ScreenUtilities.bad(registerButton);
+        try {
+            if (LoginManagement.attemptRegister(logger, credentials, indicatorLabel)) {
+                ScreenUtilities.good(registerButton);
+                ScreenUtilities.switchScreen(logger, "/src/javaproject/Login_Screen", registerButton);
+            } else {
+                ScreenUtilities.bad(registerButton);
+            }
+        } catch (PasswordException _) {
+            logger.info("Password was too long");
         }
     }
 

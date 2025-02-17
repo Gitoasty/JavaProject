@@ -1,12 +1,14 @@
 package src.javaproject.exceptions;
 
+import java.time.DateTimeException;
+
 /**
- * Custom value exception to be used when non-positive value is passed for salary of similar positive-only parameter
+ * Custom Date exception to be used when inputting dates for contracts
  */
-public class NegativeValueException extends IllegalArgumentException {
+public class NegativeValueException extends DateTimeException {
 
     /**
-     * Constructs a new value exception with the specified message
+     * Constructs a new date-time exception with the specified message
      *
      * @param message the message to use for this exception, may be null
      */

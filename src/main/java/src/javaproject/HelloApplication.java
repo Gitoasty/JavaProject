@@ -58,6 +58,9 @@ public class HelloApplication extends Application {
         DatabaseUtilities.getConnection(logger);
         TableCreator.accountData(logger);
         TableCreator.workerData(logger);
+        TableCreator.projectData(logger);
+        TableCreator.companyData(logger);
+        TableCreator.contractData(logger);
         launch(args);
     }
 }

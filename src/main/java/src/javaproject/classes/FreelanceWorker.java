@@ -10,7 +10,7 @@ public final class FreelanceWorker extends Worker {
      * Constructs the FreelanceWorker object
      * @param fw builder object used to construct the FreelanceWorker
      */
-    public FreelanceWorker(Builder fw) {
+    private FreelanceWorker(Builder fw) {
         this.id = fw.id;
         this.firstName = fw.firstName;
         this.lastName = fw.lastName;
@@ -33,7 +33,7 @@ public final class FreelanceWorker extends Worker {
 
         /**
          * guides us to the next step of the Builder Pattern
-         * @param id takes an String to be set as worker id
+         * @param id takes a String to be set as worker id
          * @return Builder as an object of type FirstNameSetter
          */
         FirstNameSetter id(String id);
@@ -72,7 +72,7 @@ public final class FreelanceWorker extends Worker {
 
         /**
          * guides us to the next step of the Builder Pattern
-         * @param workExperience takes an Integer to be set as work experiencce
+         * @param workExperience takes an Integer to be set as work experience
          * @return Builder as an object of type ContractSetter
          */
         ContractSetter workExperience(Integer workExperience);

@@ -14,7 +14,7 @@ public class ProjectAssignment extends Project {
      * constructs the ProjectAssignment object
      * @param pa builder object used to construct the ProjectAssignment
      */
-    public ProjectAssignment(Builder pa) {
+    private ProjectAssignment(Builder pa) {
         this.id = pa.id;
         this.name = pa.name;
         this.workers = pa.workers;
