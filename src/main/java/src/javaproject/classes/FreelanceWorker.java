@@ -4,7 +4,7 @@ package src.javaproject.classes;
  * This class is used to represent freelance workers in the system
  */
 public final class FreelanceWorker extends Worker {
-    private Contract contract;
+    private final Contract contract;
 
     /**
      * Constructs the FreelanceWorker object

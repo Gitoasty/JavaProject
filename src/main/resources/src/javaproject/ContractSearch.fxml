@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="720.0" minWidth="1280.0" prefHeight="400.0" prefWidth="600.0" styleClass="adminAccountBG" stylesheets="@../../stylesheets.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="src.javaproject.controllers.ContractSearchController">
+    <children>
+        <GridPane minHeight="720.0" minWidth="1280.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="25.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="25.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="25.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="25.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="-Infinity" minHeight="30.0" percentHeight="7.0" prefHeight="30.0" valignment="TOP" vgrow="NEVER" />
+                <RowConstraints maxHeight="50.0" minHeight="10.0" percentHeight="10.0" prefHeight="50.0" valignment="CENTER" vgrow="ALWAYS" />
+                <RowConstraints maxHeight="50.0" minHeight="0.0" percentHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="50.0" minHeight="10.0" percentHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="351.0" minHeight="0.0" percentHeight="63.0" prefHeight="41.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <BorderPane fx:id="topPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.columnSpan="2147483647" />
+                <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="adminLabel" text="Contract Search" textAlignment="CENTER" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                    <GridPane.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                    </GridPane.margin>
+                </Label>
+                <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="adminLabel" text="Enter contract ID:" textAlignment="RIGHT" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                    <GridPane.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                    </GridPane.margin></Label>
+                <TextField fx:id="searchTarget" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="contract id" styleClass="adminTextField" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                    <GridPane.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                    </GridPane.margin></TextField>
+                <TableView fx:id="table" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="1280.0" prefHeight="200.0" prefWidth="200.0" stylesheets="@../../stylesheets.css" GridPane.columnSpan="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                    <columns>
+                        <TableColumn fx:id="description2" maxWidth="1.7976931348623157E308" minWidth="80.0" resizable="false" text="Contract ID" />
+                        <TableColumn fx:id="description" maxWidth="1.7976931348623157E308" minWidth="300.0" prefWidth="300.0" resizable="false" text="Start date" />
+                        <TableColumn fx:id="description1" maxWidth="1.7976931348623157E308" minWidth="300.0" prefWidth="300.0" resizable="false" text="End date" />
+                  <TableColumn fx:id="description11" maxWidth="1.7976931348623157E308" minWidth="300.0" prefWidth="300.0" resizable="false" text="Salary" />
+                  <TableColumn fx:id="description12" maxWidth="1.7976931348623157E308" minWidth="300.0" prefWidth="300.0" resizable="false" text="Company ID" />
+                    </columns>
+                </TableView>
+                <Button fx:id="searchButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="adminButton" text="Search" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                    <GridPane.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                    </GridPane.margin>
+                </Button>
+            </children>
+        </GridPane>
+    </children>
+</StackPane>

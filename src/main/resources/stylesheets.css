@@ -178,14 +178,51 @@
     -fx-border-radius: 30px;
     -fx-background-color: rgba(102, 0, 0, 0.9);
 }
+
 .adminList .list-cell:odd {
     -fx-border-radius: 30px;
     -fx-background-color: rgba(102, 0, 0, 0.3);
 }
+
 .adminList .list-cell:even {
     -fx-border-radius: 30px;
     -fx-background-color: rgba(102, 0, 0, 0.5);
 }
+
 .list-cell:filled:hover {
     -fx-background-color: rgba(102, 0, 0, 0.75);
+}
+
+.adminDatePicker > * {
+    -fx-background-color: rgba(102, 0, 0, 0.75);
+    -fx-border-color: transparent;
+    -fx-font-size: 25px;
+    -fx-text-fill: white;
+}
+
+.adminDatePicker .calendar-grid {
+    -fx-background-color: rgba(102, 0, 0, 0.75);
+}
+
+.adminDatePicker .date-picker-popup > * {
+    -fx-background-color: rgba(102, 0, 0, 0.75);
+}
+
+.adminDatePicker .spinner-label {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+
+.adminDatePicker .day-cell {
+    -fx-background-color: rgba(175, 0, 0, 0.75);
+    -fx-border-color: transparent;
+    -fx-text-fill: white;
+}
+
+.adminDatePicker .day-cell.today, .adminDatePicker .day-cell:hover {
+    -fx-background-color: rgba(75, 0, 0, 0.75);
+}
+
+.adminDatePicker .day-cell:selected {
+    -fx-background-color: rgba(0, 0, 0, 0.75);
 }

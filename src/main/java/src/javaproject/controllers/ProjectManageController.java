@@ -4,7 +4,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ListView;
 import javafx.scene.control.MenuBar;
 import javafx.scene.layout.BorderPane;
@@ -16,21 +15,21 @@ import java.net.URL;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
-public class AccountManageController implements Initializable {
+public class ProjectManageController implements Initializable {
 
     @FXML
     private BorderPane topPane;
     @FXML
     private ListView<String> theList;
     @FXML
-    private ChoiceBox<String> roles;
+    private Button addButton;
     @FXML
     private Button editButton;
     @FXML
     private Button deleteButton;
     @FXML
     private Button backButton;
-    private static final Logger logger = LoggerFactory.getLogger(AccountManageController.class);
+    private static final Logger logger = LoggerFactory.getLogger(ProjectManageController.class);
 
     /**
      * Sets the MenuBar on top
@@ -45,6 +44,5 @@ public class AccountManageController implements Initializable {
         }
 
         theList.getItems().addAll("auvgieuba", "kavbuia", "oaubviub", "oavuabivuab");
-        roles.getItems().addAll("yes", "no");
     }
 }

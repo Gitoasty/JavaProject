@@ -1,12 +1,10 @@
 package src.javaproject.controllers;
 
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.ListView;
-import javafx.scene.control.MenuBar;
+import javafx.scene.control.*;
 import javafx.scene.layout.BorderPane;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,24 +14,20 @@ import java.net.URL;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
-public class AccountManageController implements Initializable {
+public class ContractSearchController implements Initializable {
 
     @FXML
     private BorderPane topPane;
     @FXML
-    private ListView<String> theList;
+    private TextField target;
     @FXML
-    private ChoiceBox<String> roles;
+    private Button searchButton;
     @FXML
-    private Button editButton;
-    @FXML
-    private Button deleteButton;
-    @FXML
-    private Button backButton;
-    private static final Logger logger = LoggerFactory.getLogger(AccountManageController.class);
+    private TableView<String> table;
+    private static final Logger logger = LoggerFactory.getLogger(ContractSearchController.class);
 
     /**
-     * Sets the MenuBar on top
+     * Adds MenuBar and sets table column widths on load
      */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -44,7 +38,10 @@ public class AccountManageController implements Initializable {
             logger.warn("Issue setting MenuBar to top of screen");
         }
 
-        theList.getItems().addAll("auvgieuba", "kavbuia", "oaubviub", "oavuabivuab");
-        roles.getItems().addAll("yes", "no");
+        ObservableList<TableColumn<String, ?>> columns = table.getColumns();
+        for (TableColumn<String, ?> column : columns) {
+            column.prefWidthProperty().bind(table.widthProperty().multiply(0.225));
+        }
+        columns.getFirst().prefWidthProperty().bind(table.widthProperty().multiply(0.1));
     }
 }

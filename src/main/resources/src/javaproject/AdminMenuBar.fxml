@@ -4,7 +4,6 @@
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 
-
 <MenuBar fx:id="adminBar" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="1280.0" prefHeight="25.0" prefWidth="1280.0" styleClass="adminBar" stylesheets="@../../stylesheets.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="src.javaproject.controllers.MenuBarController">
     <menus>
         <Menu mnemonicParsing="false" styleClass="adminMenu" text="Account">
@@ -13,58 +12,29 @@
             <MenuItem mnemonicParsing="false" onAction="#switchScreen" styleClass="adminMenuItem" text="Manage" />
          </items>
         </Menu>
-        <Menu mnemonicParsing="false" styleClass="adminMenu" text="Chef">
-            <items>
-                <MenuItem mnemonicParsing="false" text="Add Chef" />
-            </items>
-        </Menu>
-        <Menu mnemonicParsing="false" styleClass="adminMenu" text="Deliverer">
-            <items>
-                <MenuItem mnemonicParsing="false" text="Search" />
-                <MenuItem mnemonicParsing="false" text="Add Deliverer" />
-            </items>
-        </Menu>
-        <Menu mnemonicParsing="false" styleClass="adminMenu" text="Ingredient">
-            <items>
-                <MenuItem mnemonicParsing="false" text="Search" />
-                <MenuItem mnemonicParsing="false" text="Add Ingredient" />
-            </items>
-        </Menu>
-        <Menu mnemonicParsing="false" styleClass="adminMenu" text="Meal">
-            <items>
-                <MenuItem mnemonicParsing="false" text="Search" />
-                <MenuItem mnemonicParsing="false" text="Add Meal" />
-            </items>
-        </Menu>
-        <Menu mnemonicParsing="false" styleClass="adminMenu" text="Order">
-            <items>
-                <MenuItem mnemonicParsing="false" text="Search" />
-                <MenuItem mnemonicParsing="false" text="Add Order" />
-            </items>
-        </Menu>
-        <Menu mnemonicParsing="false" styleClass="adminMenu" text="Restaurant">
-            <items>
-                <MenuItem mnemonicParsing="false" text="Search" />
-                <MenuItem mnemonicParsing="false" text="Add Restaurant" />
-            </items>
-        </Menu>
-        <Menu mnemonicParsing="false" styleClass="adminMenu" text="Waiter">
-            <items>
-                <MenuItem mnemonicParsing="false" text="Search" />
-                <MenuItem mnemonicParsing="false" text="Add Waiter" />
-                <MenuItem mnemonicParsing="false" text="Export" />
-            </items>
-        </Menu>
-        <Menu mnemonicParsing="false" styleClass="adminMenu" text="Contract">
-            <items>
-                <MenuItem mnemonicParsing="false" text="Search" />
-                <MenuItem mnemonicParsing="false" text="Add Contract" />
-            </items>
-        </Menu>
-        <Menu mnemonicParsing="false" styleClass="adminMenu" text="Advanced">
-            <items>
-                <MenuItem mnemonicParsing="false" text="Go" />
-            </items>
-        </Menu>
+      <Menu mnemonicParsing="false" styleClass="adminMenu" text="Company">
+         <items>
+            <MenuItem mnemonicParsing="false" onAction="#switchScreen" text="Search" />
+            <MenuItem mnemonicParsing="false" onAction="#switchScreen" styleClass="adminMenuItem" text="Manage" />
+         </items>
+      </Menu>
+      <Menu mnemonicParsing="false" styleClass="adminMenu" text="Contract">
+         <items>
+            <MenuItem mnemonicParsing="false" onAction="#switchScreen" text="Search" />
+            <MenuItem mnemonicParsing="false" onAction="#switchScreen" styleClass="adminMenuItem" text="Manage" />
+         </items>
+      </Menu>
+      <Menu mnemonicParsing="false" styleClass="adminMenu" text="Project">
+         <items>
+            <MenuItem mnemonicParsing="false" onAction="#switchScreen" text="Search" />
+            <MenuItem mnemonicParsing="false" onAction="#switchScreen" styleClass="adminMenuItem" text="Manage" />
+         </items>
+      </Menu>
+      <Menu mnemonicParsing="false" styleClass="adminMenu" text="Worker">
+         <items>
+            <MenuItem mnemonicParsing="false" onAction="#switchScreen" text="Search" />
+            <MenuItem mnemonicParsing="false" onAction="#switchScreen" styleClass="adminMenuItem" text="Manage" />
+         </items>
+      </Menu>
     </menus>
 </MenuBar>

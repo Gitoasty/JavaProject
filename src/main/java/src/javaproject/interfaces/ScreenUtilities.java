@@ -48,9 +48,9 @@ public interface ScreenUtilities {
 
     /**
      * Indicates action was successful
-     * @param b Button object to animate
+     * @param b Node object to animate
      */
-     static void good(Button b) {
+     static void good(Node b) {
         RotateTransition r = new RotateTransition();
         r.setNode(b);
         r.setDuration(Duration.millis(500));
@@ -62,9 +62,9 @@ public interface ScreenUtilities {
 
     /**
      * Indicates action was not successful
-     * @param b Button object to animate
+     * @param b Node object to animate
      */
-    static void bad(Button b) {
+    static void bad(Node b) {
         RotateTransition r = new RotateTransition();
         r.setNode(b);
         r.setDuration(Duration.millis(500));
