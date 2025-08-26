@@ -11,14 +11,16 @@ import javafx.scene.input.KeyEvent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import src.javaproject.exceptions.PasswordException;
+import src.javaproject.exceptions.UserNotExistException;
 import src.javaproject.interfaces.LoginManagement;
 import src.javaproject.interfaces.ScreenUtilities;
+import src.javaproject.interfaces.WorkerMethods;
 
 
 /**
  * Controller for the login screen
  */
-public class LoginController {
+public final class LoginController implements WorkerMethods {
 
     @FXML
     private TextField userText;
@@ -41,7 +43,7 @@ public class LoginController {
     /**
      * Calls the {@link LoginManagement#attemptLogin(Logger, String, String)} method from {@link LoginManagement} interface
      */
-    public void login(){
+    public void login() {
         int result = 0;
 
         try {
@@ -57,7 +59,17 @@ public class LoginController {
                 break;
             case 2:
                 logger.info("Logged in as user");
-                //switch to user panel
+                String status = "";
+                try {
+                    status = checkStatus(logger, userText.getText());
+                } catch (UserNotExistException _) {
+                    logger.error("User not found in database");
+                }
+                if (status == null) {
+                    //add something
+                } else {
+                    ScreenUtilities.switchScreen(logger, "/src/javaproject/UserMenu", userText);
+                }
                 break;
             default:
                 logger.info("Login failed");

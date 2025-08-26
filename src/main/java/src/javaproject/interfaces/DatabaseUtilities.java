@@ -20,10 +20,10 @@ public interface DatabaseUtilities {
      */
     static Connection getConnection(Logger logger) {
         Connection conn = null;
-        try {
-            final String db_file = "src/main/resources/data/database.properties";
+        final String db_file = "src/main/resources/data/database.properties";
+        try (FileReader fr = new FileReader(db_file)) {
             Properties prop = new Properties();
-            prop.load(new FileReader(db_file));
+            prop.load(fr);
             String url = prop.getProperty("databaseURL");
             conn = DriverManager.getConnection(url);
         } catch (SQLException e) {
@@ -42,13 +42,15 @@ public interface DatabaseUtilities {
      */
     static boolean accountExists(Logger logger, String filter) {
         String query = "SELECT userTag FROM accounts WHERE userTag = ?";
-        try (Connection conn = getConnection(logger);
-             PreparedStatement stmt = conn.prepareStatement(query)) {
+        try (Connection conn = getConnection(logger)) {
+            assert conn != null;
 
-            stmt.setString(1, filter);
-            ResultSet rs = stmt.executeQuery();
-            return rs.next();
-        } catch (SQLException _) {
+            try (PreparedStatement stmt = conn.prepareStatement(query)) {
+                stmt.setString(1, filter);
+                ResultSet rs = stmt.executeQuery();
+                return rs.next();
+            }
+        } catch (SQLException | NullPointerException _) {
             logger.warn("Error reading from table");
         }
         return false;
@@ -62,12 +64,15 @@ public interface DatabaseUtilities {
      */
     static Account<String> fetchAccount(Logger logger, String userTag) {
         String query = "SELECT userTag, password, role FROM accounts WHERE userTag = ?";
-        try (Connection conn = getConnection(logger);
-             PreparedStatement stmt = conn.prepareStatement(query)) {
-            stmt.setString(1, userTag);
-            ResultSet rs = stmt.executeQuery();
-            if (rs.next()) {
-                return new Account<>(rs.getString("userTag"), rs.getString("password"), rs.getString("role"));
+        try (Connection conn = getConnection(logger)) {
+            assert conn != null;
+
+            try (PreparedStatement stmt = conn.prepareStatement(query)) {
+                stmt.setString(1, userTag);
+                ResultSet rs = stmt.executeQuery();
+                if (rs.next()) {
+                    return new Account<>(rs.getString("userTag"), rs.getString("password"), rs.getString("role"));
+                }
             }
         } catch (SQLException _) {
             logger.warn("Error reading from table");

@@ -9,13 +9,14 @@ import javafx.scene.control.MenuBar;
 import javafx.scene.layout.BorderPane;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import src.javaproject.interfaces.WorkerMethods;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
-public class WorkerManageController implements Initializable {
+public final class WorkerManageController implements Initializable, WorkerMethods {
 
     @FXML
     private BorderPane topPane;

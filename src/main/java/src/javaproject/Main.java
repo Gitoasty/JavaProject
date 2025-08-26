@@ -16,20 +16,42 @@ import org.slf4j.Logger;
 import src.javaproject.interfaces.DatabaseUtilities;
 import src.javaproject.interfaces.TableCreator;
 
-public class HelloApplication extends Application {
+/**
+ * <h1>
+ *     Main class, starting point for the application
+ * </h1>
+ */
+public class Main extends Application {
+    //TODO use lists, sets *AND* maps, use lambdas for sorting
+    //TODO add a generic class with 2 generic params (somehow)
+    //TODO add serialization & deserialization using txt file
+    //TODO finish the manage sections, deletion needs to have a javafx popup for confirmation
+    //TODO add a screen for viewing deserialized data about changes (probably gonna be admin)
+    //TODO do threading concurrency with an infinite thread which does the de/serialization, something like blockingqueue
 
-    private static final Logger logger = LoggerFactory.getLogger(HelloApplication.class);
+    private static final Logger logger = LoggerFactory.getLogger(Main.class);
+
+    /**
+     * <h3>
+     *     Starting method of JavaFX
+     * </h3>
+     * <p>
+     *     Sets window settings and initial scene settings
+     * </p>
+     * @param stage The window to be displayed on
+     * @throws IOException in case of a problem with accessing files
+     */
     @Override
     public void start(Stage stage) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(HelloApplication.class.getResource("Login_Screen.fxml")));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(Main.class.getResource("Login_Screen.fxml")));
         Scene scene = new Scene(root);
         scene.addEventHandler(KeyEvent.KEY_PRESSED, event -> {
             if (event.isControlDown() && event.getCode() == KeyCode.R) {
                 try {
                     stage.setMaximized(false);
-                    Parent root1 = FXMLLoader.load(Objects.requireNonNull(HelloApplication.class.getResource("Register_Screen.fxml")));
+                    Parent root1 = FXMLLoader.load(Objects.requireNonNull(Main.class.getResource("Register_Screen.fxml")));
                     Scene scene1 = new Scene(root1);
-                    String css = Objects.requireNonNull(HelloApplication.class.getResource("/stylesheets.css")).toExternalForm();
+                    String css = Objects.requireNonNull(Main.class.getResource("/stylesheets.css")).toExternalForm();
                     scene1.getStylesheets().add(css);
                     stage.setScene(scene1);
                     stage.setMaximized(true);
@@ -54,6 +76,15 @@ public class HelloApplication extends Application {
         logger.info("App started successfully");
     }
 
+    /**
+     * <h3>
+     *     Main method for the application
+     * </h3>
+     * <p>
+     *     Ensures the existence of a database and required tables
+     * </p>
+     * @param args received command line arguments
+     */
     public static void main(String[] args) {
         DatabaseUtilities.getConnection(logger);
         TableCreator.accountData(logger);

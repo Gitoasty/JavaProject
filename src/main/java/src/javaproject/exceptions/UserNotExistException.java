@@ -1,17 +1,18 @@
 package src.javaproject.exceptions;
 
 import java.io.FileNotFoundException;
+import java.sql.SQLException;
 
 /**
  * Custom Exception to be used when accessing database which cannot be located
  */
-public class DatabaseNotFoundException extends FileNotFoundException {
+public class UserNotExistException extends SQLException {
 
     /**
      * Constructs a new database exception with the specified message
      * @param message the message to be used for this exception, may be null
      */
-    public DatabaseNotFoundException(String message) {
+    public UserNotExistException(String message) {
         super(message);
     }
 }

@@ -16,10 +16,8 @@ public interface TableCreator {
      * @param logger logger of controller calling this method
      */
     static void accountData(Logger logger) {
-        try {
-            Connection conn = DatabaseUtilities.getConnection(logger);
-
-            Statement stat = conn.createStatement();
+        try (   Connection conn = DatabaseUtilities.getConnection(logger);
+                Statement stat = conn.createStatement()) {
 
             String creationString = "CREATE TABLE IF NOT EXISTS " + "accounts" + "("
                     +"userTag TEXT PRIMARY KEY NOT NULL, "
@@ -27,9 +25,8 @@ public interface TableCreator {
                     +"role TEXT NOT NULL"
                     +")";
             stat.executeUpdate(creationString);
-            conn.close();
         } catch (SQLException _) {
-            logger.warn("Problem creating account table");
+            logger.error("Problem creating account table");
         }
     }
 
@@ -38,10 +35,8 @@ public interface TableCreator {
      * @param logger logger of controller calling this method
      */
     static void workerData(Logger logger) {
-        try {
-            Connection conn = DatabaseUtilities.getConnection(logger);
-
-            Statement stat = conn.createStatement();
+        try (Connection conn = DatabaseUtilities.getConnection(logger);
+             Statement stat = conn.createStatement()) {
 
             String creationString = "CREATE TABLE IF NOT EXISTS " + "workers" + "("
                     +"id TEXT PRIMARY KEY NOT NULL, "
@@ -51,9 +46,8 @@ public interface TableCreator {
                     +"experience INTEGER"
                     +")";
             stat.executeUpdate(creationString);
-            conn.close();
         } catch (SQLException _) {
-            logger.warn("Problem creating worker table");
+            logger.error("Problem creating worker table");
         }
     }
 
@@ -62,10 +56,8 @@ public interface TableCreator {
      * @param logger logger of controller calling this method
      */
     static void projectData(Logger logger) {
-        try {
-            Connection conn = DatabaseUtilities.getConnection(logger);
-
-            Statement stat = conn.createStatement();
+        try (Connection conn = DatabaseUtilities.getConnection(logger);
+             Statement stat = conn.createStatement()) {
 
             String creationString = "CREATE TABLE IF NOT EXISTS " + "projects" + "("
                     +"id INTEGER PRIMARY KEY AUTOINCREMENT, "
@@ -75,9 +67,8 @@ public interface TableCreator {
                     +"workers TEXT" //user tags separated by commas
                     +")";
             stat.executeUpdate(creationString);
-            conn.close();
         } catch (SQLException _) {
-            logger.warn("Problem creating project table");
+            logger.error("Problem creating project table");
         }
     }
 
@@ -86,10 +77,8 @@ public interface TableCreator {
      * @param logger logger of controller calling this method
      */
     static void companyData(Logger logger) {
-        try {
-            Connection conn = DatabaseUtilities.getConnection(logger);
-
-            Statement stat = conn.createStatement();
+        try (Connection conn = DatabaseUtilities.getConnection(logger);
+             Statement stat = conn.createStatement()) {
 
             String creationString = "CREATE TABLE IF NOT EXISTS " + "companies" + "("
                     +"id INTEGER PRIMARY KEY AUTOINCREMENT, "
@@ -97,9 +86,8 @@ public interface TableCreator {
                     +"workers TEXT" //user tags separated by commas
                     +")";
             stat.executeUpdate(creationString);
-            conn.close();
         } catch (SQLException _) {
-            logger.warn("Problem creating company table");
+            logger.error("Problem creating company table");
         }
     }
 
@@ -108,10 +96,8 @@ public interface TableCreator {
      * @param logger logger of controller calling this method
      */
     static void contractData(Logger logger) {
-        try {
-            Connection conn = DatabaseUtilities.getConnection(logger);
-
-            Statement stat = conn.createStatement();
+        try (Connection conn = DatabaseUtilities.getConnection(logger);
+             Statement stat = conn.createStatement()) {
 
             String creationString = "CREATE TABLE IF NOT EXISTS " + "contracts" + "("
                     +"id INTEGER PRIMARY KEY AUTOINCREMENT, "
@@ -121,9 +107,8 @@ public interface TableCreator {
                     +"companyId INTEGER NOT NULL"
                     +")";
             stat.executeUpdate(creationString);
-            conn.close();
         } catch (SQLException _) {
-            logger.warn("Problem creating contract table");
+            logger.error("Problem creating contract table");
         }
     }
 }
