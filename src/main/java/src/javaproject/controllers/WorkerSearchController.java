@@ -11,8 +11,6 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.layout.BorderPane;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import src.javaproject.classes.FreelanceWorker;
-import src.javaproject.classes.StayingWorker;
 import src.javaproject.classes.Worker;
 import src.javaproject.enums.WorkerTypes;
 import src.javaproject.interfaces.WorkerMethods;

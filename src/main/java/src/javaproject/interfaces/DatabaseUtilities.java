@@ -26,9 +26,9 @@ public interface DatabaseUtilities {
             prop.load(fr);
             String url = prop.getProperty("databaseURL");
             conn = DriverManager.getConnection(url);
-        } catch (SQLException e) {
+        } catch (SQLException _) {
             logger.warn("Error creating table");
-        } catch (IOException e) {
+        } catch (IOException _) {
             logger.warn("Error opening or reading database.properties");
         }
         return conn;
