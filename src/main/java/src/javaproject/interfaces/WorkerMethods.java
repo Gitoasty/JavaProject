@@ -6,6 +6,7 @@ import src.javaproject.classes.Worker;
 import src.javaproject.controllers.LoginController;
 import src.javaproject.controllers.WorkerManageController;
 import src.javaproject.controllers.WorkerSearchController;
+import src.javaproject.enums.WorkerTypes;
 import src.javaproject.exceptions.UserNotExistException;
 
 import java.sql.Connection;
@@ -42,21 +43,38 @@ public sealed interface WorkerMethods permits LoginController, WorkerSearchContr
         throw new UserNotExistException("User not found in database");
     }
 
-    default List<Worker> getAllWorkers(Logger logger) {
+    default List<Worker> getWorkers(Logger logger, String worker) {
         List<Worker> outList = new ArrayList<>();
-        String query = "SELECT id, fName, lName, type, experience FROM workers";
+        String query;
+
+        if (worker.isEmpty()) {
+            query = "SELECT id, fName, lName, type, experience FROM workers";
+        } else {
+            query = STR."SELECT id, fName, lName, type, experience FROM workers WHERE id LIKE \"\{worker}%\"";
+        }
+
         try (Connection conn = DatabaseUtilities.getConnection(logger);
              PreparedStatement stmt = conn.prepareStatement(query)) {
             ResultSet results = stmt.executeQuery();
 
             while (results.next()) {
-                outList.add(FreelanceWorker.builder()
+                FreelanceWorker temp = FreelanceWorker.builder()
                         .id(results.getString("id"))
                         .firstName(results.getString("fName"))
                         .lastName(results.getString("lName"))
                         .workExperience(results.getInt("experience"))
-                        .build()
-                );
+                        .build();
+
+                String test = results.getString("type");
+                if (test == null) {
+                    temp.type = WorkerTypes.Waiting;
+                } else if (Character.isDigit(test.toCharArray()[0])) {
+                    temp.type = WorkerTypes.Freelance;
+                } else {
+                    temp.type = WorkerTypes.Staying;
+                }
+
+                outList.add(temp);
             }
 
             return outList;

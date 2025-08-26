@@ -1,5 +1,7 @@
 package src.javaproject.classes;
 
+import src.javaproject.enums.WorkerTypes;
+
 /**
  * Base class for FreelanceWorker and StayingWorker classes
  */
@@ -7,6 +9,8 @@ public abstract sealed class Worker permits FreelanceWorker, StayingWorker {
     protected String id;
     protected String firstName;
     protected String lastName;
+
+    public WorkerTypes type;
     protected Integer workExperience;
 
     /**
@@ -40,4 +44,6 @@ public abstract sealed class Worker permits FreelanceWorker, StayingWorker {
     public Integer experienceGetter() {
         return workExperience;
     }
+
+
 }

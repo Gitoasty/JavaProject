@@ -21,17 +21,14 @@ public interface RowAdder {
      * @param creds ArrayList of Account data
      */
     static void addAccount(Logger logger, ArrayList<String> creds) {
-        try {
-            Connection conn = DatabaseUtilities.getConnection(logger);
-            String sql = "INSERT INTO " + "accounts" + " (userTag, password, role) VALUES(?, ?, ?)";
-            PreparedStatement pstmt = conn.prepareStatement(sql);
+        String sql = "INSERT INTO " + "accounts" + " (userTag, password, role) VALUES(?, ?, ?)";
+        try (Connection conn = DatabaseUtilities.getConnection(logger);
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setString(1, creds.getFirst());
             String password = BCrypt.withDefaults().hashToString(12, creds.get(3).toCharArray());
             pstmt.setString(2, password);
             pstmt.setString(3, "user");
             pstmt.executeUpdate();
-            pstmt.close();
-            conn.close();
         } catch (SQLException _) {
             logger.warn("Problem inserting account into table");
         }
@@ -44,16 +41,13 @@ public interface RowAdder {
      * @param creds ArrayList of Account data
      */
     static void addPartialWorker(Logger logger, ArrayList<String> creds) {
-        try {
-            Connection conn = DatabaseUtilities.getConnection(logger);
-            String sql = "INSERT INTO " + "workers" + " (id, fName, lName) VALUES(?, ?, ?)";
-            PreparedStatement pstmt = conn.prepareStatement(sql);
+        String sql = "INSERT INTO " + "workers" + " (id, fName, lName) VALUES(?, ?, ?)";
+        try (Connection conn = DatabaseUtilities.getConnection(logger);
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setString(1, creds.getFirst());
             pstmt.setString(2, creds.get(1));
             pstmt.setString(3, creds.get(2));
             pstmt.executeUpdate();
-            pstmt.close();
-            conn.close();
         } catch (SQLException _) {
             logger.warn("Problem inserting worker into table");
         }

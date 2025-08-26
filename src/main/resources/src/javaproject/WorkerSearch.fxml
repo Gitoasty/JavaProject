@@ -49,11 +49,11 @@
                     </GridPane.margin></TextField>
                 <TableView fx:id="table" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="1280.0" prefHeight="200.0" prefWidth="200.0" stylesheets="@../../stylesheets.css" GridPane.columnSpan="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                     <columns>
-                        <TableColumn fx:id="description2" maxWidth="1.7976931348623157E308" minWidth="80.0" resizable="false" text="Worker tag" />
-                        <TableColumn fx:id="description" maxWidth="1.7976931348623157E308" minWidth="300.0" prefWidth="300.0" resizable="false" text="First name" />
-                        <TableColumn fx:id="description1" maxWidth="1.7976931348623157E308" minWidth="300.0" prefWidth="300.0" resizable="false" text="Last name" />
-                        <TableColumn fx:id="description11" maxWidth="1.7976931348623157E308" minWidth="300.0" prefWidth="300.0" resizable="false" text="Employment type" />
-                        <TableColumn fx:id="description12" maxWidth="1.7976931348623157E308" minWidth="300.0" prefWidth="300.0" resizable="false" text="Work experience" />
+                        <TableColumn fx:id="workerTag" maxWidth="1.7976931348623157E308" minWidth="80.0" resizable="false" text="Worker tag" />
+                        <TableColumn fx:id="fName" maxWidth="1.7976931348623157E308" minWidth="300.0" prefWidth="300.0" resizable="false" text="First name" />
+                        <TableColumn fx:id="lName" maxWidth="1.7976931348623157E308" minWidth="300.0" prefWidth="300.0" resizable="false" text="Last name" />
+                        <TableColumn fx:id="type" maxWidth="1.7976931348623157E308" minWidth="300.0" prefWidth="300.0" resizable="false" text="Employment type" />
+                        <TableColumn fx:id="experience" maxWidth="1.7976931348623157E308" minWidth="300.0" prefWidth="300.0" resizable="false" text="Work experience" />
                     </columns>
                 </TableView>
                 <Button fx:id="searchButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#searchWorkers" styleClass="adminButton" text="Search" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
