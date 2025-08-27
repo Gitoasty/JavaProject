@@ -1,6 +1,5 @@
 package src.javaproject.exceptions;
 
-import java.io.FileNotFoundException;
 import java.sql.SQLException;
 
 /**
