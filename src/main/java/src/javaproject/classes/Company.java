@@ -2,7 +2,7 @@ package src.javaproject.classes;
 
 import lombok.Getter;
 
-import java.util.Set;
+import java.util.TreeSet;
 
 /**
  * Class to represent a company with workers
@@ -11,16 +11,22 @@ import java.util.Set;
 public final class Company {
     private final Integer id;
     private final String name;
-    private final Set<String> workers;
+    private final TreeSet<String> workers;
 
     /**
      * Constructs the Company object
      * @param c Builder object used to construct Company
      */
     private Company(Builder c) {
+        TreeSet<String> temp = new TreeSet<>((first, second) -> {
+            char one = first.charAt(1);
+            char two = second.charAt(1);
+            return Character.compare(one, two);
+        });
+        temp.addAll(c.workers);
         this.id = c.id;
         this.name = c.name;
-        this.workers = c.workers;
+        this.workers = temp;
     }
 
     /**
@@ -67,7 +73,7 @@ public final class Company {
          * @param workers takes a Set of Workers to be set as company workers
          * @return Builder as an object of type FinalSetter
          */
-        FinalSetter workers(Set<String> workers);
+        FinalSetter workers(TreeSet<String> workers);
     }
 
     /**
@@ -88,7 +94,7 @@ public final class Company {
     private static class Builder implements IdSetter, NameSetter, WorkerSetter, FinalSetter {
         private Integer id;
         private String name;
-        private Set<String> workers;
+        private TreeSet<String> workers;
 
         @Override
         public NameSetter id(Integer id) {
@@ -103,7 +109,7 @@ public final class Company {
         }
 
         @Override
-        public FinalSetter workers(Set<String> workers) {
+        public FinalSetter workers(TreeSet<String> workers) {
             this.workers = workers;
             return this;
         }

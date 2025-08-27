@@ -25,7 +25,6 @@ public class Main extends Application {
     //TODO use lists, sets *AND* maps, use lambdas for sorting
     //TODO add a generic class with 2 generic params (somehow)
     //TODO add serialization & deserialization using txt file
-    //TODO finish search sections
     //TODO finish the manage sections, deletion needs to have a javafx popup for confirmation
     //TODO add a screen for viewing deserialized data about changes (probably gonna be admin)
     //TODO do threading concurrency with an infinite thread which does the de/serialization, something like blockingqueue

@@ -7,9 +7,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public interface CompanyMethods {
 
@@ -28,10 +26,11 @@ public interface CompanyMethods {
             ResultSet results = stmt.executeQuery();
 
             while (results.next()) {
+                TreeSet<String> workers = new TreeSet<>(List.of(results.getString("workers").split(",")));
                 Company tempCompany = Company.builder()
                         .id(results.getInt("id"))
                         .name(results.getString("name"))
-                        .workers(Set.of(results.getString("workers").split(",")))
+                        .workers(workers)
                         .build();
                 outList.add(tempCompany);
             }
