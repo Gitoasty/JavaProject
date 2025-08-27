@@ -1,14 +1,17 @@
 package src.javaproject.classes;
 
+import lombok.Getter;
+
 import java.util.Set;
 
 /**
  * Class to represent a company with workers
  */
+@Getter
 public final class Company {
     private final Integer id;
     private final String name;
-    private final Set<Worker> workers;
+    private final Set<String> workers;
 
     /**
      * Constructs the Company object
@@ -64,7 +67,7 @@ public final class Company {
          * @param workers takes a Set of Workers to be set as company workers
          * @return Builder as an object of type FinalSetter
          */
-        FinalSetter workers(Set<Worker> workers);
+        FinalSetter workers(Set<String> workers);
     }
 
     /**
@@ -85,7 +88,7 @@ public final class Company {
     private static class Builder implements IdSetter, NameSetter, WorkerSetter, FinalSetter {
         private Integer id;
         private String name;
-        private Set<Worker> workers;
+        private Set<String> workers;
 
         @Override
         public NameSetter id(Integer id) {
@@ -100,7 +103,7 @@ public final class Company {
         }
 
         @Override
-        public FinalSetter workers(Set<Worker> workers) {
+        public FinalSetter workers(Set<String> workers) {
             this.workers = workers;
             return this;
         }
@@ -109,29 +112,5 @@ public final class Company {
         public Company build() {
             return new Company(this);
         }
-    }
-
-    /**
-     * Gets company id
-     * @return Integer id
-     */
-    public Integer idGetter() {
-        return id;
-    }
-
-    /**
-     * Gets company name
-     * @return String name
-     */
-    public String nameGetter() {
-        return name;
-    }
-
-    /**
-     * Gets Workers
-     * @return Set of Workers
-     */
-    public Set<Worker> workerGetter() {
-        return workers;
     }
 }

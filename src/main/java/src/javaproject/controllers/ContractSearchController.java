@@ -50,8 +50,8 @@ public class ContractSearchController implements Initializable {
         salary.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().salary().toString()));
         companyId.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().companyId().toString()));
 
-        ObservableList<Contract> observableProjects = FXCollections.observableArrayList(contracts);
-        table.setItems(observableProjects);
+        ObservableList<Contract> observableContracts = FXCollections.observableArrayList(contracts);
+        table.setItems(observableContracts);
     }
 
     /**

@@ -150,7 +150,7 @@ public class ProjectAssignment extends Project {
         }
     }
 
-    public ArrayList<String> getWorkers() {
+    public List<String> getWorkers() {
         return workers;
     }
 }

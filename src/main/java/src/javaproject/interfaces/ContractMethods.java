@@ -12,14 +12,14 @@ import java.util.List;
 
 public interface ContractMethods {
 
-    static List<Contract> getContracts(Logger logger, String project) {
+    static List<Contract> getContracts(Logger logger, String contract) {
         List<Contract> outList = new ArrayList<>();
         String query;
 
-        if (project.isEmpty()) {
-            query = "SELECT id, name, estimatedTime, tasks, workers FROM projects";
+        if (contract.isEmpty()) {
+            query = "SELECT id, start, end, salary, companyId FROM contracts";
         } else {
-            query = STR."SELECT id, name, estimatedTime, tasks, workers FROM projects WHERE id LIKE \"\{project}%\"";
+            query = STR."SELECT id, start, end, salary, companyId FROM contracts WHERE id LIKE \"\{contract}%\"";
         }
 
         try (Connection conn = DatabaseUtilities.getConnection(logger);

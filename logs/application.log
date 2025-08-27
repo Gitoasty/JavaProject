@@ -1854,3 +1854,29 @@
 2025-08-27 22:39:35,518 [INFO] src.javaproject.controllers.LoginController - Logged in as admin
 2025-08-27 22:39:35,691 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Admin_Menu
 2025-08-27 22:39:41,896 [INFO] src.javaproject.controllers.MenuBarController - Switched screen to /src/javaproject/ContractSearch
+2025-08-27 22:44:03,431 [INFO] src.javaproject.Main - App started successfully
+2025-08-27 22:44:06,497 [INFO] src.javaproject.controllers.LoginController - Logged in as admin
+2025-08-27 22:44:06,672 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Admin_Menu
+2025-08-27 22:44:09,284 [ERROR] src.javaproject.controllers.MenuBarController - Error with switching screens
+2025-08-27 22:44:11,624 [ERROR] src.javaproject.controllers.MenuBarController - Error with switching screens
+2025-08-27 22:44:13,479 [INFO] src.javaproject.controllers.MenuBarController - Switched screen to /src/javaproject/ContractSearch
+2025-08-27 22:53:24,850 [INFO] src.javaproject.controllers.MenuBarController - Switched screen to /src/javaproject/ContractManage
+2025-08-27 22:53:28,441 [INFO] src.javaproject.controllers.MenuBarController - Switched screen to /src/javaproject/ContractSearch
+2025-08-27 22:53:31,264 [INFO] src.javaproject.Main - App closed successfully
+2025-08-27 22:54:15,479 [INFO] src.javaproject.Main - App started successfully
+2025-08-27 22:54:18,326 [INFO] src.javaproject.controllers.LoginController - Logged in as admin
+2025-08-27 22:54:18,498 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Admin_Menu
+2025-08-27 22:54:20,053 [INFO] src.javaproject.controllers.MenuBarController - Switched screen to /src/javaproject/ContractSearch
+2025-08-27 22:54:32,045 [INFO] src.javaproject.controllers.MenuBarController - Switched screen to /src/javaproject/ContractManage
+2025-08-27 22:54:39,066 [INFO] src.javaproject.controllers.MenuBarController - Switched screen to /src/javaproject/AccountSearch
+2025-08-27 22:54:41,905 [INFO] src.javaproject.controllers.MenuBarController - Switched screen to /src/javaproject/ContractSearch
+2025-08-27 22:54:43,027 [INFO] src.javaproject.controllers.MenuBarController - Switched screen to /src/javaproject/ContractManage
+2025-08-27 22:54:56,318 [INFO] src.javaproject.Main - App closed successfully
+2025-08-27 22:55:03,757 [INFO] src.javaproject.Main - App started successfully
+2025-08-27 22:55:04,641 [INFO] src.javaproject.Main - App closed successfully
+2025-08-27 22:57:02,720 [INFO] src.javaproject.Main - App started successfully
+2025-08-27 22:57:06,234 [INFO] src.javaproject.controllers.LoginController - Logged in as admin
+2025-08-27 22:57:06,402 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Admin_Menu
+2025-08-27 22:57:07,990 [INFO] src.javaproject.controllers.MenuBarController - Switched screen to /src/javaproject/CompanySearch
+2025-08-27 22:57:20,896 [INFO] src.javaproject.controllers.MenuBarController - Switched screen to /src/javaproject/CompanyManage
+2025-08-27 22:57:38,712 [INFO] src.javaproject.Main - App closed successfully
