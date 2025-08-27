@@ -1,8 +1,13 @@
 package src.javaproject.classes;
 
+import lombok.Getter;
+import lombok.Setter;
+
 /**
  * This class is used to represent freelance workers in the system
  */
+@Getter
+@Setter
 public final class FreelanceWorker extends Worker {
     private final Contract contract;
 
@@ -141,13 +146,5 @@ public final class FreelanceWorker extends Worker {
         public FreelanceWorker build() {
             return new FreelanceWorker(this);
         }
-    }
-
-    /**
-     * Gets the contract
-     * @return Contract object
-     */
-    public Contract contractGetter() {
-        return contract;
     }
 }

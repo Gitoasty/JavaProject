@@ -79,7 +79,7 @@ public sealed interface WorkerMethods permits LoginController, WorkerSearchContr
 
             return outList;
         } catch (SQLException _) {
-            logger.error("problem");
+            logger.error("Problem with getting workers from table");
         }
         return new ArrayList<>();
     }

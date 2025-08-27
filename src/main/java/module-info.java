@@ -5,6 +5,7 @@ module src.javaproject {
     requires bcrypt;
     requires org.slf4j;
     requires ch.qos.logback.classic;
+    requires lombok;
 
     opens src.javaproject to javafx.fxml;
     exports src.javaproject;

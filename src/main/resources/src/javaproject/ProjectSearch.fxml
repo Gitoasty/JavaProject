@@ -49,14 +49,14 @@
                     </GridPane.margin></TextField>
                 <TableView fx:id="table" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="1280.0" prefHeight="200.0" prefWidth="200.0" stylesheets="@../../stylesheets.css" GridPane.columnSpan="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                     <columns>
-                        <TableColumn fx:id="description2" maxWidth="1.7976931348623157E308" minWidth="80.0" resizable="false" text="Project ID" />
-                        <TableColumn fx:id="description" maxWidth="1.7976931348623157E308" minWidth="300.0" prefWidth="300.0" resizable="false" text="Name" />
-                        <TableColumn fx:id="description1" maxWidth="1.7976931348623157E308" minWidth="300.0" prefWidth="300.0" resizable="false" text="Estimated time" />
-                        <TableColumn fx:id="description11" maxWidth="1.7976931348623157E308" minWidth="300.0" prefWidth="300.0" resizable="false" text="Tasks" />
-                        <TableColumn fx:id="description12" maxWidth="1.7976931348623157E308" minWidth="300.0" prefWidth="300.0" resizable="false" text="Workers" />
+                        <TableColumn fx:id="projectId" maxWidth="1.7976931348623157E308" minWidth="80.0" resizable="false" text="Project ID" />
+                        <TableColumn fx:id="projectName" maxWidth="1.7976931348623157E308" minWidth="300.0" prefWidth="300.0" resizable="false" text="Name" />
+                        <TableColumn fx:id="estimatedTime" maxWidth="1.7976931348623157E308" minWidth="300.0" prefWidth="300.0" resizable="false" text="Estimated time" />
+                        <TableColumn fx:id="tasks" maxWidth="1.7976931348623157E308" minWidth="300.0" prefWidth="300.0" resizable="false" text="Tasks" />
+                        <TableColumn fx:id="workers" maxWidth="1.7976931348623157E308" minWidth="300.0" prefWidth="300.0" resizable="false" text="Workers" />
                     </columns>
                 </TableView>
-                <Button fx:id="searchButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="adminButton" text="Search" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                <Button fx:id="searchButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#searchProjects" styleClass="adminButton" text="Search" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                     <font>
                         <Font size="14.0" />
                     </font>

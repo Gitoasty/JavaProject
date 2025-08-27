@@ -1807,3 +1807,27 @@
 2025-08-26 23:17:11,715 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Admin_Menu
 2025-08-26 23:17:13,463 [INFO] src.javaproject.controllers.MenuBarController - Switched screen to /src/javaproject/WorkerSearch
 2025-08-26 23:17:28,006 [INFO] src.javaproject.Main - App closed successfully
+2025-08-27 20:52:54,801 [INFO] src.javaproject.Main - App started successfully
+2025-08-27 20:52:58,639 [INFO] src.javaproject.controllers.LoginController - Logged in as admin
+2025-08-27 20:52:58,861 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Admin_Menu
+2025-08-27 20:53:01,001 [INFO] src.javaproject.controllers.MenuBarController - Switched screen to /src/javaproject/WorkerSearch
+2025-08-27 20:53:29,237 [INFO] src.javaproject.Main - App closed successfully
+2025-08-27 21:52:59,385 [INFO] src.javaproject.Main - App started successfully
+2025-08-27 21:53:03,631 [INFO] src.javaproject.Main - App closed successfully
+2025-08-27 22:15:21,309 [INFO] src.javaproject.Main - App started successfully
+2025-08-27 22:15:25,537 [INFO] src.javaproject.controllers.LoginController - Logged in as admin
+2025-08-27 22:15:25,742 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Admin_Menu
+2025-08-27 22:15:27,428 [WARN] src.javaproject.controllers.ProjectSearchController - Issue setting MenuBar to top of screen
+2025-08-27 22:15:27,662 [INFO] src.javaproject.controllers.MenuBarController - Switched screen to /src/javaproject/ProjectSearch
+2025-08-27 22:15:43,130 [INFO] src.javaproject.Main - App closed successfully
+2025-08-27 22:16:25,224 [INFO] src.javaproject.Main - App started successfully
+2025-08-27 22:16:29,778 [INFO] src.javaproject.controllers.LoginController - Logged in as admin
+2025-08-27 22:16:29,949 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Admin_Menu
+2025-08-27 22:16:31,505 [WARN] src.javaproject.controllers.ProjectSearchController - Issue setting MenuBar to top of screen
+2025-08-27 22:16:31,723 [INFO] src.javaproject.controllers.MenuBarController - Switched screen to /src/javaproject/ProjectSearch
+2025-08-27 22:16:50,762 [INFO] src.javaproject.Main - App closed successfully
+2025-08-27 22:17:09,943 [INFO] src.javaproject.Main - App started successfully
+2025-08-27 22:17:13,116 [INFO] src.javaproject.controllers.LoginController - Logged in as admin
+2025-08-27 22:17:13,303 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Admin_Menu
+2025-08-27 22:17:14,943 [INFO] src.javaproject.controllers.MenuBarController - Switched screen to /src/javaproject/ProjectSearch
+2025-08-27 22:17:21,374 [INFO] src.javaproject.Main - App closed successfully

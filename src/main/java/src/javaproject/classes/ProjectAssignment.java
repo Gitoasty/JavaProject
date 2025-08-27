@@ -3,12 +3,22 @@ package src.javaproject.classes;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
+import lombok.*;
 
 /**
  * This class is used for storing assigned projects
  */
+@Getter
+@Setter
 public class ProjectAssignment extends Project {
-    private ArrayList<Worker> workers;
+    private ArrayList<String> workers = new ArrayList<>();
+
+    public ProjectAssignment(ProjectDraft pd) {
+        this.id = pd.id;
+        this.name = pd.name;
+        this.estimatedTime = pd.estimatedTime;
+        this.tasks = pd.tasks;
+    }
 
     /**
      * constructs the ProjectAssignment object
@@ -65,7 +75,7 @@ public class ProjectAssignment extends Project {
          * @param workers takes a List of Strings to be set as the project workers
          * @return Builder as an object of type OptionalSetter
          */
-        OptionalSetter workers(List<Worker> workers);
+        OptionalSetter workers(List<String> workers);
     }
 
     /**
@@ -100,7 +110,7 @@ public class ProjectAssignment extends Project {
     private static class Builder implements IdSetter, NameSetter, WorkerSetter, OptionalSetter {
         private Integer id;
         private String name;
-        private ArrayList<Worker> workers;
+        private ArrayList<String> workers;
         private Set<String> tasks;
         private Integer estimatedTime;
 
@@ -117,8 +127,8 @@ public class ProjectAssignment extends Project {
         }
 
         @Override
-        public OptionalSetter workers(List<Worker> workers) {
-            this.workers = (ArrayList<Worker>) workers;
+        public OptionalSetter workers(List<String> workers) {
+            this.workers = (ArrayList<String>) workers;
             return this;
         }
 
@@ -140,19 +150,7 @@ public class ProjectAssignment extends Project {
         }
     }
 
-    /**
-     * takes an Arraylist of Workers for the Project
-     * @param w provided List of Workers for the project
-     */
-    public void workerSetter(List<Worker> w) {
-        this.workers = (ArrayList<Worker>) w;
-    }
-
-    /**
-     * used to get the workers assigned to the project
-     * @return an Arraylist of Workers working on the project
-     */
-    public List<Worker> workerGetter() {
+    public ArrayList<String> getWorkers() {
         return workers;
     }
 }
