@@ -1835,3 +1835,22 @@
 2025-08-27 22:18:25,105 [INFO] src.javaproject.controllers.LoginController - Logged in as admin
 2025-08-27 22:18:25,283 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Admin_Menu
 2025-08-27 22:18:28,196 [INFO] src.javaproject.Main - App closed successfully
+2025-08-27 22:36:22,217 [INFO] src.javaproject.Main - App started successfully
+2025-08-27 22:36:25,320 [INFO] src.javaproject.controllers.LoginController - Logged in as admin
+2025-08-27 22:36:25,497 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Admin_Menu
+2025-08-27 22:36:27,412 [INFO] src.javaproject.controllers.MenuBarController - Switched screen to /src/javaproject/ContractSearch
+2025-08-27 22:36:44,501 [INFO] src.javaproject.controllers.MenuBarController - Switched screen to /src/javaproject/CompanySearch
+2025-08-27 22:36:47,596 [INFO] src.javaproject.controllers.MenuBarController - Switched screen to /src/javaproject/ContractSearch
+2025-08-27 22:36:49,816 [INFO] src.javaproject.controllers.MenuBarController - Switched screen to /src/javaproject/ProjectSearch
+2025-08-27 22:36:51,250 [INFO] src.javaproject.controllers.MenuBarController - Switched screen to /src/javaproject/WorkerSearch
+2025-08-27 22:36:52,646 [INFO] src.javaproject.controllers.MenuBarController - Switched screen to /src/javaproject/CompanySearch
+2025-08-27 22:38:55,771 [INFO] src.javaproject.Main - App closed successfully
+2025-08-27 22:39:09,425 [INFO] src.javaproject.Main - App started successfully
+2025-08-27 22:39:12,598 [INFO] src.javaproject.controllers.LoginController - Logged in as admin
+2025-08-27 22:39:12,769 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Admin_Menu
+2025-08-27 22:39:14,717 [INFO] src.javaproject.controllers.MenuBarController - Switched screen to /src/javaproject/ContractSearch
+2025-08-27 22:39:23,484 [INFO] src.javaproject.Main - App closed successfully
+2025-08-27 22:39:32,302 [INFO] src.javaproject.Main - App started successfully
+2025-08-27 22:39:35,518 [INFO] src.javaproject.controllers.LoginController - Logged in as admin
+2025-08-27 22:39:35,691 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Admin_Menu
+2025-08-27 22:39:41,896 [INFO] src.javaproject.controllers.MenuBarController - Switched screen to /src/javaproject/ContractSearch

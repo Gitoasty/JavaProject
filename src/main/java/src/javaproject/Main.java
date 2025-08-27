@@ -67,7 +67,7 @@ public class Main extends Application {
         stage.getIcons().add(icon);
         stage.setMaximized(true);
         stage.setMinWidth(1280);
-        stage.setMinHeight(720);
+        stage.setMinHeight(735);
         stage.setTitle("Freelancer tracking");
         stage.setScene(scene);
         stage.setOnCloseRequest(_ ->
