@@ -67,11 +67,11 @@ public sealed interface WorkerMethods permits LoginController, WorkerSearchContr
 
                 String test = results.getString("type");
                 if (test == null) {
-                    temp.type = WorkerTypes.Waiting;
+                    temp.setType(WorkerTypes.WAITING);
                 } else if (Character.isDigit(test.toCharArray()[0])) {
-                    temp.type = WorkerTypes.Freelance;
+                    temp.setType(WorkerTypes.FREELANCE);
                 } else {
-                    temp.type = WorkerTypes.Staying;
+                    temp.setType(WorkerTypes.STAYING);
                 }
 
                 outList.add(temp);

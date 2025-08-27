@@ -54,9 +54,9 @@ public final class WorkerSearchController implements Initializable, WorkerMethod
         fName.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().firstNameGetter()));
         lName.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().lastNameGetter()));
         type.setCellValueFactory(cellData -> {
-            if (cellData.getValue().type.equals(WorkerTypes.Freelance)) {
+            if (cellData.getValue().getType().equals(WorkerTypes.FREELANCE)) {
                 return new SimpleStringProperty("Freelance");
-            } else if (cellData.getValue().type.equals(WorkerTypes.Staying)) {
+            } else if (cellData.getValue().getType().equals(WorkerTypes.STAYING)) {
                 return new SimpleStringProperty("Contract");
             } else {
                 return new SimpleStringProperty("Waiting");
