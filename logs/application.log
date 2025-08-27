@@ -1831,3 +1831,7 @@
 2025-08-27 22:17:13,303 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Admin_Menu
 2025-08-27 22:17:14,943 [INFO] src.javaproject.controllers.MenuBarController - Switched screen to /src/javaproject/ProjectSearch
 2025-08-27 22:17:21,374 [INFO] src.javaproject.Main - App closed successfully
+2025-08-27 22:18:21,695 [INFO] src.javaproject.Main - App started successfully
+2025-08-27 22:18:25,105 [INFO] src.javaproject.controllers.LoginController - Logged in as admin
+2025-08-27 22:18:25,283 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Admin_Menu
+2025-08-27 22:18:28,196 [INFO] src.javaproject.Main - App closed successfully
