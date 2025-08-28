@@ -2,6 +2,9 @@ package src.javaproject.controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
+import javafx.scene.Scene;
+import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
 import org.slf4j.Logger;
@@ -29,6 +32,8 @@ public class MenuBarController {
             target = STR."/src/javaproject/\{item.getParentMenu().getText()}Search";
         } else if (((MenuItem) event.getSource()).getText().equals("Manage")) {
             target = STR."/src/javaproject/\{item.getParentMenu().getText()}Manage";
+        } else if (((MenuItem)  event.getSource()).getText().equals("Logs")) {
+            target = "/src/javaproject/Logs";
         }
 
         ScreenUtilities.switchScreen(logger, target, adminBar);

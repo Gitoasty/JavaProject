@@ -36,5 +36,10 @@
             <MenuItem mnemonicParsing="false" onAction="#switchScreen" styleClass="adminMenuItem" text="Manage" />
          </items>
       </Menu>
+      <Menu mnemonicParsing="false" text="Serialized">
+        <items>
+          <MenuItem mnemonicParsing="false" onAction="#switchScreen" styleClass="adminMenuItem" text="Logs" />
+        </items>
+      </Menu>
     </menus>
 </MenuBar>
