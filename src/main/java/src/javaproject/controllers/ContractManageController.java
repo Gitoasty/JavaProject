@@ -1,19 +1,30 @@
 package src.javaproject.controllers;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.ListView;
-import javafx.scene.control.MenuBar;
+import javafx.scene.Node;
+import javafx.scene.control.*;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import src.javaproject.classes.Company;
+import src.javaproject.classes.Contract;
+import src.javaproject.interfaces.CompanyMethods;
+import src.javaproject.interfaces.ContractMethods;
+import src.javaproject.interfaces.DatabaseUtilities;
+import src.javaproject.interfaces.ScreenUtilities;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.Objects;
-import java.util.ResourceBundle;
+import java.sql.Connection;
+import java.sql.Date;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.*;
 
 public class ContractManageController implements Initializable {
 
@@ -22,14 +33,111 @@ public class ContractManageController implements Initializable {
     @FXML
     private ListView<String> theList;
     @FXML
-    private Button addButton;
+    private DatePicker startDate;
     @FXML
-    private Button editButton;
+    private DatePicker endDate;
     @FXML
-    private Button deleteButton;
+    private TextField salaryField;
     @FXML
-    private Button backButton;
-    private static final Logger logger = LoggerFactory.getLogger(ContractManageController.class);
+    private ListView<String> companyList;
+    private static final Logger logger = LoggerFactory.getLogger(CompanyManageController.class);
+    private final String tableName = "contracts";
+    private List<Contract> contracts;
+
+    public void updateList() {
+        theList.getItems().clear();
+        contracts = ContractMethods.getContracts(logger, "");
+        List<String> values = new ArrayList<>();
+
+        for (Contract c : contracts) {
+            values.add(STR."\{c.id()} -> \{c.startDate()} <-> \{c.endDate()} - \{c.salary()} - \{c.companyId()}");
+        }
+        theList.getItems().addAll(values);
+    }
+
+    public void addContract()  {
+        String sql = STR."INSERT INTO \{tableName} (start, end, salary, companyId) VALUES(?, ?, ?, ?)";
+        Company temp = CompanyMethods.getCompany(logger, companyList.getSelectionModel().getSelectedItem());
+
+        assert temp != null;
+        try (Connection conn = DatabaseUtilities.getConnection(logger);
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setDate(1, Date.valueOf(startDate.getValue()));
+            pstmt.setDate(2, Date.valueOf(endDate.getValue()));
+            pstmt.setInt(3, Integer.parseInt(salaryField.getText()));
+            pstmt.setInt(4, temp.getId());
+            pstmt.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+
+        updateList();
+    }
+
+    public void editContract() {
+        String contractId = theList.getSelectionModel().getSelectedItem().split(" ->")[0];
+        Company company = CompanyMethods.getCompany(logger, companyList.getSelectionModel().getSelectedItem());
+        assert company != null;
+
+        String sql = STR."UPDATE \{tableName} SET start = ?, end = ?, salary = ?, companyId = ? WHERE id = ?";
+
+        try (Connection conn = DatabaseUtilities.getConnection(logger);
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+            pstmt.setDate(1, Date.valueOf(startDate.getValue()));
+            pstmt.setDate(2, Date.valueOf(endDate.getValue()));
+            pstmt.setInt(3, Integer.parseInt(salaryField.getText()));
+            pstmt.setInt(4, company.getId());
+            pstmt.setInt(5, Integer.parseInt(contractId));
+
+            System.out.println("got here");
+            pstmt.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+
+        updateList();
+    }
+
+    public void deleteContract()  {
+        String contractId = theList.getSelectionModel().getSelectedItem().split(" ->")[0];
+        Contract deletingContract = null;
+        
+        for (Contract c : contracts) {
+            if (c.id() == Integer.parseInt(contractId)) {
+                deletingContract = c;
+                break;
+            }
+        }
+
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setGraphic(new ImageView(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/temp_backgrounds/deleteAlert.jpg")))));
+        alert.setTitle("Deletion confirmation");
+        alert.setHeaderText(STR."You're about to delete entry: \{deletingContract.id()}");
+        alert.setContentText("Are you ok with this?");
+        Optional<ButtonType> result = alert.showAndWait();
+        if (result.isPresent()){
+            if (result.get() == ButtonType.OK) {
+                String sql = STR."DELETE FROM \{tableName} WHERE id = ?";
+                try (Connection conn = DatabaseUtilities.getConnection(logger);
+                     PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+                    pstmt.setInt(1, deletingContract.id());
+
+                    pstmt.executeUpdate();
+                } catch (SQLException e) {
+                    System.out.println(e.getMessage());
+                }
+                updateList();
+            }
+        }
+    }
+
+    public void switchScreen(ActionEvent event) {
+        String target = "/src/javaproject/Admin_Menu";
+
+        ScreenUtilities.switchScreen(logger, target, (Node) event.getSource());
+    }
 
     /**
      * Sets the MenuBar on top
@@ -43,6 +151,13 @@ public class ContractManageController implements Initializable {
             logger.warn("Issue setting MenuBar to top of screen");
         }
 
-        theList.getItems().addAll("auvgieuba", "kavbuia", "oaubviub", "oavuabivuab");
+        companyList.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
+
+        List<String> companies = DatabaseUtilities.getColumnFromTable(logger, "name", "companies");
+        assert companies != null;
+
+        updateList();
+        companyList.getItems().addAll(companies);
+
     }
 }

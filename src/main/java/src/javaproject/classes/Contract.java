@@ -14,10 +14,8 @@ import java.time.LocalDate;
  */
 public record Contract (Integer id, LocalDate startDate, LocalDate endDate, Integer salary, Integer companyId) {
     public Contract(Integer id, LocalDate startDate, LocalDate endDate, Integer salary, Integer companyId) {
-        if (startDate().isBefore(LocalDate.now())) {
-            throw new NegativeValueException("Start date must be today or later!");
-        } else if (endDate().isBefore(LocalDate.now()) || endDate().isEqual(LocalDate.now())) {
-            throw new NegativeValueException("End date must be at least tomorrow!");
+        if (endDate.isBefore(startDate)) {
+            throw new NegativeValueException("End date must be after start date!");
         } else if(companyId <= 0) {
             throw new NegativeValueException("SQL indexing starts at 1, so the company id can never be smaller than that!");
         } else {
