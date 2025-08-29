@@ -5,10 +5,9 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
-import javafx.scene.control.ListView;
-import javafx.scene.control.MenuBar;
-import javafx.scene.control.SelectionMode;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,6 +23,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class CompanyManageController implements Initializable {
@@ -93,18 +93,28 @@ public class CompanyManageController implements Initializable {
             return;
         }
 
-        String sql = STR."DELETE FROM \{tableName} WHERE id = ?";
-        System.out.println(STR."Deleting company: \{deletingCompany.getId()} - \{deletingCompany.getName()}");
-        try (Connection conn = DatabaseUtilities.getConnection(logger);
-             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setGraphic(new ImageView(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/temp_backgrounds/deleteAlert.jpg")))));
+        alert.setTitle("Deletion confirmation");
+        alert.setHeaderText(STR."You're about to delete entry: \{deletingCompany.getName()}");
+        alert.setContentText("Are you ok with this?");
+        Optional<ButtonType> result = alert.showAndWait();
+        if (result.isPresent()){
+            if (result.get() == ButtonType.OK) {
+                String sql = STR."DELETE FROM \{tableName} WHERE id = ?";
+                System.out.println(STR."Deleting company: \{deletingCompany.getId()} - \{deletingCompany.getName()}");
+                try (Connection conn = DatabaseUtilities.getConnection(logger);
+                     PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
-            pstmt.setInt(1, deletingCompany.getId());
+                    pstmt.setInt(1, deletingCompany.getId());
 
-            pstmt.executeUpdate();
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
+                    pstmt.executeUpdate();
+                } catch (SQLException e) {
+                    System.out.println(e.getMessage());
+                }
+                updateList();
+            }
         }
-        updateList();
     }
 
     public void switchScreen(ActionEvent event) {
