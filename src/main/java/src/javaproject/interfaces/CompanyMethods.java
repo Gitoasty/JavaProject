@@ -41,4 +41,30 @@ public interface CompanyMethods {
         }
         return new ArrayList<>();
     }
+
+    static Company getCompany(Logger logger, String company) {
+        String query = "SELECT * FROM companies WHERE name = ?";
+
+        try (Connection conn = DatabaseUtilities.getConnection(logger);
+             PreparedStatement stmt = conn.prepareStatement(query)) {
+            stmt.setString(1, company);
+            ResultSet results = stmt.executeQuery();
+
+            if (results.next()) {
+                String workerString = results.getString("workers");
+                System.out.println(workerString);
+                TreeSet<String> workers = new TreeSet<>(Arrays.asList(workerString.split(",")));
+
+                return Company.builder()
+                        .id(results.getInt("id"))
+                        .name(results.getString("name"))
+                        .workers(workers)
+                        .build();
+            }
+
+        } catch (SQLException _) {
+            logger.error("Problem with getting projects");
+        }
+        return null;
+    }
 }

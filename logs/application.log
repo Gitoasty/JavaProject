@@ -2014,3 +2014,136 @@
 2025-08-29 18:54:07,277 [INFO] src.javaproject.Main - App closed successfully
 2025-08-29 18:58:16,536 [INFO] src.javaproject.Main - App started successfully
 2025-08-29 18:58:18,718 [INFO] src.javaproject.Main - App closed successfully
+2025-08-29 19:00:56,208 [INFO] src.javaproject.Main - App started successfully
+2025-08-29 19:01:00,204 [INFO] src.javaproject.controllers.LoginController - Logged in as admin
+2025-08-29 19:01:00,388 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Admin_Menu
+2025-08-29 19:01:03,589 [INFO] src.javaproject.controllers.MenuBarController - Switched screen to /src/javaproject/CompanyManage
+2025-08-29 19:02:01,360 [INFO] src.javaproject.controllers.MenuBarController - Switched screen to /src/javaproject/WorkerSearch
+2025-08-29 19:02:04,283 [INFO] src.javaproject.Main - App closed successfully
+2025-08-29 19:02:07,951 [INFO] src.javaproject.Main - App started successfully
+2025-08-29 19:02:08,896 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Register_Screen
+2025-08-29 19:02:13,807 [INFO] src.javaproject.controllers.RegisterController - Switched screen to /src/javaproject/Login_Screen
+2025-08-29 19:02:18,993 [INFO] src.javaproject.controllers.LoginController - Logged in as admin
+2025-08-29 19:02:19,154 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Admin_Menu
+2025-08-29 19:05:45,651 [INFO] src.javaproject.controllers.MenuBarController - Switched screen to /src/javaproject/CompanyManage
+2025-08-29 19:16:52,809 [INFO] src.javaproject.Main - App started successfully
+2025-08-29 19:16:56,578 [INFO] src.javaproject.controllers.LoginController - Logged in as admin
+2025-08-29 19:16:56,750 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Admin_Menu
+2025-08-29 19:16:58,338 [ERROR] src.javaproject.controllers.MenuBarController - Error with switching screens
+2025-08-29 19:17:00,614 [INFO] src.javaproject.Main - App closed successfully
+2025-08-29 21:59:09,643 [INFO] src.javaproject.Main - App started successfully
+2025-08-29 21:59:15,408 [INFO] src.javaproject.controllers.LoginController - Logged in as admin
+2025-08-29 21:59:15,578 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Admin_Menu
+2025-08-29 21:59:17,557 [INFO] src.javaproject.controllers.MenuBarController - Switched screen to /src/javaproject/CompanySearch
+2025-08-29 21:59:19,053 [INFO] src.javaproject.controllers.MenuBarController - Switched screen to /src/javaproject/CompanyManage
+2025-08-29 22:01:10,785 [INFO] src.javaproject.Main - App started successfully
+2025-08-29 22:01:14,165 [INFO] src.javaproject.controllers.LoginController - Logged in as admin
+2025-08-29 22:01:14,335 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Admin_Menu
+2025-08-29 22:01:16,319 [INFO] src.javaproject.controllers.MenuBarController - Switched screen to /src/javaproject/CompanyManage
+2025-08-29 22:03:10,704 [INFO] src.javaproject.Main - App started successfully
+2025-08-29 22:03:14,779 [INFO] src.javaproject.controllers.LoginController - Logged in as admin
+2025-08-29 22:03:14,948 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Admin_Menu
+2025-08-29 22:03:16,691 [INFO] src.javaproject.controllers.MenuBarController - Switched screen to /src/javaproject/CompanyManage
+2025-08-29 22:04:58,257 [INFO] src.javaproject.Main - App started successfully
+2025-08-29 22:05:01,316 [INFO] src.javaproject.controllers.LoginController - Logged in as admin
+2025-08-29 22:05:01,492 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Admin_Menu
+2025-08-29 22:05:03,471 [INFO] src.javaproject.controllers.MenuBarController - Switched screen to /src/javaproject/CompanyManage
+2025-08-29 22:07:07,532 [INFO] src.javaproject.Main - App started successfully
+2025-08-29 22:07:11,157 [INFO] src.javaproject.controllers.LoginController - Logged in as admin
+2025-08-29 22:07:11,329 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Admin_Menu
+2025-08-29 22:07:13,560 [INFO] src.javaproject.controllers.MenuBarController - Switched screen to /src/javaproject/CompanyManage
+2025-08-29 22:10:17,843 [INFO] src.javaproject.Main - App started successfully
+2025-08-29 22:10:20,960 [INFO] src.javaproject.controllers.LoginController - Logged in as admin
+2025-08-29 22:10:21,138 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Admin_Menu
+2025-08-29 22:10:23,016 [INFO] src.javaproject.controllers.MenuBarController - Switched screen to /src/javaproject/CompanyManage
+2025-08-29 22:10:27,844 [ERROR] src.javaproject.controllers.CompanyManageController - Problem with getting projects
+2025-08-29 22:10:59,049 [INFO] src.javaproject.Main - App started successfully
+2025-08-29 22:11:02,853 [INFO] src.javaproject.controllers.LoginController - Logged in as admin
+2025-08-29 22:11:03,027 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Admin_Menu
+2025-08-29 22:11:05,463 [INFO] src.javaproject.controllers.MenuBarController - Switched screen to /src/javaproject/CompanyManage
+2025-08-29 22:11:07,779 [ERROR] src.javaproject.controllers.CompanyManageController - Problem with getting projects
+2025-08-29 22:12:12,433 [INFO] src.javaproject.Main - App started successfully
+2025-08-29 22:12:15,688 [INFO] src.javaproject.controllers.LoginController - Logged in as admin
+2025-08-29 22:12:15,855 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Admin_Menu
+2025-08-29 22:12:17,663 [INFO] src.javaproject.controllers.MenuBarController - Switched screen to /src/javaproject/CompanyManage
+2025-08-29 22:12:19,366 [ERROR] src.javaproject.controllers.CompanyManageController - Problem with getting projects
+2025-08-29 22:12:54,108 [INFO] src.javaproject.Main - App started successfully
+2025-08-29 22:12:57,922 [INFO] src.javaproject.controllers.LoginController - Logged in as admin
+2025-08-29 22:12:58,093 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Admin_Menu
+2025-08-29 22:12:59,723 [INFO] src.javaproject.controllers.MenuBarController - Switched screen to /src/javaproject/CompanyManage
+2025-08-29 22:14:07,744 [INFO] src.javaproject.Main - App started successfully
+2025-08-29 22:14:11,005 [INFO] src.javaproject.controllers.LoginController - Logged in as admin
+2025-08-29 22:14:11,179 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Admin_Menu
+2025-08-29 22:14:19,364 [INFO] src.javaproject.controllers.MenuBarController - Switched screen to /src/javaproject/CompanyManage
+2025-08-29 22:16:06,386 [INFO] src.javaproject.Main - App started successfully
+2025-08-29 22:16:09,607 [INFO] src.javaproject.controllers.LoginController - Logged in as admin
+2025-08-29 22:16:09,780 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Admin_Menu
+2025-08-29 22:16:11,712 [INFO] src.javaproject.controllers.MenuBarController - Switched screen to /src/javaproject/CompanyManage
+2025-08-29 22:18:51,240 [INFO] src.javaproject.Main - App started successfully
+2025-08-29 22:18:55,142 [INFO] src.javaproject.controllers.LoginController - Logged in as admin
+2025-08-29 22:18:55,315 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Admin_Menu
+2025-08-29 22:18:57,270 [INFO] src.javaproject.controllers.MenuBarController - Switched screen to /src/javaproject/CompanyManage
+2025-08-29 22:20:25,317 [INFO] src.javaproject.Main - App started successfully
+2025-08-29 22:20:28,178 [INFO] src.javaproject.controllers.LoginController - Logged in as admin
+2025-08-29 22:20:28,352 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Admin_Menu
+2025-08-29 22:20:30,275 [INFO] src.javaproject.controllers.MenuBarController - Switched screen to /src/javaproject/CompanyManage
+2025-08-29 22:21:57,775 [INFO] src.javaproject.Main - App started successfully
+2025-08-29 22:22:00,874 [INFO] src.javaproject.controllers.LoginController - Logged in as admin
+2025-08-29 22:22:01,049 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Admin_Menu
+2025-08-29 22:22:02,812 [INFO] src.javaproject.controllers.MenuBarController - Switched screen to /src/javaproject/CompanyManage
+2025-08-29 22:24:31,990 [INFO] src.javaproject.Main - App started successfully
+2025-08-29 22:24:35,946 [INFO] src.javaproject.controllers.LoginController - Logged in as admin
+2025-08-29 22:24:36,116 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Admin_Menu
+2025-08-29 22:24:38,369 [INFO] src.javaproject.controllers.MenuBarController - Switched screen to /src/javaproject/CompanyManage
+2025-08-29 22:25:36,392 [INFO] src.javaproject.Main - App started successfully
+2025-08-29 22:25:39,310 [INFO] src.javaproject.controllers.LoginController - Logged in as admin
+2025-08-29 22:25:39,485 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Admin_Menu
+2025-08-29 22:25:41,723 [INFO] src.javaproject.controllers.MenuBarController - Switched screen to /src/javaproject/CompanyManage
+2025-08-29 22:26:59,934 [INFO] src.javaproject.Main - App started successfully
+2025-08-29 22:27:03,077 [INFO] src.javaproject.controllers.LoginController - Logged in as admin
+2025-08-29 22:27:03,252 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Admin_Menu
+2025-08-29 22:27:04,983 [INFO] src.javaproject.controllers.MenuBarController - Switched screen to /src/javaproject/CompanyManage
+2025-08-29 22:27:10,688 [INFO] src.javaproject.Main - App closed successfully
+2025-08-29 22:27:26,771 [INFO] src.javaproject.Main - App started successfully
+2025-08-29 22:27:30,227 [INFO] src.javaproject.controllers.LoginController - Logged in as admin
+2025-08-29 22:27:30,404 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Admin_Menu
+2025-08-29 22:27:33,611 [INFO] src.javaproject.controllers.MenuBarController - Switched screen to /src/javaproject/CompanyManage
+2025-08-29 22:27:50,454 [INFO] src.javaproject.Main - App closed successfully
+2025-08-29 22:28:31,110 [INFO] src.javaproject.Main - App started successfully
+2025-08-29 22:28:34,090 [INFO] src.javaproject.controllers.LoginController - Logged in as admin
+2025-08-29 22:28:34,267 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Admin_Menu
+2025-08-29 22:28:35,949 [INFO] src.javaproject.controllers.MenuBarController - Switched screen to /src/javaproject/CompanyManage
+2025-08-29 22:28:40,642 [INFO] src.javaproject.Main - App closed successfully
+2025-08-29 22:31:27,526 [INFO] src.javaproject.Main - App started successfully
+2025-08-29 22:31:30,341 [INFO] src.javaproject.controllers.LoginController - Logged in as admin
+2025-08-29 22:31:30,516 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Admin_Menu
+2025-08-29 22:31:32,578 [INFO] src.javaproject.controllers.MenuBarController - Switched screen to /src/javaproject/CompanyManage
+2025-08-29 22:31:57,118 [INFO] src.javaproject.Main - App started successfully
+2025-08-29 22:32:00,348 [INFO] src.javaproject.controllers.LoginController - Logged in as admin
+2025-08-29 22:32:00,519 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Admin_Menu
+2025-08-29 22:32:02,462 [INFO] src.javaproject.controllers.MenuBarController - Switched screen to /src/javaproject/CompanyManage
+2025-08-29 22:32:13,880 [INFO] src.javaproject.Main - App closed successfully
+2025-08-29 22:32:45,625 [INFO] src.javaproject.Main - App started successfully
+2025-08-29 22:32:49,488 [INFO] src.javaproject.controllers.LoginController - Login failed
+2025-08-29 22:32:55,808 [INFO] src.javaproject.controllers.LoginController - Logged in as admin
+2025-08-29 22:32:55,979 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Admin_Menu
+2025-08-29 22:32:57,654 [INFO] src.javaproject.controllers.MenuBarController - Switched screen to /src/javaproject/CompanyManage
+2025-08-29 22:35:33,729 [INFO] src.javaproject.Main - App started successfully
+2025-08-29 22:35:37,358 [INFO] src.javaproject.controllers.LoginController - Logged in as admin
+2025-08-29 22:35:37,533 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Admin_Menu
+2025-08-29 22:35:39,088 [INFO] src.javaproject.controllers.MenuBarController - Switched screen to /src/javaproject/CompanyManage
+2025-08-29 22:36:31,520 [INFO] src.javaproject.Main - App started successfully
+2025-08-29 22:36:34,261 [INFO] src.javaproject.controllers.LoginController - Logged in as admin
+2025-08-29 22:36:34,440 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Admin_Menu
+2025-08-29 22:36:36,481 [INFO] src.javaproject.controllers.MenuBarController - Switched screen to /src/javaproject/CompanyManage
+2025-08-29 22:36:44,982 [INFO] src.javaproject.Main - App closed successfully
+2025-08-29 22:37:07,289 [INFO] src.javaproject.Main - App started successfully
+2025-08-29 22:37:10,368 [INFO] src.javaproject.controllers.LoginController - Logged in as admin
+2025-08-29 22:37:10,542 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Admin_Menu
+2025-08-29 22:37:12,060 [INFO] src.javaproject.controllers.MenuBarController - Switched screen to /src/javaproject/CompanyManage
+2025-08-29 22:37:21,640 [INFO] src.javaproject.Main - App closed successfully
+2025-08-29 22:40:10,699 [INFO] src.javaproject.Main - App started successfully
+2025-08-29 22:40:13,926 [INFO] src.javaproject.controllers.LoginController - Logged in as admin
+2025-08-29 22:40:14,098 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Admin_Menu
+2025-08-29 22:40:16,440 [INFO] src.javaproject.controllers.MenuBarController - Switched screen to /src/javaproject/CompanyManage
+2025-08-29 22:41:18,476 [INFO] src.javaproject.Main - App closed successfully

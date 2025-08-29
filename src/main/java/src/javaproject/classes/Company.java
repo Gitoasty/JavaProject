@@ -19,9 +19,13 @@ public final class Company {
      */
     private Company(Builder c) {
         TreeSet<String> temp = new TreeSet<>((first, second) -> {
-            char one = first.charAt(1);
-            char two = second.charAt(1);
-            return Character.compare(one, two);
+            if (first.length() > 1 && second.length() > 1) {
+                char one = first.charAt(1);
+                char two = second.charAt(1);
+                return Character.compare(one, two);
+            } else {
+                return 1;
+            }
         });
         temp.addAll(c.workers);
         this.id = c.id;

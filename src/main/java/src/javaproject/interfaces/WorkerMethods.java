@@ -43,7 +43,7 @@ public sealed interface WorkerMethods permits LoginController, WorkerSearchContr
         throw new UserNotExistException("User not found in database");
     }
 
-    default List<Worker> getWorkers(Logger logger, String worker) {
+    static List<Worker> getWorkers(Logger logger, String worker) {
         List<Worker> outList = new ArrayList<>();
         String query;
 

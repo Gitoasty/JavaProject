@@ -47,7 +47,7 @@ public final class WorkerSearchController implements Initializable, WorkerMethod
     private static final Logger logger = LoggerFactory.getLogger(WorkerSearchController.class);
 
     public void searchWorkers() {
-        List<Worker> workers = getWorkers(logger, searchTarget.getText());
+        List<Worker> workers = WorkerMethods.getWorkers(logger, searchTarget.getText());
 
         table.getItems().clear();
         workerTag.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().idGetter()));
