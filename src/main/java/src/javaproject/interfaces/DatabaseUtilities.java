@@ -6,6 +6,8 @@ import src.javaproject.classes.Account;
 import java.io.FileReader;
 import java.io.IOException;
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Properties;
 
 /**
@@ -78,5 +80,30 @@ public interface DatabaseUtilities {
             logger.warn("Error reading from table");
         }
         return new Account<>("","","");
+    }
+
+    /**
+     * for getting rows to display
+     */
+    static List<String> getColumnFromTable(Logger logger, String column, String table) {
+        String sql = STR."SELECT * FROM \{table}";
+        List<String> outData = new ArrayList<>();
+
+        try {
+            Connection conn = DatabaseUtilities.getConnection(logger);
+            Statement stmt = conn.createStatement();
+            ResultSet rs = stmt.executeQuery(sql);
+
+            while (rs.next()) {
+                String value = rs.getString(column);
+                outData.add(value);
+            }
+
+            return outData;
+        } catch (SQLException e) {
+            logger.error("Problem with getting column");
+        }
+
+        return null;
     }
 }

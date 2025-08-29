@@ -2,9 +2,6 @@ package src.javaproject.controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.Node;
-import javafx.scene.Scene;
-import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
 import org.slf4j.Logger;
@@ -25,8 +22,8 @@ public class MenuBarController {
      * @param event Event which triggered the method call
      */
     public void switchScreen(ActionEvent event) {
-        MenuItem item = (MenuItem) event.getSource();
         String target = "";
+        MenuItem item = (MenuItem) event.getSource();
 
         if (((MenuItem) event.getSource()).getText().equals("Search")) {
             target = STR."/src/javaproject/\{item.getParentMenu().getText()}Search";
