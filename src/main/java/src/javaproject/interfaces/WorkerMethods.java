@@ -83,4 +83,38 @@ public sealed interface WorkerMethods permits LoginController, WorkerSearchContr
         }
         return new ArrayList<>();
     }
+
+    static Worker getWorker(Logger logger, String worker) {
+        String query = "SELECT * FROM workers WHERE id = ?";
+
+        try (Connection conn = DatabaseUtilities.getConnection(logger);
+             PreparedStatement stmt = conn.prepareStatement(query)) {
+            stmt.setString(1, worker);
+            ResultSet results = stmt.executeQuery();
+
+            if (results.next()) {
+                FreelanceWorker temp = FreelanceWorker.builder()
+                        .id(results.getString("id"))
+                        .firstName(results.getString("fName"))
+                        .lastName(results.getString("lName"))
+                        .workExperience(results.getInt("experience"))
+                        .build();
+
+                String test = results.getString("type");
+                if (test == null) {
+                    temp.setType(WorkerTypes.WAITING);
+                } else if (Character.isDigit(test.toCharArray()[0])) {
+                    temp.setType(WorkerTypes.FREELANCE);
+                } else {
+                    temp.setType(WorkerTypes.STAYING);
+                }
+
+                return temp;
+            }
+
+        } catch (SQLException _) {
+            logger.error("Problem with getting worker");
+        }
+        return null;
+    }
 }
