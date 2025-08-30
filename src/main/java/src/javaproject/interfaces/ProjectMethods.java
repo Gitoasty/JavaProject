@@ -1,7 +1,6 @@
 package src.javaproject.interfaces;
 
 import org.slf4j.Logger;
-import src.javaproject.classes.Project;
 import src.javaproject.classes.ProjectAssignment;
 import src.javaproject.classes.ProjectDraft;
 
@@ -9,10 +8,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public interface ProjectMethods {
 
@@ -57,5 +53,38 @@ public interface ProjectMethods {
             logger.error("Problem with getting projects");
         }
         return new ArrayList<>();
+    }
+
+    static ProjectAssignment getProject(Logger logger, String project) {
+        String query = "SELECT * FROM projects WHERE name = ?";
+
+        try (Connection conn = DatabaseUtilities.getConnection(logger);
+             PreparedStatement stmt = conn.prepareStatement(query)) {
+            stmt.setString(1, project);
+            ResultSet results = stmt.executeQuery();
+
+            if (results.next()) {
+                if (results.getString("workers").isEmpty()) {
+                    ProjectDraft tempProject = ProjectDraft.builder()
+                            .id(results.getInt("id"))
+                            .name(results.getString("name"))
+                            .estimatedTimeSetter(results.getInt("estimatedTime"))
+                            .taskSetter(Set.of(results.getString("tasks").split(",")))
+                            .build();
+                    return new ProjectAssignment(tempProject);
+                } else {
+                    return ProjectAssignment.builder()
+                            .id(results.getInt("id"))
+                            .name(results.getString("name"))
+                            .workers(Arrays.asList(results.getString("workers").split(",")))
+                            .estimatedTimeSetter(results.getInt("estimatedTime"))
+                            .taskSetter(Set.of(results.getString("tasks").split(",")))
+                            .build();
+                }
+            }
+        } catch (SQLException _) {
+            logger.error("Problem with getting projects");
+        }
+        return null;
     }
 }

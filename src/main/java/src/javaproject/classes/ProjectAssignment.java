@@ -128,7 +128,7 @@ public class ProjectAssignment extends Project {
 
         @Override
         public OptionalSetter workers(List<String> workers) {
-            this.workers = (ArrayList<String>) workers;
+            this.workers = new ArrayList<>(workers);
             return this;
         }
 

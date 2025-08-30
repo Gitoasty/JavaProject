@@ -40,12 +40,12 @@
                         <Insets bottom="50.0" left="70.0" right="70.0" top="50.0" />
                     </GridPane.margin>
                 </Label>
-                <Button fx:id="addButton" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="adminButton" text="Add" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                <Button fx:id="addButton" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#addProject" styleClass="adminButton" text="Add" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
                     <GridPane.margin>
                         <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                     </GridPane.margin>
                 </Button>
-                <Button fx:id="deleteButton" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="adminButton" text="Delete" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                <Button fx:id="deleteButton" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#deleteProject" styleClass="adminButton" text="Delete" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
                     <GridPane.margin>
                         <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                     </GridPane.margin>
@@ -55,7 +55,7 @@
                         <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                     </GridPane.margin>
                 </Button>
-                <Button fx:id="editButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="adminButton" text="Edit" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                <Button fx:id="editButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#editProject" styleClass="adminButton" text="Edit" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
                     <GridPane.margin>
                         <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                     </GridPane.margin>
@@ -75,22 +75,22 @@
                         <Insets bottom="50.0" left="70.0" right="70.0" top="50.0" />
                     </GridPane.margin>
                 </Label>
-                <TextField alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="salary" styleClass="adminTextField" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                <TextField fx:id="description" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="description of project tasks" styleClass="adminTextField" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                     <GridPane.margin>
                         <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                     </GridPane.margin>
                 </TextField>
-                <ListView fx:id="companyList" layoutX="10.0" layoutY="55.0" prefHeight="400.0" prefWidth="290.0" styleClass="adminList" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="4">
+                <ListView fx:id="workerList" layoutX="10.0" layoutY="55.0" prefHeight="400.0" prefWidth="290.0" styleClass="adminList" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="4">
                     <GridPane.margin>
                         <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
                     </GridPane.margin>
                 </ListView>
-            <TextField alignment="CENTER" layoutX="985.0" layoutY="346.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="name" styleClass="adminTextField" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+            <TextField fx:id="name" alignment="CENTER" layoutX="985.0" layoutY="346.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="name" styleClass="adminTextField" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                <GridPane.margin>
                   <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
                </GridPane.margin>
             </TextField>
-            <TextField alignment="CENTER" layoutX="970.0" layoutY="40.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="duration (in days)" styleClass="adminTextField" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+            <TextField fx:id="duration" alignment="CENTER" layoutX="970.0" layoutY="40.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="duration (in days)" styleClass="adminTextField" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                <GridPane.margin>
                   <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
                </GridPane.margin>
