@@ -25,7 +25,6 @@ public class Main extends Application {
     //TODO use lists, sets *AND* maps, use lambdas for sorting
     //TODO add a generic class with 2 generic params (somehow)
     //TODO add serialization & deserialization using txt file
-    //TODO finish the project and worker manage sections
     //TODO do threading concurrency with an infinite thread which does the de/serialization, something like blockingqueue
 
     private static final Logger logger = LoggerFactory.getLogger(Main.class);
