@@ -11,10 +11,8 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import src.javaproject.classes.Company;
 import src.javaproject.classes.Worker;
 import src.javaproject.enums.WorkerTypes;
-import src.javaproject.interfaces.CompanyMethods;
 import src.javaproject.interfaces.DatabaseUtilities;
 import src.javaproject.interfaces.ScreenUtilities;
 import src.javaproject.interfaces.WorkerMethods;
@@ -42,10 +40,10 @@ public final class WorkerManageController implements Initializable, WorkerMethod
     private  TextField experience;
     private static final Logger logger = LoggerFactory.getLogger(WorkerManageController.class);
     private final String tableName = "workers";
-    private final String column = "id";
 
     public void updateList() {
         theList.getItems().clear();
+        String column = "id";
         List<String> values = DatabaseUtilities.getColumnFromTable(logger, column, tableName);
 
         assert values != null;

@@ -11,86 +11,115 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.StackPane?>
 
-<StackPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="720.0" minWidth="1280.0" prefHeight="400.0" prefWidth="600.0" styleClass="adminAccountBG" stylesheets="@../../stylesheets.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="src.javaproject.controllers.WorkerManageController">
-    <children>
-        <GridPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
-            <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="50.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="12.5" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="12.5" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="12.5" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="12.5" prefWidth="100.0" />
-            </columnConstraints>
-            <rowConstraints>
-                <RowConstraints minHeight="10.0" percentHeight="7.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" percentHeight="34.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" percentHeight="34.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" percentHeight="34.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" percentHeight="34.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" percentHeight="25.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            </rowConstraints>
-            <children>
-                <BorderPane fx:id="topPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="5" />
-                <ListView fx:id="theList" prefHeight="400.0" prefWidth="290.0" styleClass="adminList" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.rowSpan="2147483647" GridPane.valignment="CENTER">
-                    <GridPane.margin>
-                        <Insets right="15.0" top="15.0" />
-                    </GridPane.margin></ListView>
-                <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="adminLabel" text="First name: " GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
-                    <GridPane.margin>
-                        <Insets bottom="50.0" left="70.0" right="70.0" top="50.0" />
-                    </GridPane.margin>
-                </Label>
-                <Button fx:id="deleteButton" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#deleteWorker" styleClass="adminButton" text="Delete" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
-                    <GridPane.margin>
-                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
-                    </GridPane.margin>
-                </Button>
-                <Button fx:id="backButton" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#switchScreen" styleClass="adminButton" text="Back" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
-                    <GridPane.margin>
-                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
-                    </GridPane.margin>
-                </Button>
-                <Button fx:id="editButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#editWorker" styleClass="adminButton" text="Edit" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
-                    <GridPane.margin>
-                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
-                    </GridPane.margin>
-                </Button>
-                <Label alignment="CENTER" layoutX="720.0" layoutY="90.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="adminLabel" text="Last name: " GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2">
-                    <GridPane.margin>
-                        <Insets bottom="50.0" left="70.0" right="70.0" top="50.0" />
-                    </GridPane.margin>
-                </Label>
-                <Label alignment="CENTER" layoutX="720.0" layoutY="236.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="adminLabel" text="Type: " GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3">
-                    <GridPane.margin>
-                        <Insets bottom="50.0" left="70.0" right="70.0" top="50.0" />
-                    </GridPane.margin>
-                </Label>
-                <Label alignment="CENTER" layoutX="720.0" layoutY="381.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="adminLabel" text="Work experience: " GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="4">
-                    <GridPane.margin>
-                        <Insets bottom="50.0" left="70.0" right="70.0" top="50.0" />
-                    </GridPane.margin>
-                </Label>
-                <TextField fx:id="experience" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="experience" styleClass="adminTextField" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
-                    <GridPane.margin>
-                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
-                    </GridPane.margin>
-                </TextField>
-                <ListView fx:id="typeList" layoutX="10.0" layoutY="55.0" prefHeight="400.0" prefWidth="290.0" styleClass="adminList" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="3">
-                    <GridPane.margin>
-                        <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
-                    </GridPane.margin>
-                </ListView>
-                <TextField fx:id="fName" alignment="CENTER" layoutX="985.0" layoutY="346.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="first name" styleClass="adminTextField" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
-                    <GridPane.margin>
-                        <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
-                    </GridPane.margin>
-                </TextField>
-                <TextField fx:id="lName" alignment="CENTER" layoutX="970.0" layoutY="40.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="last name" styleClass="adminTextField" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
-                    <GridPane.margin>
-                        <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
-                    </GridPane.margin>
-                </TextField>
-            </children>
-        </GridPane>
-    </children>
+<StackPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="720.0" minWidth="1280.0"
+           prefHeight="400.0" prefWidth="600.0" styleClass="adminAccountBG" stylesheets="@../../stylesheets.css"
+           xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="src.javaproject.controllers.WorkerManageController">
+    <GridPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="50.0" prefWidth="100.0"/>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="12.5" prefWidth="100.0"/>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="12.5" prefWidth="100.0"/>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="12.5" prefWidth="100.0"/>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="12.5" prefWidth="100.0"/>
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" percentHeight="7.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            <RowConstraints minHeight="10.0" percentHeight="34.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            <RowConstraints minHeight="10.0" percentHeight="34.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            <RowConstraints minHeight="10.0" percentHeight="34.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            <RowConstraints minHeight="10.0" percentHeight="34.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            <RowConstraints minHeight="10.0" percentHeight="25.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+        </rowConstraints>
+        <BorderPane fx:id="topPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="5"/>
+        <ListView fx:id="theList" prefHeight="400.0" prefWidth="290.0" styleClass="adminList"
+                  GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.rowSpan="2147483647"
+                  GridPane.valignment="CENTER">
+            <GridPane.margin>
+                <Insets right="15.0" top="15.0"/>
+            </GridPane.margin>
+        </ListView>
+        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+               styleClass="adminLabel" text="First name: " GridPane.columnIndex="1" GridPane.columnSpan="2"
+               GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+            <GridPane.margin>
+                <Insets bottom="50.0" left="70.0" right="70.0" top="50.0"/>
+            </GridPane.margin>
+        </Label>
+        <Button alignment="CENTER" maxHeight="1.7976931348623157E308"
+                maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#deleteWorker"
+                styleClass="adminButton" text="Delete" GridPane.columnIndex="2" GridPane.columnSpan="2"
+                GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+            <GridPane.margin>
+                <Insets bottom="15.0" left="15.0" right="15.0" top="15.0"/>
+            </GridPane.margin>
+        </Button>
+        <Button alignment="CENTER" maxHeight="1.7976931348623157E308"
+                maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#switchScreen"
+                styleClass="adminButton" text="Back" GridPane.columnIndex="4" GridPane.halignment="CENTER"
+                GridPane.rowIndex="5" GridPane.valignment="CENTER">
+            <GridPane.margin>
+                <Insets bottom="15.0" left="15.0" right="15.0" top="15.0"/>
+            </GridPane.margin>
+        </Button>
+        <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                mnemonicParsing="false" onAction="#editWorker" styleClass="adminButton" text="Edit"
+                GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5"
+                GridPane.valignment="CENTER">
+            <GridPane.margin>
+                <Insets bottom="15.0" left="15.0" right="15.0" top="15.0"/>
+            </GridPane.margin>
+        </Button>
+        <Label alignment="CENTER" layoutX="720.0" layoutY="90.0" maxHeight="1.7976931348623157E308"
+               maxWidth="1.7976931348623157E308" styleClass="adminLabel" text="Last name: " GridPane.columnIndex="1"
+               GridPane.columnSpan="2" GridPane.rowIndex="2">
+            <GridPane.margin>
+                <Insets bottom="50.0" left="70.0" right="70.0" top="50.0"/>
+            </GridPane.margin>
+        </Label>
+        <Label alignment="CENTER" layoutX="720.0" layoutY="236.0" maxHeight="1.7976931348623157E308"
+               maxWidth="1.7976931348623157E308" styleClass="adminLabel" text="Type: " GridPane.columnIndex="1"
+               GridPane.columnSpan="2" GridPane.rowIndex="3">
+            <GridPane.margin>
+                <Insets bottom="50.0" left="70.0" right="70.0" top="50.0"/>
+            </GridPane.margin>
+        </Label>
+        <Label alignment="CENTER" layoutX="720.0" layoutY="381.0" maxHeight="1.7976931348623157E308"
+               maxWidth="1.7976931348623157E308" styleClass="adminLabel" text="Work experience: "
+               GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="4">
+            <GridPane.margin>
+                <Insets bottom="50.0" left="70.0" right="70.0" top="50.0"/>
+            </GridPane.margin>
+        </Label>
+        <TextField fx:id="experience" alignment="CENTER" maxHeight="1.7976931348623157E308"
+                   maxWidth="1.7976931348623157E308" promptText="experience" styleClass="adminTextField"
+                   GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.halignment="CENTER"
+                   GridPane.rowIndex="4" GridPane.valignment="CENTER">
+            <GridPane.margin>
+                <Insets bottom="15.0" left="15.0" right="15.0" top="15.0"/>
+            </GridPane.margin>
+        </TextField>
+        <ListView fx:id="typeList" layoutX="10.0" layoutY="55.0" prefHeight="400.0" prefWidth="290.0"
+                  styleClass="adminList" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="3">
+            <GridPane.margin>
+                <Insets bottom="25.0" left="25.0" right="25.0" top="25.0"/>
+            </GridPane.margin>
+        </ListView>
+        <TextField fx:id="fName" alignment="CENTER" layoutX="985.0" layoutY="346.0"
+                   maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="first name"
+                   styleClass="adminTextField" GridPane.columnIndex="3" GridPane.columnSpan="2"
+                   GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+            <GridPane.margin>
+                <Insets bottom="25.0" left="25.0" right="25.0" top="25.0"/>
+            </GridPane.margin>
+        </TextField>
+        <TextField fx:id="lName" alignment="CENTER" layoutX="970.0" layoutY="40.0"
+                   maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="last name"
+                   styleClass="adminTextField" GridPane.columnIndex="3" GridPane.columnSpan="2"
+                   GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+            <GridPane.margin>
+                <Insets bottom="25.0" left="25.0" right="25.0" top="25.0"/>
+            </GridPane.margin>
+        </TextField>
+    </GridPane>
 </StackPane>
