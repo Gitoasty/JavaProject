@@ -1,10 +1,14 @@
 package src.javaproject.classes;
 
+import src.javaproject.interfaces.SerializeMarker;
+
+import java.io.Serializable;
+
 /**
  * Generic class for handling accounts when logging in and using the app
  * @param <R> can be String or null, depending on the user role
  */
-public class Account<R> {
+public final class Account<R> implements Serializable, SerializeMarker {
     private final String username;
     private final String password;
     private final R role;

@@ -1,14 +1,16 @@
 package src.javaproject.classes;
 
 import lombok.Getter;
+import src.javaproject.interfaces.SerializeMarker;
 
+import java.io.Serializable;
 import java.util.TreeSet;
 
 /**
  * Class to represent a company with workers
  */
 @Getter
-public final class Company {
+public final class Company implements Serializable, SerializeMarker {
     private final Integer id;
     private final String name;
     private final TreeSet<String> workers;

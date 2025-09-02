@@ -3,13 +3,16 @@ package src.javaproject.classes;
 import lombok.Getter;
 import lombok.Setter;
 import src.javaproject.enums.WorkerTypes;
+import src.javaproject.interfaces.SerializeMarker;
+
+import java.io.Serializable;
 
 /**
  * Base class for FreelanceWorker and StayingWorker classes
  */
 @Getter
 @Setter
-public abstract sealed class Worker permits FreelanceWorker, StayingWorker {
+public abstract sealed class Worker implements Serializable, SerializeMarker permits FreelanceWorker, StayingWorker {
     protected String id;
     protected String firstName;
     protected String lastName;

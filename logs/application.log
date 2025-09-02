@@ -2354,3 +2354,69 @@
 2025-08-31 01:42:22,102 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Admin_Menu
 2025-08-31 01:42:24,334 [INFO] src.javaproject.controllers.MenuBarController - Switched screen to /src/javaproject/WorkerManage
 2025-08-31 01:42:57,735 [INFO] src.javaproject.Main - App closed successfully
+2025-09-01 23:00:43,632 [INFO] src.javaproject.Main - App started successfully
+2025-09-01 23:02:22,030 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Register_Screen
+2025-09-01 23:02:39,586 [INFO] src.javaproject.controllers.RegisterController - Password is too short, register failed
+2025-09-01 23:02:58,189 [INFO] src.javaproject.controllers.RegisterController - Register successful
+2025-09-01 23:02:58,283 [INFO] src.javaproject.controllers.RegisterController - Switched screen to /src/javaproject/Login_Screen
+2025-09-01 23:04:27,218 [INFO] src.javaproject.Main - App started successfully
+2025-09-01 23:04:33,251 [INFO] src.javaproject.controllers.LoginController - Logged in as user
+2025-09-01 23:04:33,273 [ERROR] src.javaproject.controllers.LoginController - Problem with loading
+2025-09-01 23:05:01,176 [INFO] src.javaproject.controllers.LoginController - Logged in as admin
+2025-09-01 23:05:01,370 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Admin_Menu
+2025-09-01 23:05:05,018 [INFO] src.javaproject.controllers.MenuBarController - Switched screen to /src/javaproject/AccountManage
+2025-09-01 23:05:11,547 [INFO] src.javaproject.Main - App closed successfully
+2025-09-01 23:05:14,771 [INFO] src.javaproject.Main - App started successfully
+2025-09-01 23:05:18,300 [INFO] src.javaproject.controllers.LoginController - Logged in as user
+2025-09-01 23:05:18,325 [ERROR] src.javaproject.controllers.LoginController - Problem with loading
+2025-09-01 23:05:25,177 [INFO] src.javaproject.Main - App closed successfully
+2025-09-01 23:05:39,865 [INFO] src.javaproject.Main - App started successfully
+2025-09-01 23:06:04,626 [INFO] src.javaproject.controllers.LoginController - Logged in as user
+2025-09-01 23:06:04,647 [ERROR] src.javaproject.controllers.LoginController - Problem with loading
+2025-09-01 23:07:47,328 [INFO] src.javaproject.Main - App started successfully
+2025-09-01 23:07:53,275 [INFO] src.javaproject.controllers.LoginController - Logged in as user
+2025-09-01 23:08:56,911 [INFO] src.javaproject.Main - App started successfully
+2025-09-01 23:09:10,112 [INFO] src.javaproject.controllers.LoginController - Logged in as user
+2025-09-01 23:14:34,882 [INFO] src.javaproject.Main - App started successfully
+2025-09-01 23:14:38,583 [INFO] src.javaproject.Main - Switched to register screen with keyboard shortcut
+2025-09-01 23:14:46,390 [INFO] src.javaproject.controllers.RegisterController - Register successful
+2025-09-01 23:14:46,491 [INFO] src.javaproject.controllers.RegisterController - Switched screen to /src/javaproject/Login_Screen
+2025-09-01 23:14:49,668 [INFO] src.javaproject.controllers.LoginController - No such account
+2025-09-01 23:14:49,668 [INFO] src.javaproject.controllers.LoginController - Login failed
+2025-09-01 23:14:58,150 [INFO] src.javaproject.controllers.LoginController - No such account
+2025-09-01 23:14:58,150 [INFO] src.javaproject.controllers.LoginController - Login failed
+2025-09-01 23:15:44,576 [INFO] src.javaproject.Main - App started successfully
+2025-09-01 23:15:49,396 [INFO] src.javaproject.controllers.LoginController - No such account
+2025-09-01 23:15:49,396 [INFO] src.javaproject.controllers.LoginController - Login failed
+2025-09-01 23:16:01,474 [INFO] src.javaproject.Main - App started successfully
+2025-09-01 23:16:16,054 [INFO] src.javaproject.controllers.LoginController - No such account
+2025-09-01 23:16:16,054 [INFO] src.javaproject.controllers.LoginController - Login failed
+2025-09-01 23:16:40,073 [INFO] src.javaproject.controllers.LoginController - Logged in as user
+2025-09-01 23:17:01,222 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Register_Screen
+2025-09-01 23:17:25,036 [INFO] src.javaproject.controllers.RegisterController - Switched screen to /src/javaproject/Login_Screen
+2025-09-01 23:26:35,340 [INFO] src.javaproject.Main - App started successfully
+2025-09-01 23:26:42,026 [INFO] src.javaproject.controllers.LoginController - Logged in as user
+2025-09-01 23:27:17,604 [INFO] src.javaproject.controllers.LoginController - Logged in as admin
+2025-09-01 23:27:17,782 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/Admin_Menu
+2025-09-01 23:27:20,459 [INFO] src.javaproject.controllers.MenuBarController - Switched screen to /src/javaproject/WorkerManage
+2025-09-01 23:28:42,985 [INFO] src.javaproject.Main - App closed successfully
+2025-09-01 23:28:51,092 [INFO] src.javaproject.Main - App started successfully
+2025-09-01 23:28:55,369 [INFO] src.javaproject.controllers.LoginController - Logged in as user
+2025-09-01 23:28:55,393 [ERROR] src.javaproject.controllers.LoginController - Problem with loading
+2025-09-01 23:29:04,989 [INFO] src.javaproject.Main - App closed successfully
+2025-09-01 23:29:09,405 [INFO] src.javaproject.Main - App started successfully
+2025-09-01 23:30:07,376 [INFO] src.javaproject.Main - App started successfully
+2025-09-01 23:30:10,599 [INFO] src.javaproject.controllers.LoginController - Logged in as user
+2025-09-01 23:30:10,630 [ERROR] src.javaproject.controllers.LoginController - Error with switching screens
+2025-09-01 23:30:12,755 [INFO] src.javaproject.Main - App closed successfully
+2025-09-01 23:31:07,123 [INFO] src.javaproject.Main - App started successfully
+2025-09-01 23:31:11,600 [INFO] src.javaproject.controllers.LoginController - Logged in as user
+2025-09-01 23:31:11,623 [ERROR] src.javaproject.controllers.LoginController - Error with switching screens
+2025-09-01 23:31:19,371 [INFO] src.javaproject.controllers.LoginController - Logged in as user
+2025-09-01 23:35:21,272 [ERROR] src.javaproject.controllers.LoginController - Error with switching screens
+2025-09-01 23:35:26,197 [INFO] src.javaproject.Main - App started successfully
+2025-09-01 23:35:29,977 [INFO] src.javaproject.controllers.LoginController - Logged in as user
+2025-09-01 23:35:30,055 [INFO] src.javaproject.controllers.LoginController - Switched screen to /src/javaproject/UserMenu
+2025-09-01 23:35:32,156 [INFO] src.javaproject.Main - App closed successfully
+2025-09-02 09:46:23,554 [INFO] src.javaproject.Main - App started successfully
+2025-09-02 09:46:24,674 [INFO] src.javaproject.Main - App closed successfully

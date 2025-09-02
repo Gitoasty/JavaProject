@@ -1,39 +1,18 @@
 package src.javaproject.classes;
 
+import src.javaproject.interfaces.SerializeMarker;
+
+import java.io.Serializable;
 import java.util.Set;
 
 /**
  * Base class for Project classes
  */
-public abstract class Project {
+public abstract non-sealed class Project implements Serializable, SerializeMarker {
     protected Integer id;
     protected String name;
     protected Integer estimatedTime;
     protected Set<String> tasks;
-
-    /**
-     * takes Integer argument to be set as the project id
-     * @param i provided project id
-     */
-    public void idSetter(Integer i) {
-        this.id = i;
-    }
-
-    /**
-     * takes String argument to be set as the project name
-     * @param n provided project name
-     */
-    public void nameSetter(String n) {
-        this.name = n;
-    }
-
-    /**
-     * takes Integer argument to be set as the estimated project duration
-     * @param t provided estimated project duration (in days)
-     */
-    public void timeSetter(Integer t) {
-        this.estimatedTime = t;
-    }
 
     /**
      * takes a Set of Strings to be set as the tasks to be completed

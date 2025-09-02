@@ -6,6 +6,7 @@ module src.javaproject {
     requires org.slf4j;
     requires ch.qos.logback.classic;
     requires lombok;
+    requires java.desktop;
 
     opens src.javaproject to javafx.fxml;
     exports src.javaproject;

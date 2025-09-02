@@ -15,6 +15,8 @@ import src.javaproject.exceptions.UserNotExistException;
 import src.javaproject.interfaces.LoginManagement;
 import src.javaproject.interfaces.ScreenUtilities;
 import src.javaproject.interfaces.WorkerMethods;
+import java.awt.Desktop;
+import java.net.URI;
 
 
 /**
@@ -66,7 +68,12 @@ public final class LoginController implements WorkerMethods {
                     logger.error("User not found in database");
                 }
                 if (status == null) {
-                    //add something
+                    try {
+                        String url = "https://agar.io";
+                        Desktop.getDesktop().browse(new URI(url));
+                    } catch (Exception _) {
+                        logger.error("Problem loading game");
+                    }
                 } else {
                     ScreenUtilities.switchScreen(logger, "/src/javaproject/UserMenu", userText);
                 }
