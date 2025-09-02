@@ -1,11 +1,6 @@
 package src.javaproject.classes;
 
 import src.javaproject.exceptions.NegativeValueException;
-import src.javaproject.interfaces.SerializeMarker;
-
-import java.io.InvalidObjectException;
-import java.io.ObjectStreamException;
-import java.io.Serializable;
 import java.time.LocalDate;
 
 /**

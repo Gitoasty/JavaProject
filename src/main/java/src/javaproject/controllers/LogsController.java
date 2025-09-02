@@ -39,10 +39,6 @@ public class LogsController implements Initializable {
         List<SerialWriter<String, SerializeMarker>> lines;
         lines = SerializationUtilities.deserialize();
 
-        for (SerialWriter<String, SerializeMarker> s : lines) {
-            System.out.println(s.toString());
-        }
-
         try {
             logList.getItems().clear();
             logList.getItems().addAll(lines.stream().map(SerialWriter<String, SerializeMarker>::toString).toList());
