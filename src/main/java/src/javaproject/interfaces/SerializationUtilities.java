@@ -29,7 +29,6 @@ public interface SerializationUtilities {
             }) {
                 oos.writeObject(sw);
             } catch (IOException e) {
-                e.printStackTrace();
                 logger.error("Problem with writing serialized data");
             }
         }
@@ -59,7 +58,6 @@ public interface SerializationUtilities {
                 }
             }
         } catch (IOException | ClassNotFoundException e) {
-            e.printStackTrace();
             logger.error("Problem reading serialized data");
         }
 
