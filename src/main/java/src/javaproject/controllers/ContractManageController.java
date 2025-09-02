@@ -13,10 +13,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import src.javaproject.classes.Company;
 import src.javaproject.classes.Contract;
-import src.javaproject.interfaces.CompanyMethods;
-import src.javaproject.interfaces.ContractMethods;
-import src.javaproject.interfaces.DatabaseUtilities;
-import src.javaproject.interfaces.ScreenUtilities;
+import src.javaproject.classes.ContractSerializer;
+import src.javaproject.classes.SerialWriter;
+import src.javaproject.exceptions.NullObjectException;
+import src.javaproject.interfaces.*;
 
 import java.io.IOException;
 import java.net.URL;
@@ -49,13 +49,15 @@ public class ContractManageController implements Initializable {
         contracts = ContractMethods.getContracts(logger, "");
         List<String> values = new ArrayList<>();
 
-        for (Contract c : contracts) {
-            values.add(STR."\{c.id()} -> \{c.startDate()} <-> \{c.endDate()} - \{c.salary()} - \{c.companyId()}");
+        if (!contracts.isEmpty()) {
+            for (Contract c : contracts) {
+                values.add(STR."\{c.id()} -> \{c.startDate()} <-> \{c.endDate()} - \{c.salary()} - \{c.companyId()}");
+            }
         }
         theList.getItems().addAll(values);
     }
 
-    public void addContract()  {
+    public void addContract() throws NullObjectException {
         String sql = STR."INSERT INTO \{tableName} (start, end, salary, companyId) VALUES(?, ?, ?, ?)";
         Company temp = CompanyMethods.getCompany(logger, companyList.getSelectionModel().getSelectedItem());
 
@@ -70,12 +72,17 @@ public class ContractManageController implements Initializable {
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
+        Contract data = ContractMethods.getContracts(logger, "").getLast();
+        System.out.println(data);
 
+        if (data == null) throw new NullObjectException("Contract is null");
         updateList();
+        SerializationUtilities.serialize(new SerialWriter<>("Admin", new ContractSerializer(data)));
     }
 
     public void editContract() {
         String contractId = theList.getSelectionModel().getSelectedItem().split(" ->")[0];
+        Contract data = ContractMethods.getContract(logger, contractId);
         Company company = CompanyMethods.getCompany(logger, companyList.getSelectionModel().getSelectedItem());
         assert company != null;
 
@@ -97,10 +104,13 @@ public class ContractManageController implements Initializable {
         }
 
         updateList();
+        assert data != null;
+        SerializationUtilities.serialize(new SerialWriter<>("Admin", new ContractSerializer(data)));
     }
 
     public void deleteContract()  {
         String contractId = theList.getSelectionModel().getSelectedItem().split(" ->")[0];
+        Contract data = ContractMethods.getContract(logger, contractId);
         Contract deletingContract = null;
         
         for (Contract c : contracts) {
@@ -113,6 +123,7 @@ public class ContractManageController implements Initializable {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setGraphic(new ImageView(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/temp_backgrounds/deleteAlert.jpg")))));
         alert.setTitle("Deletion confirmation");
+        assert deletingContract != null;
         alert.setHeaderText(STR."You're about to delete entry: \{deletingContract.id()}");
         alert.setContentText("Are you ok with this?");
         Optional<ButtonType> result = alert.showAndWait();
@@ -128,7 +139,10 @@ public class ContractManageController implements Initializable {
                 } catch (SQLException e) {
                     System.out.println(e.getMessage());
                 }
+
                 updateList();
+                assert data != null;
+                SerializationUtilities.serialize(new SerialWriter<>("Admin", new ContractSerializer(data)));
             }
         }
     }

@@ -3,7 +3,9 @@ package src.javaproject.classes;
 import lombok.Getter;
 import src.javaproject.interfaces.SerializeMarker;
 
+import java.io.Serial;
 import java.io.Serializable;
+import java.util.Comparator;
 import java.util.TreeSet;
 
 /**
@@ -11,6 +13,8 @@ import java.util.TreeSet;
  */
 @Getter
 public final class Company implements Serializable, SerializeMarker {
+    private static final long serialVersionUID = 1L;
+
     private final Integer id;
     private final String name;
     private final TreeSet<String> workers;
@@ -20,7 +24,7 @@ public final class Company implements Serializable, SerializeMarker {
      * @param c Builder object used to construct Company
      */
     private Company(Builder c) {
-        TreeSet<String> temp = new TreeSet<>((first, second) -> {
+        Comparator<String> comparator = (Comparator<String> & Serializable) (first, second) -> {
             if (first.length() > 1 && second.length() > 1) {
                 char one = first.charAt(1);
                 char two = second.charAt(1);
@@ -28,7 +32,9 @@ public final class Company implements Serializable, SerializeMarker {
             } else {
                 return 1;
             }
-        });
+        };
+
+        TreeSet<String> temp = new TreeSet<>(comparator);
         temp.addAll(c.workers);
         this.id = c.id;
         this.name = c.name;
@@ -124,5 +130,10 @@ public final class Company implements Serializable, SerializeMarker {
         public Company build() {
             return new Company(this);
         }
+    }
+
+    @Override
+    public String toString() {
+        return STR."\{id} - \{name} - \{workers.toString()}";
     }
 }

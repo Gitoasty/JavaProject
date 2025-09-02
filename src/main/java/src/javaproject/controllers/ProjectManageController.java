@@ -11,11 +11,11 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import src.javaproject.classes.Contract;
 import src.javaproject.classes.Project;
 import src.javaproject.classes.ProjectAssignment;
-import src.javaproject.interfaces.DatabaseUtilities;
-import src.javaproject.interfaces.ProjectMethods;
-import src.javaproject.interfaces.ScreenUtilities;
+import src.javaproject.classes.SerialWriter;
+import src.javaproject.interfaces.*;
 
 import java.io.IOException;
 import java.net.URL;
@@ -67,8 +67,10 @@ public class ProjectManageController implements Initializable {
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
+        Project data = ProjectMethods.getProjects(logger, "").getLast();
 
         updateList();
+        SerializationUtilities.serialize(new SerialWriter<>("Admin", data));
     }
 
     public void editProject() {
@@ -95,6 +97,7 @@ public class ProjectManageController implements Initializable {
         }
 
         updateList();
+        SerializationUtilities.serialize(new SerialWriter<>("Admin", editingProject));
     }
 
     public void deleteProject()  {
@@ -123,7 +126,9 @@ public class ProjectManageController implements Initializable {
                 } catch (SQLException e) {
                     System.out.println(e.getMessage());
                 }
+
                 updateList();
+                SerializationUtilities.serialize(new SerialWriter<>("Admin", deletingProject));
             }
         }
     }

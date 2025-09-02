@@ -53,4 +53,9 @@ public abstract non-sealed class Project implements Serializable, SerializeMarke
     public Set<String> taskGetter() {
         return tasks;
     }
+
+    @Override
+    public String toString() {
+        return STR."\{id} - \{name} - \{estimatedTime} - \{tasks}";
+    }
 }

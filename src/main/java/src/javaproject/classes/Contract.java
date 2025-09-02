@@ -3,6 +3,8 @@ package src.javaproject.classes;
 import src.javaproject.exceptions.NegativeValueException;
 import src.javaproject.interfaces.SerializeMarker;
 
+import java.io.InvalidObjectException;
+import java.io.ObjectStreamException;
 import java.io.Serializable;
 import java.time.LocalDate;
 
@@ -14,7 +16,8 @@ import java.time.LocalDate;
  * @param companyId indicates company owning the contract
  * @param salary
  */
-public record Contract (Integer id, LocalDate startDate, LocalDate endDate, Integer salary, Integer companyId) implements Serializable, SerializeMarker {
+public record Contract (Integer id, LocalDate startDate, LocalDate endDate, Integer salary, Integer companyId) {
+
     public Contract(Integer id, LocalDate startDate, LocalDate endDate, Integer salary, Integer companyId) {
         if (endDate.isBefore(startDate)) {
             throw new NegativeValueException("End date must be after start date!");

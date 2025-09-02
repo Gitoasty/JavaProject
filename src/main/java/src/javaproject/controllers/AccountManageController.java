@@ -12,9 +12,8 @@ import javafx.scene.layout.BorderPane;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import src.javaproject.classes.Account;
-import src.javaproject.interfaces.AccountMethods;
-import src.javaproject.interfaces.DatabaseUtilities;
-import src.javaproject.interfaces.ScreenUtilities;
+import src.javaproject.classes.SerialWriter;
+import src.javaproject.interfaces.*;
 
 import java.io.IOException;
 import java.net.URL;
@@ -45,8 +44,8 @@ public class AccountManageController implements Initializable {
     }
 
     public void editAccount() {
-
         String sql = STR."UPDATE \{tableName} SET role = ? WHERE userTag = ?";
+        Account<String> data = AccountMethods.getAccounts(logger, theList.getSelectionModel().getSelectedItem()).getFirst();
 
         try (Connection conn = DatabaseUtilities.getConnection(logger);
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
@@ -58,11 +57,14 @@ public class AccountManageController implements Initializable {
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
+
         updateList();
+        SerializationUtilities.serialize(new SerialWriter<>("Admin", data));
     }
 
     public void deleteAccount() {
         String sql = STR."DELETE FROM \{tableName} WHERE \{column} = ?";
+        Account<String> data = AccountMethods.getAccounts(logger, theList.getSelectionModel().getSelectedItem()).getFirst();
 
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setGraphic(new ImageView(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/temp_backgrounds/deleteAlert.jpg")))));
@@ -81,7 +83,9 @@ public class AccountManageController implements Initializable {
                 } catch (SQLException e) {
                     System.out.println(e.getMessage());
                 }
+
                 updateList();
+                SerializationUtilities.serialize(new SerialWriter<>("Admin", data));
             }
         }
     }

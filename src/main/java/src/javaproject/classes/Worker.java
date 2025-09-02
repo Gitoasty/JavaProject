@@ -52,5 +52,8 @@ public abstract sealed class Worker implements Serializable, SerializeMarker per
         return workExperience;
     }
 
-
+    @Override
+    public String toString() {
+        return STR."\{id} - \{firstName} - \{lastName} - \{type} - \{workExperience}";
+    }
 }

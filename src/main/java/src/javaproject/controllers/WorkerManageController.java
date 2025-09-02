@@ -11,11 +11,11 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import src.javaproject.classes.Project;
+import src.javaproject.classes.SerialWriter;
 import src.javaproject.classes.Worker;
 import src.javaproject.enums.WorkerTypes;
-import src.javaproject.interfaces.DatabaseUtilities;
-import src.javaproject.interfaces.ScreenUtilities;
-import src.javaproject.interfaces.WorkerMethods;
+import src.javaproject.interfaces.*;
 
 import java.io.IOException;
 import java.net.URL;
@@ -51,6 +51,7 @@ public final class WorkerManageController implements Initializable, WorkerMethod
     }
     public void editWorker() {
         Worker editingWorker = WorkerMethods.getWorker(logger, theList.getSelectionModel().getSelectedItem());
+        Worker data = WorkerMethods.getWorker(logger, theList.getSelectionModel().getSelectedItem());
 
         if (editingWorker == null) {
             return;
@@ -73,10 +74,12 @@ public final class WorkerManageController implements Initializable, WorkerMethod
         }
 
         updateList();
+        SerializationUtilities.serialize(new SerialWriter<>("Admin", data));
     }
 
     public void deleteWorker()  {
         Worker deletingWorker = WorkerMethods.getWorker(logger, theList.getSelectionModel().getSelectedItem());
+        Worker data = WorkerMethods.getWorker(logger, theList.getSelectionModel().getSelectedItem());
 
         if (deletingWorker == null) {
             return;
@@ -101,7 +104,9 @@ public final class WorkerManageController implements Initializable, WorkerMethod
                 } catch (SQLException e) {
                     System.out.println(e.getMessage());
                 }
+
                 updateList();
+                SerializationUtilities.serialize(new SerialWriter<>("Admin", data));
             }
         }
     }

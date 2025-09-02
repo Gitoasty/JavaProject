@@ -36,7 +36,7 @@ public interface AccountMethods {
             }
 
             return outList;
-        } catch (SQLException _) {
+        } catch (SQLException | NullPointerException _) {
             logger.error("Problem with getting projects");
         }
         return new ArrayList<>();

@@ -11,10 +11,10 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import src.javaproject.classes.Account;
 import src.javaproject.classes.Company;
-import src.javaproject.interfaces.CompanyMethods;
-import src.javaproject.interfaces.DatabaseUtilities;
-import src.javaproject.interfaces.ScreenUtilities;
+import src.javaproject.classes.SerialWriter;
+import src.javaproject.interfaces.*;
 
 import java.io.IOException;
 import java.net.URL;
@@ -50,6 +50,7 @@ public class CompanyManageController implements Initializable {
 
     public void addCompany()  {
         String sql = STR."INSERT INTO \{tableName} (name, workers) VALUES(?, ?)";
+
         try (Connection conn = DatabaseUtilities.getConnection(logger);
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setString(1, company.getText());
@@ -60,10 +61,13 @@ public class CompanyManageController implements Initializable {
         }
 
         updateList();
+        Company data = CompanyMethods.getCompany(logger, company.getText());
+        SerializationUtilities.serialize(new SerialWriter<>("Admin", data));
     }
 
     public void editCompany() {
         Company editingCompany = CompanyMethods.getCompany(logger, theList.getSelectionModel().getSelectedItem());
+        Company data = CompanyMethods.getCompany(logger, theList.getSelectionModel().getSelectedItem());
 
         if (editingCompany == null) {
             return;
@@ -84,10 +88,12 @@ public class CompanyManageController implements Initializable {
         }
 
         updateList();
+        SerializationUtilities.serialize(new SerialWriter<>("Admin", data));
     }
 
     public void deleteCompany()  {
         Company deletingCompany = CompanyMethods.getCompany(logger, theList.getSelectionModel().getSelectedItem());
+        Company data = CompanyMethods.getCompany(logger, theList.getSelectionModel().getSelectedItem());
 
         if (deletingCompany == null) {
             return;
@@ -112,7 +118,9 @@ public class CompanyManageController implements Initializable {
                 } catch (SQLException e) {
                     System.out.println(e.getMessage());
                 }
+
                 updateList();
+                SerializationUtilities.serialize(new SerialWriter<>("Admin", data));
             }
         }
     }

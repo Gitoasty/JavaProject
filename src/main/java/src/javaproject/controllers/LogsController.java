@@ -8,12 +8,12 @@ import javafx.scene.control.MenuBar;
 import javafx.scene.layout.BorderPane;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import src.javaproject.classes.SerialWriter;
+import src.javaproject.interfaces.SerializationUtilities;
+import src.javaproject.interfaces.SerializeMarker;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.ResourceBundle;
@@ -36,17 +36,18 @@ public class LogsController implements Initializable {
         } catch (IOException | NullPointerException _) {
             logger.warn("Issue setting MenuBar to top of screen");
         }
-        List<String> lines = new ArrayList<>();
-        try (BufferedReader br = new BufferedReader(new FileReader("logs/dbLog.txt"))) {
-            String line;
-            while ((line = br.readLine()) != null) {
-                lines.add(line);
-            }
-        } catch (IOException _) {
-            logger.error("Problem reading logs from txt");
-        } finally {
+        List<SerialWriter<String, SerializeMarker>> lines;
+        lines = SerializationUtilities.deserialize();
+
+        for (SerialWriter<String, SerializeMarker> s : lines) {
+            System.out.println(s.toString());
+        }
+
+        try {
             logList.getItems().clear();
-            logList.getItems().addAll(lines);
+            logList.getItems().addAll(lines.stream().map(SerialWriter<String, SerializeMarker>::toString).toList());
+        } catch (Exception _) {
+            logger.error("Problem setting deserialized data");
         }
     }
 }
