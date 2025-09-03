@@ -11,6 +11,7 @@ import javafx.stage.Stage;
 import javafx.util.Duration;
 import org.slf4j.Logger;
 
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Objects;
 
@@ -30,6 +31,38 @@ public interface ScreenUtilities {
             Stage stage = (Stage) clicked.getScene().getWindow();
             stage.setMaximized(false);
             Parent root = FXMLLoader.load(Objects.requireNonNull(ScreenUtilities.class.getResource(STR."\{target}.fxml")));
+            Scene scene = new Scene(root);
+
+            String css = Objects.requireNonNull(ScreenUtilities.class.getResource("/stylesheets.css")).toExternalForm();
+            scene.getStylesheets().add(css);
+            stage.setScene(scene);
+            stage.setMaximized(true);
+            stage.show();
+            logger.info(STR."Switched screen to \{target}");
+        } catch (IOException e) {
+            logger.error("Error with switching screens");
+        } catch (NullPointerException e) {
+            logger.error("Problem with loading");
+        }
+    }
+
+    /**
+     * Switches displayed screen to the target Screen
+     * @param logger logger of controller calling this method
+     * @param target name of target screen
+     * @param clicked Button which triggered the method call
+     */
+    static void waitScreen(Logger logger, String target, Node clicked, String user) {
+        try {
+            FileWriter fw = new FileWriter("src/main/resources/data/tempCred.txt");
+            fw.write(user);
+            fw.close();
+
+            Stage stage = (Stage) clicked.getScene().getWindow();
+            stage.setMaximized(false);
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(ScreenUtilities.class.getResource(STR."\{target}.fxml"));
+            Parent root = loader.load();
             Scene scene = new Scene(root);
 
             String css = Objects.requireNonNull(ScreenUtilities.class.getResource("/stylesheets.css")).toExternalForm();

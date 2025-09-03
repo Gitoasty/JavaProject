@@ -28,7 +28,7 @@ public sealed interface WorkerMethods permits LoginController, WorkerSearchContr
      * @return type of employment, null if empty
      * @throws UserNotExistException in case userTag doesn't exist in table
      */
-    default String checkStatus(Logger logger, String user) throws UserNotExistException {
+    static String checkStatus(Logger logger, String user) throws UserNotExistException {
         String query = "SELECT type FROM workers WHERE id = ?";
         try (Connection conn = DatabaseUtilities.getConnection(logger);
              PreparedStatement stmt = conn.prepareStatement(query)) {

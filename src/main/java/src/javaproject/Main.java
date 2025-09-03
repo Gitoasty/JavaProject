@@ -23,7 +23,6 @@ import src.javaproject.interfaces.TableCreator;
  */
 public class Main extends Application {
     //TODO use lists, sets *AND* maps, use lambdas for sorting
-    //TODO do threading concurrency with an infinite thread which does the de/serialization, something like blockingqueue
 
     private static final Logger logger = LoggerFactory.getLogger(Main.class);
 

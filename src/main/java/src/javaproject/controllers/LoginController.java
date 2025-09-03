@@ -16,7 +16,10 @@ import src.javaproject.interfaces.LoginManagement;
 import src.javaproject.interfaces.ScreenUtilities;
 import src.javaproject.interfaces.WorkerMethods;
 import java.awt.Desktop;
+import java.io.IOException;
 import java.net.URI;
+import java.net.URISyntaxException;
+import java.util.concurrent.locks.LockSupport;
 
 
 /**
@@ -63,15 +66,19 @@ public final class LoginController implements WorkerMethods {
                 logger.info("Logged in as user");
                 String status = "";
                 try {
-                    status = checkStatus(logger, userText.getText());
+                    status = WorkerMethods.checkStatus(logger, userText.getText());
                 } catch (UserNotExistException _) {
                     logger.error("User not found in database");
                 }
                 if (status == null) {
                     try {
+                        ScreenUtilities.waitScreen(logger, "/src/javaproject/WaitScreen", userText, userText.getText());
+
+                        LockSupport.parkNanos(2_000_000_000);
+
                         String url = "https://agar.io";
                         Desktop.getDesktop().browse(new URI(url));
-                    } catch (Exception _) {
+                    } catch (URISyntaxException | IOException _) {
                         logger.error("Problem loading game");
                     }
                 } else {
