@@ -42,7 +42,7 @@ public class UserWaitController implements Initializable {
                 if (!scheduler.awaitTermination(1, TimeUnit.SECONDS)) {
                     scheduler.shutdownNow();
                 }
-            } catch (InterruptedException e) {
+            } catch (InterruptedException _) {
                 scheduler.shutdownNow();
                 Thread.currentThread().interrupt();
             }
@@ -87,7 +87,7 @@ public class UserWaitController implements Initializable {
                         ScreenUtilities.switchScreen(logger, "/src/javaproject/Admin_Menu", storage)
                     );
                 }
-            } catch (UserNotExistException e) {
+            } catch (UserNotExistException _) {
                 logger.error("User does not exist");
             }
         };
