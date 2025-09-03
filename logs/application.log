@@ -2871,3 +2871,13 @@
 2025-09-02 22:21:47,339 [INFO] src.javaproject.controllers.MenuBarController - Switched screen to /src/javaproject/WorkerManage
 2025-09-02 22:21:50,673 [INFO] src.javaproject.controllers.MenuBarController - Switched screen to /src/javaproject/Logs
 2025-09-02 22:22:03,378 [INFO] src.javaproject.Main - App closed successfully
+2025-09-03 20:20:56,838 [INFO] src.javaproject.Main - App started successfully
+2025-09-03 20:20:58,978 [INFO] src.javaproject.Main - Switched to register screen with keyboard shortcut
+2025-09-03 20:21:13,049 [INFO] src.javaproject.controllers.RegisterController - Register successful
+2025-09-03 20:21:13,156 [INFO] src.javaproject.controllers.RegisterController - Switched screen to /src/javaproject/Login_Screen
+2025-09-03 20:21:17,887 [INFO] src.javaproject.controllers.LoginController - No such account
+2025-09-03 20:21:17,887 [INFO] src.javaproject.controllers.LoginController - Login failed
+2025-09-03 20:21:21,925 [INFO] src.javaproject.controllers.LoginController - No such account
+2025-09-03 20:21:21,925 [INFO] src.javaproject.controllers.LoginController - Login failed
+2025-09-03 20:21:26,212 [INFO] src.javaproject.controllers.LoginController - Logged in as user
+2025-09-03 20:24:07,828 [INFO] src.javaproject.Main - App closed successfully
