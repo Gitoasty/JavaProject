@@ -82,7 +82,7 @@ public final class LoginController implements WorkerMethods {
                         logger.error("Problem loading game");
                     }
                 } else {
-                    ScreenUtilities.switchScreen(logger, "/src/javaproject/UserMenu", userText);
+                    ScreenUtilities.waitScreen(logger, "/src/javaproject/UserMenu", userText, userText.getText());
                 }
                 break;
             default:

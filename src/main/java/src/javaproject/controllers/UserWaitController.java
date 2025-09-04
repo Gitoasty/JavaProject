@@ -84,7 +84,7 @@ public class UserWaitController implements Initializable {
                     shutdownScheduler();
 
                     Platform.runLater(() ->
-                        ScreenUtilities.switchScreen(logger, "/src/javaproject/Admin_Menu", storage)
+                        ScreenUtilities.switchScreen(logger, "/src/javaproject/UserMenu", storage)
                     );
                 }
             } catch (UserNotExistException _) {

@@ -87,4 +87,36 @@ public interface ProjectMethods {
         }
         return null;
     }
+
+    static Map<String, List<ProjectAssignment>> getProjectsForWorker(Logger logger, String worker) {
+        Map<String, List<ProjectAssignment>> outMap = new HashMap<>();
+        outMap.put(worker, new ArrayList<>());
+        String query = "SELECT id, name, estimatedTime, tasks, workers FROM projects";
+
+        try (Connection conn = DatabaseUtilities.getConnection(logger);
+             PreparedStatement stmt = conn.prepareStatement(query)) {
+            ResultSet results = stmt.executeQuery();
+
+            while (results.next()) {
+                String helper = results.getString("workers");
+                List<String> helperList = Arrays.asList(helper.split(","));
+                if (!helper.isEmpty() && helperList.contains(worker)) {
+                    ProjectAssignment tempProject = ProjectAssignment.builder()
+                            .id(results.getInt("id"))
+                            .name(results.getString("name"))
+                            .workers(helperList)
+                            .estimatedTimeSetter(results.getInt("estimatedTime"))
+                            .taskSetter(Set.of(results.getString("tasks").split(",")))
+                            .build();
+                    outMap.get(worker).add(tempProject);
+                }
+            }
+
+            return outMap;
+        } catch (SQLException _) {
+            logger.error("Problem with getting projects");
+        }
+
+        return null;
+    }
 }

@@ -3,6 +3,8 @@ package src.javaproject.classes;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.Objects;
+
 /**
  * This class is used to represent freelance workers in the system
  */
@@ -132,7 +134,7 @@ public final class FreelanceWorker extends Worker {
 
         @Override
         public ContractSetter workExperience(Integer experience) {
-            this.workExperience = experience;
+            this.workExperience = Objects.requireNonNullElse(experience, 0);
             return this;
         }
 

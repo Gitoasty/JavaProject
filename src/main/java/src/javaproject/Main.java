@@ -22,8 +22,6 @@ import src.javaproject.interfaces.TableCreator;
  * </h1>
  */
 public class Main extends Application {
-    //TODO use lists, sets *AND* maps, use lambdas for sorting
-
     private static final Logger logger = LoggerFactory.getLogger(Main.class);
 
     /**
@@ -87,6 +85,7 @@ public class Main extends Application {
         TableCreator.projectData(logger);
         TableCreator.companyData(logger);
         TableCreator.contractData(logger);
+        TableCreator.projectsForWorker(logger);
         launch(args);
     }
 }

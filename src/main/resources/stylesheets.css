@@ -226,3 +226,50 @@
 .adminDatePicker .day-cell:selected {
     -fx-background-color: rgba(0, 0, 0, 0.75);
 }
+
+.userBG {
+    -fx-background-image: url("temp_backgrounds/userBG.png");
+    -fx-background-size: stretch;
+}
+
+.userLabel {
+    -fx-background-color: rgba(0, 102, 0, 0.75);
+    -fx-background-radius: 50px;
+    -fx-text-fill: white;
+    -fx-font-size: 35px;
+    -fx-padding: 10px;
+}
+
+.userList {
+    -fx-background-color: rgba(0, 102, 0, 0.2);
+    -fx-border-radius: 30px;
+    -fx-font-size: 25px;
+}
+
+.userList .list-cell {
+    -fx-alignment: center;
+    -fx-text-alignment: center;
+    -fx-text-fill: white;
+}
+
+.userList .list-cell:filled:selected:focused, .userList .list-cell:filled:selected {
+    -fx-border-radius: 30px;
+    -fx-background-color: rgba(0, 102, 0, 0.9);
+}
+
+.userList .list-cell:odd {
+    -fx-border-radius: 30px;
+    -fx-background-color: rgba(0, 102, 0, 0.3);
+}
+
+.userList .list-cell:even {
+    -fx-border-radius: 30px;
+    -fx-background-color: rgba(0, 102, 0, 0.5);
+}
+
+.userButton {
+    -fx-background-color: rgba(0, 102, 0, 0.75);
+    -fx-background-radius: 50px;
+    -fx-text-fill: white;
+    -fx-font-size: 35px;
+}

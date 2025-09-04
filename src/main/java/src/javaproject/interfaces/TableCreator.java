@@ -111,4 +111,18 @@ public interface TableCreator {
             logger.error("Problem creating contract table");
         }
     }
+
+    static void projectsForWorker(Logger logger) {
+        try (Connection conn = DatabaseUtilities.getConnection(logger);
+             Statement stat = conn.createStatement()) {
+
+            String creationString = "CREATE TABLE IF NOT EXISTS " + "workerProjects" + "("
+                    +"id TEXT PRIMARY KEY NOT NULL, "
+                    +"projects TEXT NOT NULL" //stores projects that the worker has completed, separated by " " "
+                    +")";
+            stat.executeUpdate(creationString);
+        } catch (SQLException _) {
+            logger.error("Problem creating contract table");
+        }
+    }
 }

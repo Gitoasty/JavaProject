@@ -1,5 +1,7 @@
 package src.javaproject.classes;
 
+import java.util.Objects;
+
 /**
  * This class is used to represent full-time workers at a company
  */
@@ -117,7 +119,7 @@ public final class StayingWorker extends Worker {
 
         @Override
         public FinalSetter workExperience(Integer experience) {
-            this.workExperience = experience;
+            this.workExperience = Objects.requireNonNullElse(experience, 0);
             return this;
         }
 
