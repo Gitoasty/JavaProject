@@ -55,7 +55,6 @@ public class UserWaitController implements Initializable {
         Path path = Path.of("G:\\learning_java\\JavaProject\\src\\main\\resources\\data\\tempCred.txt");
         try (Stream<String> linesStream = Files.lines(path)) {
             linesStream.findFirst().ifPresent(storage::setText);
-            Files.delete(path);
         } catch (IOException _) {
             logger.error("Could not load user");
         }
